@@ -18858,7 +18858,7 @@ function dadosNota(pdfData) {
   const checkOnlyNumber = (str) => `${str}`.trim().split('').filter(a => a != ' ').reduce((n, c) => !isNaN(Number(c)) ? n + 1 : n, 0) === `${str}`.trim().length;
   const checkContainsNumber = (str) => `${str}`.trim().split('').filter(a => a != ' ').reduce((n, c) => !isNaN(Number(c)) ? n + 1 : n, 0);
   const checkValueOrComma = (str) => checkContainsNumber(str) > 0 || str.includes(',');
-  
+
   const getReverseValue = (str) => {
       let vlr = [];
       str.trim().split('').reverse().every(element => {
@@ -18897,7 +18897,7 @@ function dadosNota(pdfData) {
      
       return false;
     }
-  
+  console.log("teste")
     const valor = row[8] || row[7];
     const valorSubstituido = valor.replace(/,/g, '.');
   
