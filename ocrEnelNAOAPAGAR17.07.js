@@ -18875,12 +18875,6 @@ function dadosNota(pdfData) {
     
     return (`${pdf.queries[indexAlias].content}`).toString();
   };
-  const getNum = (pdf) => {
-      const indexAlias = pdf.queries.findIndex(i => i.alias == 'N do cliente');
-      if (indexAlias == -1) return false;
-
-      return Number(`${pdf.queries[indexAlias].content}`).toString();
-  };
   const getPISPASEP0699 = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -19274,11 +19268,16 @@ function dadosNota(pdfData) {
     if (indexAlias == -1) return false;
     return Number(`${pdf.queries[indexAlias].content}`).toString() || (`${pdf.queries[indexAlias].content}`).toString() // || (`${pdf.queries[indexAlias].content}`).toString() // um ou outro
   };
-  const getNdainstalacao= (pdf) => {
-    const indexAlias = pdf.queries.findIndex(i => i.alias == 'N da instalacao?');
-    if (indexAlias == -1) return false;
-    return Number(`${pdf.queries[indexAlias].content}`).toString() || (`${pdf.queries[indexAlias].content}`).toString() // || (`${pdf.queries[indexAlias].content}`).toString() // um ou outro
-  };
+  const getNdainstalacao = (pdf) => {
+     const indexAlias = pdf.queries.findIndex((i) => i.alias === 'N da instalacao?');
+     if (indexAlias === -1) return false;
+  
+    const content = pdf.queries[indexAlias].content;
+    const numeros = content.match(/\d+/g).join('');
+  
+    // Converter para número antes de retornar
+      return Number(numeros);
+  }
   const getNdaNotaFiscal= (pdf) => {
     const indexAlias = pdf.queries.findIndex(i => i.alias == 'N Nota fiscal?');
     if (indexAlias == -1) return false;
@@ -19504,7 +19503,6 @@ function dadosNota(pdfData) {
       return cpf;
   };
   const getDados = (pdf) => {
-      const vlrNum = getNum(pdf);
       const vlrVencimento = getVencimento(pdf);
       const vlrLeituraAnterior = getLeituraAnterior(pdf);
       const vlrTotalaPagar = getTotalaPagar(pdf);
@@ -19564,7 +19562,6 @@ function dadosNota(pdfData) {
       return {
           vlrCNPJ,
           vlrCPF,
-          vlrNum,
           vlrVencimento,
           vlrTotalaPagar,
           vlrContaReferente,
