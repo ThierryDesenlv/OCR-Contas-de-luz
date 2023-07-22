@@ -18851,7 +18851,6 @@ const notas = {
       }
   ]
   }
-
 }
 
 function dadosNota(pdfData) {
@@ -18891,13 +18890,102 @@ function dadosNota(pdfData) {
      
       return false;
     }
-  
     const valor = row[8] || row[7];
     const valorSubstituido = valor.replace(/,/g, '.');
   
     return valorSubstituido;
+  };//CONSUMO ATIVOF PONTA TUSD
+  //getConsumoAtivoPontaTUSDvalueTARIFASeIMPOSTOS
+  const getConsumoAtivoPontaTUSDvalueTARIFASeIMPOSTOS = (pdf) => {
+    const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD" , "CONSUMOATIVOPONTA TUSD"];
+    const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
+  
+    if (!table) return false;
+  
+    const row = table.valuesContent.find((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword))));
+    if (!row) return false;
+  
+    const valor = row[11];
+    return valor.replace(/,/g, '.');
   };
-  const getAUferPontaLeituraRegistrado = (pdf) => {
+  //getConsumoAtivoPontaTUSDvalueVALOR
+  const getConsumoAtivoPontaTUSDvalueVALOR = (pdf) => {
+    const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD" , "CONSUMOATIVOPONTA TUSD"];
+    const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
+  
+    if (!table) return false;
+  
+    const row = table.valuesContent.find((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword))));
+    if (!row) return false;
+  
+    const valor = row[10];
+    return valor.replace(/,/g, '.');
+  };
+  //getConsumoAtivoPontaTUSDvalueICMS
+  const getConsumoAtivoPontaTUSDvalueICMS = (pdf) => {
+    const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD" , "CONSUMOATIVOPONTA TUSD"];
+    const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
+  
+    if (!table) return false;
+  
+    const row = table.valuesContent.find((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword))));
+    if (!row) return false;
+  
+    const valor = row[9];
+    return valor.replace(/,/g, '.');
+  };
+  //getConsumoAtivoPontaTUSDaliqICMS
+  const getConsumoAtivoPontaTUSDaliqICMS = (pdf) => {
+    const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD" , "CONSUMOATIVOPONTA TUSD"];
+    const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
+  
+    if (!table) return false;
+  
+    const row = table.valuesContent.find((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword))));
+    if (!row) return false;
+  
+    const valor = row[8];
+    return valor.replace(/,/g, '.');
+  };
+  //getConsumoAtivoPontaTUSDBaseICMS
+  const getConsumoAtivoPontaTUSDBaseICMS = (pdf) => {
+    const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD" , "CONSUMOATIVOPONTA TUSD"];
+    const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
+  
+    if (!table) return false;
+  
+    const row = table.valuesContent.find((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword))));
+    if (!row) return false;
+  
+    const valor = row[7];
+    return valor.replace(/,/g, '.');
+  };  
+  const getConsumoAtivoPontaTUSDtarifaCICMS = (pdf) => {
+    const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD" , "CONSUMOATIVOPONTA TUSD"];
+    const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
+  
+    if (!table) return false;
+  
+    const row = table.valuesContent.find((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword))));
+    if (!row) return false;
+  
+    const valor = row[6];
+    return valor.replace(/,/g, '.');
+  };  
+  //faturado
+  const getConsumoAtivoPontaTUSDFATURADO = (pdf) => {
+    const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD" , "CONSUMOATIVOPONTA TUSD"];
+    const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
+  
+    if (!table) return false;
+  
+    const row = table.valuesContent.find((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword))));
+    if (!row) return false;
+  
+    const valor = row[5];
+    return valor.replace(/,/g, '.');
+  };  
+  const getAUferPontaLeituraREGISTRADO = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
   // testar colocar numeros diferentes na porcentagem
@@ -18919,7 +19007,7 @@ function dadosNota(pdfData) {
   
     return valorSubstituido;
   };
-  const getAUferPontaLeituraAtual = (pdf) => {
+  const getAUferPontaLeituraATUAL = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
   // testar colocar numeros diferentes na porcentagem
@@ -18941,17 +19029,17 @@ function dadosNota(pdfData) {
   
     return valorSubstituido;
   };
-  const getAUferPontaLeituraAnterior = (pdf) => {
+  const getAUferPontaLeituraANTERIOR = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
   // testar colocar numeros diferentes na porcentagem
-      return valuesContent.some((row) => row.includes("DEMANDA PONT") || (row[1] && row[1].includes("DEMANDAPONT")));
+      return valuesContent.some((row) => row.includes("UFERPONTA") || (row[1] && row[1].includes("UFER PONTA")));
     });
   
     if (!table) return false;
   
     const valuesContent = table.valuesContent;
-    const row = valuesContent.find((row) => row.includes("DEMANDA PONT") || (row[1] && row[1].includes("DEMANDAPONT")));
+    const row = valuesContent.find((row) => row.includes("UFERPONTA") || (row[1] && row[1].includes("UFER PONTA")));
   
     if (!row) {
      
@@ -19095,6 +19183,34 @@ function dadosNota(pdfData) {
   
     return valorSubstituido;
   };
+  const getENERGIA0601 = (pdf) => {
+    const table = pdf.tables.find((table) => {
+      const valuesContent = table.valuesContent;
+  
+      return valuesContent.some((row) => row.includes("ENERGIA (TE)"));
+    });
+  
+    if (!table) return false;
+  
+    const valuesContent = table.valuesContent;
+    const row = valuesContent.find((row) => row.includes("ENERGIA (TE)"));
+  
+    if (!row) {
+      const fallbackRow = valuesContent.find((row) => row.includes("0601"));
+  
+      if (!fallbackRow) return false;
+  
+      const valor = fallbackRow[8] || fallbackRow[7];
+      const valorSubstituido = valor.replace(/,/g, '.');
+  
+      return valorSubstituido;
+    }
+  
+    const valor = row[8] || row[7];
+    const valorSubstituido = valor.replace(/,/g, '.');
+  
+    return valorSubstituido;
+  };
   const getCOFINS = (pdf, vlrSerieDoTipoDeConta) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -19126,34 +19242,6 @@ function dadosNota(pdfData) {
     return valorSubstituido;
 
   };
-  const getENERGIA0601 = (pdf) => {
-    const table = pdf.tables.find((table) => {
-      const valuesContent = table.valuesContent;
-  
-      return valuesContent.some((row) => row.includes("ENERGIA (TE)"));
-    });
-  
-    if (!table) return false;
-  
-    const valuesContent = table.valuesContent;
-    const row = valuesContent.find((row) => row.includes("ENERGIA (TE)"));
-  
-    if (!row) {
-      const fallbackRow = valuesContent.find((row) => row.includes("0601"));
-  
-      if (!fallbackRow) return false;
-  
-      const valor = fallbackRow[8] || fallbackRow[7];
-      const valorSubstituido = valor.replace(/,/g, '.');
-  
-      return valorSubstituido;
-    }
-  
-    const valor = row[8] || row[7];
-    const valorSubstituido = valor.replace(/,/g, '.');
-  
-    return valorSubstituido;
-  };
   const getTUSD0605 = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -19172,7 +19260,7 @@ function dadosNota(pdfData) {
       if (!fallbackRow) return false;
   
       const valor = fallbackRow[8] || fallbackRow[7];
-      const valorSubstituido = valor.replace(/,/g, '.');
+      const valorSubstituido = valor.replace(/,/g, '.'); //Se nem a linha "USO SIST. DISTR (TUSD)" nem a linha "0605" forem encontradas na tabela, a função retorna false.
   
       return valorSubstituido;
     }
@@ -19182,7 +19270,7 @@ function dadosNota(pdfData) {
   
     return valorSubstituido;
   };
-  const getCodigo0807 = (pdf) => {
+  const getCodigo0807 = (pdf, vlrSerieDoTipoDeConta) => {
     const table = pdf.tables.find(table => {
       const valuesContent = table.valuesContent;
   
@@ -19202,6 +19290,14 @@ function dadosNota(pdfData) {
   
     if (!row) return false;
     //(row[8] || row[7]);
+    if (vlrSerieDoTipoDeConta === "A") {
+      const valor = row[10];
+      //console.log(row)
+      const valorFinal = valor.replace(/,/g, '.');
+    
+    return valorFinal;
+    }
+
     const valor = row[8] || row[7];
     const valorSubstituido = valor.replace(/,/g, '.');
   
@@ -19519,21 +19615,27 @@ function dadosNota(pdfData) {
       const vlrProximaleitura = getProximaleitura(pdf);
       const vlrDataDeEmissao = getDataDeEmissao(pdf);
       const vlrMensagens = getMensagens(pdf);
-      const vlrCodigo0807 = getCodigo0807(pdf)
+      const vlrCodigo0807 = getCodigo0807(pdf, vlrSerieDoTipoDeConta)// Conta A
       const vlrTUSD0605 = getTUSD0605(pdf)
       const vlrENERGIA0601 = getENERGIA0601(pdf)
       const vlrPISPASEP0699 = getPISPASEP0699(pdf)
       const vlrCOFINS = getCOFINS(pdf, vlrSerieDoTipoDeConta)// Perguntar duvida ao cliente 
-
-      const vlrAUferPontaLeituraAnterior  = getAUferPontaLeituraAnterior(pdf)
-      const vlrAUferPontaLeituraAtual = getAUferPontaLeituraAtual(pdf)
-      const vlrAUferPontaLeituraRegistrado = getAUferPontaLeituraRegistrado(pdf)
+      const vlrAUferPontaLeituraANTERIOR  = getAUferPontaLeituraANTERIOR(pdf)
+      const vlrAUferPontaLeituraATUAL = getAUferPontaLeituraATUAL(pdf)
+      const vlrAUferPontaLeituraREGISTRADO = getAUferPontaLeituraREGISTRADO(pdf)
       const vlrADemandaPontaANTERIOR = getADemandaPontaANTERIOR(pdf)
       const vlrADemandaPontaATUAL = getADemandaPontaATUAL(pdf)
-      const vlrADemandaPontaREGISTRADO = getADemandaPontaREGISTRADO(pdf)//getADemandaForaPontaIndutivaANTERIOR
-      const vlrADemandaForaPontaIndutivaANTERIOR = getADemandaForaPontaIndutivaANTERIOR(pdf)//getADemandaForaPontaIndutivaATUAL
-      const vlrADemandaForaPontaIndutivaATUAL = getADemandaForaPontaIndutivaATUAL(pdf)//getADemandaForaPontaIndutivaREGISTRADO
+      const vlrADemandaPontaREGISTRADO = getADemandaPontaREGISTRADO(pdf)
+      const vlrADemandaForaPontaIndutivaANTERIOR = getADemandaForaPontaIndutivaANTERIOR(pdf)//
+      const vlrADemandaForaPontaIndutivaATUAL = getADemandaForaPontaIndutivaATUAL(pdf)
       const vlrADemandaForaPontaIndutivaREGISTRADO = getADemandaForaPontaIndutivaREGISTRADO(pdf)
+      const vlrConsumoAtivoPontaTUSDFATURADO = getConsumoAtivoPontaTUSDFATURADO(pdf)//getConsumoAtivoPontaTUSDFATURADO
+      const vlrConsumoAtivoPontaTUSDtarifaCICMS = getConsumoAtivoPontaTUSDtarifaCICMS(pdf)
+      const vlrConsumoAtivoPontaTUSDvalueVALOR = getConsumoAtivoPontaTUSDvalueVALOR(pdf)
+      const vlrConsumoAtivoPontaTUSDvalueICMS = getConsumoAtivoPontaTUSDvalueICMS(pdf)
+      const vlrConsumoAtivoPontaTUSDBaseICMS = getConsumoAtivoPontaTUSDBaseICMS(pdf)
+      const vlrConsumoAtivoPontaTUSDaliqICMS = getConsumoAtivoPontaTUSDaliqICMS(pdf)
+      const vlrConsumoAtivoPontaTUSDvalueTARIFASeIMPOSTOS = getConsumoAtivoPontaTUSDvalueTARIFASeIMPOSTOS(pdf)
       // let splitEmissao = false 
       // let vlrDiaEmissao = false
       // let vlrMesEmissao = false
@@ -19574,24 +19676,29 @@ function dadosNota(pdfData) {
           vlrDataDeEmissao,//certo
           vlrNdaNotaFiscal,
           vlrSerieDoTipoDeConta,
-          vlrCFOP,
-          vlrMensagens,
-          vlrCodigo0807,
-          vlrTUSD0605,
-          vlrENERGIA0601,
-          vlrPISPASEP0699, 
+          vlrCFOP, //Ambas contas
+          vlrMensagens, //Conta B e conta A precisa ser testado mais vezes
+          vlrCodigo0807,//Conta A E Conta B
+          vlrTUSD0605, //Conta B
+          vlrENERGIA0601,//Conta B
+          vlrPISPASEP0699, //Conta B
           vlrCOFINS, //Conta A Vindo errado
-          vlrAUferPontaLeituraAnterior,//Conta A
-          vlrAUferPontaLeituraAtual,//Conta A
-          vlrAUferPontaLeituraRegistrado,//Conta A
+          vlrAUferPontaLeituraANTERIOR,//Conta A
+          vlrAUferPontaLeituraATUAL,//Conta A
+          vlrAUferPontaLeituraREGISTRADO,//Conta A
           vlrADemandaPontaANTERIOR,//Conta A
           vlrADemandaPontaATUAL,//Conta A
           vlrADemandaPontaREGISTRADO,//Conta A
           vlrADemandaForaPontaIndutivaANTERIOR,//CONTA A
           vlrADemandaForaPontaIndutivaATUAL,//CONTA A
           vlrADemandaForaPontaIndutivaREGISTRADO,//conta A
-
-          
+          vlrConsumoAtivoPontaTUSDFATURADO,//Conta A
+          vlrConsumoAtivoPontaTUSDtarifaCICMS,//Conta A
+          vlrConsumoAtivoPontaTUSDvalueVALOR,//Conta A
+          vlrConsumoAtivoPontaTUSDvalueICMS,//Conta A
+          vlrConsumoAtivoPontaTUSDBaseICMS,//Conta A
+          vlrConsumoAtivoPontaTUSDaliqICMS,//Conta A
+          vlrConsumoAtivoPontaTUSDvalueTARIFASeIMPOSTOS,//Conta A
           //   vlrDiaEmissao,
           //   vlrMesEmissao,
           //   vlrAnoEmissao,
