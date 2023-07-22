@@ -18894,7 +18894,7 @@ function dadosNota(pdfData) {
     const valorSubstituido = valor.replace(/,/g, '.');
   
     return valorSubstituido;
-  };//CONSUMO ATIVOF PONTA TUSD
+  };//CONSUMO ATIVOF PONTA TUSD  
   //getConsumoAtivoPontaTUSDvalueTARIFASeIMPOSTOS
   const getConsumoAtivoPontaTUSDvalueTARIFASeIMPOSTOS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD" , "CONSUMOATIVOPONTA TUSD"];
@@ -18907,8 +18907,7 @@ function dadosNota(pdfData) {
   
     const valor = row[11];
     return valor.replace(/,/g, '.');
-  };
-  //getConsumoAtivoPontaTUSDvalueVALOR
+  };  //getConsumoAtivoPontaTUSDvalueVALOR
   const getConsumoAtivoPontaTUSDvalueVALOR = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD" , "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -18933,8 +18932,7 @@ function dadosNota(pdfData) {
   
     const valor = row[9];
     return valor.replace(/,/g, '.');
-  };
-  //getConsumoAtivoPontaTUSDaliqICMS
+  };  //getConsumoAtivoPontaTUSDaliqICMS
   const getConsumoAtivoPontaTUSDaliqICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD" , "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -18946,8 +18944,7 @@ function dadosNota(pdfData) {
   
     const valor = row[8];
     return valor.replace(/,/g, '.');
-  };
-  //getConsumoAtivoPontaTUSDBaseICMS
+  }; //getConsumoAtivoPontaTUSDBaseICMS
   const getConsumoAtivoPontaTUSDBaseICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD" , "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -18959,7 +18956,7 @@ function dadosNota(pdfData) {
   
     const valor = row[7];
     return valor.replace(/,/g, '.');
-  };  
+  };//tarifaCICMS
   const getConsumoAtivoPontaTUSDtarifaCICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD" , "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -18971,8 +18968,7 @@ function dadosNota(pdfData) {
   
     const valor = row[6];
     return valor.replace(/,/g, '.');
-  };  
-  //faturado
+  };  //faturado
   const getConsumoAtivoPontaTUSDFATURADO = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD" , "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
