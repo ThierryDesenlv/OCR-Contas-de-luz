@@ -18951,13 +18951,145 @@ function dadosNota(pdfData) {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
   // testar colocar numeros diferentes na porcentagem
-      return valuesContent.some((row) => row.includes("UFERPONTA") || (row[1] && row[1].includes("UFER PONTA")));
+      return valuesContent.some((row) => row.includes("DEMANDA PONT") || (row[1] && row[1].includes("DEMANDAPONT")));
     });
   
     if (!table) return false;
   
     const valuesContent = table.valuesContent;
-    const row = valuesContent.find((row) => row.includes("UFERPONTA") || (row[1] && row[1].includes("UFER PONTA")));
+    const row = valuesContent.find((row) => row.includes("DEMANDA PONT") || (row[1] && row[1].includes("DEMANDAPONT")));
+  
+    if (!row) {
+     
+      return false;
+    }
+  
+    const valor = row[2];
+    const valorSubstituido = valor.replace(/,/g, '.');
+  
+    return valorSubstituido;
+  };
+  const getADemandaForaPontaIndutivaREGISTRADO = (pdf) => {
+    const table = pdf.tables.find((table) => {
+      const valuesContent = table.valuesContent;
+  // testar colocar numeros diferentes na porcentagem
+      return valuesContent.some((row) => row.includes("DEMANDA FORA PONTA INDUTIVA") || (row[1] && row[1].includes("DEMANDAFORAPONTA INDUTIVA")));
+    });
+  
+    if (!table) return false;
+  
+    const valuesContent = table.valuesContent;
+    const row = valuesContent.find((row) => row.includes("DEMANDA FORA PONTA INDUTIVA") || (row[1] && row[1].includes("DEMANDAFORAPONTA INDUTIVA")));
+  
+    if (!row) {
+     
+      return false;
+    }
+  
+    const valor = row[4];
+    const valorSubstituido = valor.replace(/,/g, '.');
+  
+    return valorSubstituido;
+  };
+  const getADemandaForaPontaIndutivaATUAL = (pdf) => {
+    const table = pdf.tables.find((table) => {
+      const valuesContent = table.valuesContent;
+  // testar colocar numeros diferentes na porcentagem
+      return valuesContent.some((row) => row.includes("DEMANDA FORA PONTA INDUTIVA") || (row[1] && row[1].includes("DEMANDAFORAPONTA INDUTIVA")));
+    });
+  
+    if (!table) return false;
+  
+    const valuesContent = table.valuesContent;
+    const row = valuesContent.find((row) => row.includes("DEMANDA FORA PONTA INDUTIVA") || (row[1] && row[1].includes("DEMANDAFORAPONTA INDUTIVA")));
+  
+    if (!row) {
+     
+      return false;
+    }
+  
+    const valor = row[3];
+    const valorSubstituido = valor.replace(/,/g, '.');
+  
+    return valorSubstituido;
+  };
+  const getADemandaForaPontaIndutivaANTERIOR = (pdf) => {
+    const table = pdf.tables.find((table) => {
+      const valuesContent = table.valuesContent;
+  // testar colocar numeros diferentes na porcentagem
+      return valuesContent.some((row) => row.includes("DEMANDA FORA PONTA INDUTIVA") || (row[1] && row[1].includes("DEMANDAFORAPONTA INDUTIVA")));
+    });
+  
+    if (!table) return false;
+  
+    const valuesContent = table.valuesContent;
+    const row = valuesContent.find((row) => row.includes("DEMANDA FORA PONTA INDUTIVA") || (row[1] && row[1].includes("DEMANDAFORAPONTA INDUTIVA")));
+  
+    if (!row) {
+     
+      return false;
+    }
+  
+    const valor = row[2];
+    const valorSubstituido = valor.replace(/,/g, '.');
+  
+    return valorSubstituido;
+  };
+  const getADemandaPontaREGISTRADO = (pdf) => {
+    const table = pdf.tables.find((table) => {
+      const valuesContent = table.valuesContent;
+  // testar colocar numeros diferentes na porcentagem
+      return valuesContent.some((row) => row.includes("DEMANDA PONTA") || (row[1] && row[1].includes("DEMANDAPONTA")));
+    });
+  
+    if (!table) return false;
+  
+    const valuesContent = table.valuesContent;
+    const row = valuesContent.find((row) => row.includes("DEMANDA PONTA") || (row[1] && row[1].includes("DEMANDAPONTA")));
+  
+    if (!row) {
+     
+      return false;
+    }
+  
+    const valor = row[4];
+    const valorSubstituido = valor.replace(/,/g, '.');
+  
+    return valorSubstituido;
+  };
+  const getADemandaPontaATUAL = (pdf) => {
+    const table = pdf.tables.find((table) => {
+      const valuesContent = table.valuesContent;
+  // testar colocar numeros diferentes na porcentagem
+      return valuesContent.some((row) => row.includes("DEMANDA PONTA") || (row[1] && row[1].includes("DEMANDAPONTA")));
+    });
+  
+    if (!table) return false;
+  
+    const valuesContent = table.valuesContent;
+    const row = valuesContent.find((row) => row.includes("DEMANDA PONTA") || (row[1] && row[1].includes("DEMANDAPONTA")));
+  
+    if (!row) {
+     
+      return false;
+    }
+  
+    const valor = row[3];
+    const valorSubstituido = valor.replace(/,/g, '.');
+  
+    return valorSubstituido;
+  };
+  const getADemandaPontaANTERIOR= (pdf) => {
+    const table = pdf.tables.find((table) => {
+      const valuesContent = table.valuesContent;
+  // testar colocar numeros diferentes na porcentagem
+      return valuesContent.some((row) => row.includes("DEMANDA PONTA") || (row[1] && row[1].includes("DEMANDAPONTA")));
+    });
+  
+    if (!table) return false;
+  
+    const valuesContent = table.valuesContent;
+    const row = valuesContent.find((row) => row.includes("DEMANDA PONTA") || (row[1] && row[1].includes("DEMANDAPONTA")));
   
     if (!row) {
      
@@ -19371,7 +19503,6 @@ function dadosNota(pdfData) {
 
       return cpf;
   };
-
   const getDados = (pdf) => {
       const vlrNum = getNum(pdf);
       const vlrVencimento = getVencimento(pdf);
@@ -19399,6 +19530,12 @@ function dadosNota(pdfData) {
       const vlrAUferPontaLeituraAnterior  = getAUferPontaLeituraAnterior(pdf)
       const vlrAUferPontaLeituraAtual = getAUferPontaLeituraAtual(pdf)
       const vlrAUferPontaLeituraRegistrado = getAUferPontaLeituraRegistrado(pdf)
+      const vlrADemandaPontaANTERIOR = getADemandaPontaANTERIOR(pdf)
+      const vlrADemandaPontaATUAL = getADemandaPontaATUAL(pdf)
+      const vlrADemandaPontaREGISTRADO = getADemandaPontaREGISTRADO(pdf)//getADemandaForaPontaIndutivaANTERIOR
+      const vlrADemandaForaPontaIndutivaANTERIOR = getADemandaForaPontaIndutivaANTERIOR(pdf)//getADemandaForaPontaIndutivaATUAL
+      const vlrADemandaForaPontaIndutivaATUAL = getADemandaForaPontaIndutivaATUAL(pdf)//getADemandaForaPontaIndutivaREGISTRADO
+      const vlrADemandaForaPontaIndutivaREGISTRADO = getADemandaForaPontaIndutivaREGISTRADO(pdf)
       // let splitEmissao = false 
       // let vlrDiaEmissao = false
       // let vlrMesEmissao = false
@@ -19450,10 +19587,18 @@ function dadosNota(pdfData) {
           vlrAUferPontaLeituraAnterior,//Conta A
           vlrAUferPontaLeituraAtual,//Conta A
           vlrAUferPontaLeituraRegistrado,//Conta A
+          vlrADemandaPontaANTERIOR,//Conta A
+          vlrADemandaPontaATUAL,//Conta A
+          vlrADemandaPontaREGISTRADO,//Conta A
+          vlrADemandaForaPontaIndutivaANTERIOR,//CONTA A
+          vlrADemandaForaPontaIndutivaATUAL,//CONTA A
+          vlrADemandaForaPontaIndutivaREGISTRADO,//conta A
+
+          
           //   vlrDiaEmissao,
           //   vlrMesEmissao,
           //   vlrAnoEmissao,
-          //  vlrCNPJ,
+          //   vlrCNPJ,
           //   vlrNome,
           //   vlrCidade,
           //   vlrUF,
