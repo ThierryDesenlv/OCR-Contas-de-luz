@@ -18895,8 +18895,174 @@ function dadosNota(pdfData) {
   
     return valorSubstituido;
   };
+//"UFERFORAPONTATE"
+  //TARIFASeIMPOSTOS
+  const getUFERFORAPONTATETARIFASeIMPOSTOS = (pdf) => {
+    const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
+      //console.log(row)
+      return row.some((cell) =>{
+        //console.log(`'${cell}'`) 
+        const formatcell = cell.replace(/\s/g, "");
+        if (formatcell.includes("UFERFORAPONTATE")) return true
+        return false 
+      })
+    }));
+    if (!table) return false;
+    const row = table.valuesContent.find((row) => {
+      return row.some((cell) => {
+        const formatCell = cell.replace(/\s/g, "");
+        return formatCell.includes("UFERFORAPONTATE");
+      });
+    });
+    if (!row) return false;
+  
+    const valor = row[11];
+    return valor.replace(/,/g, '.');
+  };
+    //value VALOR
+  const getUFERFORAPONTATEvalueVALOR = (pdf) => {
+    const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
+      //console.log(row)
+      return row.some((cell) =>{
+        //console.log(`'${cell}'`) 
+        const formatcell = cell.replace(/\s/g, "");
+        if (formatcell.includes('UFERFORAPONTATE')) return true
+        return false 
+      })
+    }));
+    if (!table) return false;
+    const row = table.valuesContent.find((row) => {
+      return row.some((cell) => {
+        const formatCell = cell.replace(/\s/g, "");
+        return formatCell.includes("UFERFORAPONTATE");
+      });
+    });
+    if (!row) return false;
+  
+    const valor = row[10];
+    return valor.replace(/,/g, '.');
 
+  };
+    //valueICMS
+  const getUFERFORAPONTATEvalueICMS = (pdf) => {
+    const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
+      //console.log(row)
+      return row.some((cell) =>{
+        //console.log(`'${cell}'`) 
+        const formatcell = cell.replace(/\s/g, "");
+        if (formatcell.includes('UFERFORAPONTATE')) return true
+        return false 
+      })
+    }));
+    if (!table) return false;
+    const row = table.valuesContent.find((row) => {
+      return row.some((cell) => {
+        const formatCell = cell.replace(/\s/g, "");
+        return formatCell.includes("UFERFORAPONTATE");
+      });
+    });
+    if (!row) return false;
+  
+    const valor = row[9];
+    return valor.replace(/,/g, '.');
 
+  };
+  //aliqICMS
+  const getUFERFORAPONTATEaliqICMS = (pdf) => {
+    const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
+      //console.log(row)
+      return row.some((cell) =>{
+        //console.log(`'${cell}'`) 
+        const formatcell = cell.replace(/\s/g, "");
+        if (formatcell.includes('UFERFORAPONTATE')) return true
+        return false 
+      })
+    }));
+    if (!table) return false;
+    const row = table.valuesContent.find((row) => {
+      return row.some((cell) => {
+        const formatCell = cell.replace(/\s/g, "");
+        return formatCell.includes("UFERFORAPONTATE");
+      });
+    });
+    if (!row) return false;
+  
+    const valor = row[8];
+    return valor.replace(/,/g, '.');
+
+  };
+  //BaseICMS
+  const getUFERFORAPONTATEBaseICMS = (pdf) => {
+    const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
+      //console.log(row)
+      return row.some((cell) =>{
+        //console.log(`'${cell}'`) 
+        const formatcell = cell.replace(/\s/g, "");
+        if (formatcell.includes('UFERFORAPONTATE')) return true
+        return false 
+      })
+    }));
+    if (!table) return false;
+    const row = table.valuesContent.find((row) => {
+      return row.some((cell) => {
+        const formatCell = cell.replace(/\s/g, "");
+        return formatCell.includes("UFERFORAPONTATE");
+      });
+    });
+    if (!row) return false;
+  
+    const valor = row[7];
+    return valor.replace(/,/g, '.');
+  
+  };
+  //tarifaCICMS
+  const getUFERFORAPONTATEtarifaICMS = (pdf) => {
+    const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
+      //console.log(row)
+      return row.some((cell) =>{
+        //console.log(`'${cell}'`) 
+        const formatcell = cell.replace(/\s/g, "");
+        if (formatcell.includes('UFERFORAPONTATE')) return true
+        return false 
+      })
+    }));
+    if (!table) return false;
+    const row = table.valuesContent.find((row) => {
+      return row.some((cell) => {
+        const formatCell = cell.replace(/\s/g, "");
+        return formatCell.includes("UFERFORAPONTATE");
+      });
+    });
+    if (!row) return false;
+  
+    const valor = row[6];
+    return valor.replace(/,/g, '.');
+  
+  };
+    //FATURADO
+  const getUFERFORAPONTATEFATURADO = (pdf) => {
+    const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
+      //console.log(row)
+      return row.some((cell) =>{
+        //console.log(`'${cell}'`) 
+        const formatcell = cell.replace(/\s/g, "");
+        if (formatcell.includes('UFERFORAPONTATE')) return true
+        return false 
+      })
+    }));
+    if (!table) return false;
+    const row = table.valuesContent.find((row) => {
+      return row.some((cell) => {
+        const formatCell = cell.replace(/\s/g, "");
+        return formatCell.includes("UFERFORAPONTATE");
+      });
+    });
+    if (!row) return false;
+  
+    const valor = row[5];
+    return valor.replace(/,/g, '.');
+  
+  };
   //UFER PONTA TE
   //TARIFASeIMPOSTOS
   const getUFERPONTATETARIFASeIMPOSTOS = (pdf) => {
@@ -19550,7 +19716,7 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
   
     return valorSubstituido;
   };
-  const getCOFINS = (pdf, vlrSerieDoTipoDeConta) => {
+  const getCOFINS = (pdf,vlrSerieDoTipoDeConta) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
   // testar colocar numeros diferentes na porcentagem
@@ -19569,11 +19735,11 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
     }
   
     if (vlrSerieDoTipoDeConta === "A") {
-      const valor = row[10];
-      //console.log(row)
-      const valorFinal = valor.replace(/,/g, '.');
+      // const valor = row[10];
+      // //console.log(row)
+      // const valorFinal = valor.replace(/,/g, '.');
     
-    return valorFinal;
+      return false;
     }
       const valor = row[8] || row[7];
       const valorSubstituido = valor.replace(/,/g, '.');
@@ -19982,13 +20148,21 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
       const vlrConsumoAtivoFpontaTUSDvalueICMS = getConsumoAtivoFpontaTUSDvalueICMS(pdf)
       const vlrConsumoAtivoFpontaTUSDtarifaCICMS = getConsumoAtivoFpontaTUSDtarifaCICMS(pdf)//
       const vlrConsumoAtivoFpontaTUSDFATURADO = getConsumoAtivoFpontaTUSDFATURADO(pdf)// 
-      const vlrUFERPONTATEFATURADO = getUFERPONTATEFATURADO(pdf)// se nao tiver fica = 0 no SGU
-      const vlrUFERPONTATEtarifaCICMS = getUFERPONTATEtarifaCICMS(pdf)
-      const vlrUFERPONTATEBaseICMS =  getUFERPONTATEBaseICMS(pdf)
-      const vlrUFERPONTATEaliqICMS = getUFERPONTATEaliqICMS(pdf)
-      const vlrUFERPONTATEvalueICMS = getUFERPONTATEvalueICMS(pdf)
-      const vlrUFERPONTATEvalueVALOR = getUFERPONTATEvalueVALOR(pdf)
-      const vlrUFERPONTATETARIFASeIMPOSTOS = getUFERPONTATETARIFASeIMPOSTOS(pdf)
+      const vlrUFERPONTATEFATURADO = getUFERPONTATEFATURADO(pdf)// se nao tiver fica = 0 no SGU - conta A
+      const vlrUFERPONTATEtarifaCICMS = getUFERPONTATEtarifaCICMS(pdf)// se nao tiver fica = 0 no SGU - conta A
+      const vlrUFERPONTATEBaseICMS =  getUFERPONTATEBaseICMS(pdf)// se nao tiver fica = 0 no SGU - conta A
+      const vlrUFERPONTATEaliqICMS = getUFERPONTATEaliqICMS(pdf)// se nao tiver fica = 0 no SGU - conta A
+      const vlrUFERPONTATEvalueICMS = getUFERPONTATEvalueICMS(pdf)// se nao tiver fica = 0 no SGU - conta A
+      const vlrUFERPONTATEvalueVALOR = getUFERPONTATEvalueVALOR(pdf)// se nao tiver fica = 0 no SGU - conta A
+      const vlrUFERPONTATETARIFASeIMPOSTOS = getUFERPONTATETARIFASeIMPOSTOS(pdf)// se nao tiver fica = 0 no SGU - conta A
+      const vlrUFERFORAPONTATEFATURADO = getUFERFORAPONTATEFATURADO(pdf)
+      const vlrUFERFORAPONTATEtarifaICMS = getUFERFORAPONTATEtarifaICMS(pdf)
+      const vlrUFERFORAPONTATEBaseICMS = getUFERFORAPONTATEBaseICMS(pdf)
+      const vlrUFERFORAPONTATEaliqICMS = getUFERFORAPONTATEaliqICMS(pdf)
+      const vlrUFERFORAPONTATEvalueICMS = getUFERFORAPONTATEvalueICMS(pdf)
+      const vlrUFERFORAPONTATEvalueVALOR = getUFERFORAPONTATEvalueVALOR(pdf)
+      const vlrUFERFORAPONTATETARIFASeIMPOSTOS = getUFERFORAPONTATETARIFASeIMPOSTOS(pdf)
+
       // let splitEmissao = false 
       // let vlrDiaEmissao = false
       // let vlrMesEmissao = false
@@ -20066,6 +20240,15 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
           vlrUFERPONTATEvalueICMS,
           vlrUFERPONTATEvalueVALOR,
           vlrUFERPONTATETARIFASeIMPOSTOS,
+          vlrUFERFORAPONTATEFATURADO,
+          vlrUFERFORAPONTATEtarifaICMS,
+          vlrUFERFORAPONTATEBaseICMS,
+          vlrUFERFORAPONTATEaliqICMS,
+          vlrUFERFORAPONTATEvalueICMS,
+          vlrUFERFORAPONTATEvalueVALOR,
+          vlrUFERFORAPONTATETARIFASeIMPOSTOS,
+
+
 
           //   vlrDiaEmissao,
           //   vlrMesEmissao,
