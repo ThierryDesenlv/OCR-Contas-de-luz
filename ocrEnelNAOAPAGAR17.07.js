@@ -20161,7 +20161,7 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
       const vlrUFERFORAPONTATEaliqICMS = getUFERFORAPONTATEaliqICMS(pdf)
       const vlrUFERFORAPONTATEvalueICMS = getUFERFORAPONTATEvalueICMS(pdf)
       const vlrUFERFORAPONTATEvalueVALOR = getUFERFORAPONTATEvalueVALOR(pdf)
-      const vlrUFERFORAPONTATETARIFASeIMPOSTOS = getUFERFORAPONTATETARIFASeIMPOSTOS(pdf)
+      const vlrUFERFORAPONTATETARIFASeIMPOSTOS = getUFERFORAPONTATETARIFASeIMPOSTOS(pdf)//
 
       // let splitEmissao = false 
       // let vlrDiaEmissao = false
@@ -20278,9 +20278,9 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
 // console.log(dadosNota(ocrEusebio1))
 
 for(let nota in notas) {
-      if(nota !== "ocrContaA") {
-       continue
-     }
+    //   if(nota !== "ocrContaA") {
+    //    continue
+    //  }
     console.log(`---------- ${nota} ----------`)
     dadosNota(notas[nota])
 
