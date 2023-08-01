@@ -25764,7 +25764,7 @@ function dadosNota(pdfData) {
     
     return (`${pdf.queries[indexAlias].content}`).toString();
   };
-  const getPISPASEP0699 = (pdf) => {
+  const getPISPASEP0699 = (pdf, vlrSerieDoTipoDeConta) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
   // testar colocar numeros diferentes na porcentagem
@@ -25780,6 +25780,9 @@ function dadosNota(pdfData) {
      
       return false;
     }
+    if (vlrSerieDoTipoDeConta === "A") {
+      return false;
+      }
     const valor = row[8] || row[7];
     const valorSubstituido = valor.replace(/,/g, '.');
   
@@ -26747,7 +26750,6 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
     
     return (numeroSemPontos).toString();
   };
-
   const getCFOP = (pdf) => {
     const indexAlias = pdf.queries.findIndex((i) => i.alias === 'Qual CFOP?');
     if (indexAlias === -1) return false;
@@ -27021,7 +27023,7 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
       const vlrCodigo0807 = getCodigo0807(pdf, vlrSerieDoTipoDeConta)// Conta A
       const vlrTUSD0605 = getTUSD0605(pdf)
       const vlrENERGIA0601 = getENERGIA0601(pdf)
-      const vlrPISPASEP0699 = getPISPASEP0699(pdf)
+      const vlrPISPASEP0699 = getPISPASEP0699(pdf, vlrSerieDoTipoDeConta)
       const vlrCOFINS = getCOFINS(pdf, vlrSerieDoTipoDeConta)// Perguntar duvida ao cliente 
       const vlrAUferPontaLeituraANTERIOR  = getAUferPontaLeituraANTERIOR(pdf)
       const vlrAUferPontaLeituraATUAL = getAUferPontaLeituraATUAL(pdf)
