@@ -26723,32 +26723,155 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
     
     return formatTotalaPagar.replace(/[.]|[,]/g, '');
   };
+  //   if (indexAlias === -1) return false;
+  
+  //   const numeroComPontos = pdf.queries[indexAlias].content;
+  //   const numeroSemPontos = numeroComPontos.replace(/\./g, '');
+  
+  //   // Separar o número da letra
+  //   const numero = numeroSemPontos.match(/\d+/)[0];
+  //   const letra = numeroSemPontos.replace(/\d+/, '');
+  
+  //   // Coleção de meses abreviados
+  //   const mesesAbreviados = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+  
+  //   // Verificar se a letra corresponde a um mês abreviado
+  //   const mesIndex = mesesAbreviados.indexOf(letra);
+  //   if (mesIndex !== -1) {
+  //     // Converter mês abreviado para número de 1 a 12
+  //     const mesNumero = mesIndex + 1;
+  
+  //     // Concatenar dia e mês em formato de número final
+  //     const dia = numero.slice(0, 2);
+  //     const numeroFinal = `${dia}/${mesNumero.toString().padStart(2, '0')}`;
+  
+  //     return numeroFinal;
+  //   } else {
+  //     // Se o mês abreviado não for encontrado, retorna o valor original
+  //     return numeroSemPontos;
+  //   }
+  // };
   const getLeituraAnterior = (pdf) => {
-    const indexAlias = pdf.queries.findIndex(i => i.alias == 'Leitura anterior?');
-    if (indexAlias == -1) return false;
-    
+    const indexAlias = pdf.queries.findIndex(i => i.alias === 'Leitura anterior?');
+    if (indexAlias === -1) return false;
+  
     const numeroComPontos = pdf.queries[indexAlias].content;
     const numeroSemPontos = numeroComPontos.replace(/\./g, '');
-    
-    return (numeroSemPontos).toString();
+  
+    // Verificar se o formato é "dd MMM" (dia e mês abreviado)
+    const match = numeroSemPontos.match(/(\d{2})\s*([A-Z]{3})/i);
+    if (match) {
+      const dia = match[1];
+      const mesAbreviado = match[2].toUpperCase();
+  
+      // Coleção de meses abreviados
+      const mesesAbreviados = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+  
+      // Verificar se a letra corresponde a um mês abreviado
+      const mesIndex = mesesAbreviados.indexOf(mesAbreviado);
+      if (mesIndex !== -1) {
+        // Converter mês abreviado para número de 1 a 12
+        const mesNumero = mesIndex + 1;
+  
+        // Concatenar dia e mês em formato de número final
+        const numeroFinal = `${dia}/${mesNumero.toString().padStart(2, '0')}`;
+  
+        return numeroFinal;
+      }
+    }
+  
+    // Se o formato não for "dd MMM" ou o mês abreviado não for encontrado, retorna o valor original
+    return numeroSemPontos;
   };
   const getLeituraAtual = (pdf) => {
-    const indexAlias = pdf.queries.findIndex(i => i.alias == 'Leitura atual?',);
-    if (indexAlias == -1) return false;
-    
+    const indexAlias = pdf.queries.findIndex(i => i.alias == 'Leitura atual?');
+    if (indexAlias === -1) return "Initial Value"; // Return the initial value when alias is not found
+  
     const numeroComPontos = pdf.queries[indexAlias].content;
     const numeroSemPontos = numeroComPontos.replace(/\./g, '');
-    
-    return (numeroSemPontos).toString();
+  
+    // Separar o número da letra
+    const numero = numeroSemPontos.match(/\d+/)[0];
+    const letra = numeroSemPontos.replace(/\d+/, '');
+  
+    // Coleção de meses abreviados
+    const mesesAbreviados = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+  
+    // Verificar se a letra corresponde a um mês abreviado
+    const mesIndex = mesesAbreviados.indexOf(letra);
+    if (mesIndex !== -1) {
+      // Converter mês abreviado para número de 1 a 12
+      const mesNumero = mesIndex + 1;
+  
+      // Concatenar dia e mês em formato de número final
+      const dia = numero.slice(0, 2);
+      const numeroFinal = `${dia}/${mesNumero.toString().padStart(2, '0')}`;
+  
+      return numeroFinal;
+    }
+  
+    return numeroComPontos; // Return the initial value if the conditions don't match
   };
+  // const geValorLeituraAtual = (pdf) => {
+  //   const indexAlias = pdf.queries.findIndex(i => i.alias == 'Leitura atual?');
+  //   if (indexAlias == -1) return false;
+
+  //   return (`${pdf.queries[indexAlias].content}`).toString();
+
+  // };
+
+
+  const geValorLeituraAtual = (pdf) => {
+    const indexAlias = pdf.queries.findIndex(i => i.alias === 'Leitura atual?');
+    if (indexAlias === -1) return false;
+  
+    const contentString = `${pdf.queries[indexAlias].content}`;
+    const cleanedString = contentString.replace(/\./g, ''); // Remove os pontos
+    const lastNumber = extractLastNumber(cleanedString);
+    return lastNumber === null ? false : parseInt(lastNumber);
+  };
+  
+  const extractLastNumber = (str) => {
+    const parts = str.split(' ');
+    let lastNumber = null;
+    
+    for (let i = parts.length - 1; i >= 0; i--) {
+      const num = parseInt(parts[i]);
+      if (!isNaN(num)) {
+        lastNumber = num.toString();
+        break; // Saia do loop quando encontrar o último número válido
+      }
+    }
+    
+    return lastNumber;
+  };
+  
   const getProximaleitura = (pdf) => {
     const indexAlias = pdf.queries.findIndex(i => i.alias == 'Proxima leitura?',);
-    if (indexAlias == -1) return false;
-    
+    if (indexAlias === -1) return false;
+  
     const numeroComPontos = pdf.queries[indexAlias].content;
     const numeroSemPontos = numeroComPontos.replace(/\./g, '');
-    
-    return (numeroSemPontos).toString();
+  
+    // Separar o número da letra
+    const numero = numeroSemPontos.match(/\d+/)[0];
+    const letra = numeroSemPontos.replace(/\d+/, '');
+  
+    // Coleção de meses abreviados
+    const mesesAbreviados = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+  
+    // Verificar se a letra corresponde a um mês abreviado
+    const mesIndex = mesesAbreviados.indexOf(letra);
+    if (mesIndex !== -1) {
+      // Converter mês abreviado para número de 1 a 12
+      const mesNumero = mesIndex + 1;
+  
+      // Concatenar dia e mês em formato de número final
+      const dia = numero.slice(0, 2);
+      const numeroFinal = `${dia}/${mesNumero.toString().padStart(2, '0')}`;
+  
+      return numeroFinal;
+    }
   };
   const getCFOP = (pdf) => {
     const indexAlias = pdf.queries.findIndex((i) => i.alias === 'Qual CFOP?');
@@ -26795,61 +26918,86 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
   };
   const getContaReferenteA = (pdf) => {
     const indexAlias = pdf.queries.findIndex(i => i.alias == 'CONTA REFERENTE A?');
+  
     if (indexAlias == -1) return false;
     const meses = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
     const regex = /[^A-Z]*(\w{3}|\w{4}) *(\d{4})/i;
     const match = pdf.queries[indexAlias].content.match(regex);
-
+  
     if (!match) return false;
-
-    //const dia = match[1];
+  
     const mesAbreviado = match[1].toUpperCase();
     const ano = match[2];
     const mesIndex = meses.indexOf(mesAbreviado);
     if (mesIndex === -1) return false;
   
-    const mesCompleto = meses[mesIndex];
+    const mesNumero = mesIndex + 1; // Adicionamos 1 para obter números de 1 a 12
+    if (mesNumero < 1 || mesNumero > 12) return false; // Verifica se o valor está dentro do intervalo válido
   
-    return `${mesCompleto}/${ano}`;
-  };  
+    return `${mesNumero.toString().padStart(2, '0')}/${ano}`;
+  };
   const getVencimento = (pdf) => {
     const indexAlias = pdf.queries.findIndex(i => i.alias == 'VENCIMENTO?');
-
+  
     if (indexAlias == -1) return false;
     const meses = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
     const regex = /(\d{2})[^A-Z]*(\w{3}|\w{4}) *(\d{4})/i;
     const match = pdf.queries[indexAlias].content.match(regex);
-
+  
     if (!match) return false;
-
+  
     const dia = match[1];
     const mesAbreviado = match[2].toUpperCase();
     const ano = match[3];
-    const mesIndex = meses.indexOf(mesAbreviado);
-    if (mesIndex === -1) return false;
+    
+    let mesNumero = meses.indexOf(mesAbreviado) + 1; // Adicionamos 1 para obter números de 1 a 12
+    if (mesNumero < 1 || mesNumero > 12) return false; // Verifica se o valor está dentro do intervalo válido
   
-    const mesCompleto = meses[mesIndex];
-  
-    return `${dia}/${mesCompleto}/${ano}`;
+    return `${dia}/${mesNumero.toString().padStart(2, '0')}/${ano}`;
   };
   const getDataDeEmissao = (pdf) => {
     const indexAlias = pdf.queries.findIndex(i => i.alias == 'Qual a data de emissao?');
-    if (indexAlias == -1) return false;
-    const meses = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
-    const regex = /(\d{2})[^A-Z]*(\w{3}|\w{4}) *(\d{4})/i;
-    const match = pdf.queries[indexAlias].content.match(regex);
-
-    if (!match) return false;
-
-    const dia = match[1];
-    const mesAbreviado = match[2].toUpperCase();
-    const ano = match[3];
-    const mesIndex = meses.indexOf(mesAbreviado);
-    if (mesIndex === -1) return false;
+    
+    if (indexAlias != -1) {
+      const meses = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+      const regex = /(\d{2})\D*(\w{3,4})\D*(\d{4})/i;
+      
+      const match = pdf.queries[indexAlias].content.match(regex);
   
-    const mesCompleto = meses[mesIndex];
+      if (match) {
+        const dia = match[1];
+        const mesAbreviado = match[2].toUpperCase();
+        const ano = match[3];
+        const mesIndex = meses.indexOf(mesAbreviado);
   
-    return `${dia}/${mesCompleto}/${ano}`;
+        if (mesIndex !== -1) {
+          const mesNumerico = mesIndex + 1;
+          return `${dia}/${mesNumerico}/${ano}`;
+        }
+      }
+    }
+  
+    // Caso o alias não seja encontrado ou o formato de consulta não bata,
+    // procurar em forms
+    const formEntry = pdf.forms.find(entry => entry.key === 'Data de Emissão');
+    
+    if (formEntry) {
+      const formMatch = formEntry.value.match(/(\d{2}) (\w{3}) (\d{4})/);
+  
+      if (formMatch) {
+        const dia = formMatch[1];
+        const mesAbreviado = formMatch[2].toUpperCase();
+        const ano = formMatch[3];
+        const mesesNumerico = {"JAN": 1, "FEV": 2, "MAR": 3, "ABR": 4, "MAI": 5, "JUN": 6, "JUL": 7, "AGO": 8, "SET": 9, "OUT": 10, "NOV": 11, "DEZ": 12};
+        const mesNumerico = mesesNumerico[mesAbreviado];
+  
+        if (mesNumerico) {
+          return `${dia}/${mesNumerico}/${ano}`;
+        }
+      }
+    }
+  
+    return false;
   };
   const validarCNPJ = (cnpj) => {
       cnpj = cnpj.replace(/[^\d]+/g, '');
@@ -27017,6 +27165,7 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
       const vlrCFOP = getCFOP (pdf);
       const vlrConsumoDoMes = getConsumoDoMes(pdf);
       const vlrLeituraAtual = getLeituraAtual(pdf);
+      const vlrValorLeituraAtual = geValorLeituraAtual(pdf);
       const vlrProximaleitura = getProximaleitura(pdf);
       const vlrDataDeEmissao = getDataDeEmissao(pdf);
       const vlrMensagens = getMensagens(pdf);
@@ -27098,6 +27247,7 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
           vlrNdomedidor,
           vlrLeituraAnterior,
           vlrLeituraAtual,
+          vlrValorLeituraAtual,
           vlrProximaleitura,
           vlrConsumoDoMes,
           vlrDataDeEmissao,//certo
@@ -27111,7 +27261,7 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
           vlrPISPASEP0699, //Conta B
           vlrCOFINS, //Conta A Vindo errado
           vlrAUferPontaLeituraANTERIOR,//Conta A
-          vlrAUferPontaLeituraATUAL,//Conta A
+          vlrAUferPontaLeituraATUAL,
           vlrAUferPontaLeituraREGISTRADO,//Conta A
           vlrADemandaPontaANTERIOR,//Conta A
           vlrADemandaPontaATUAL,//Conta A
