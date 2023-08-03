@@ -26783,6 +26783,38 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
     // Se o formato não for "dd MMM" ou o mês abreviado não for encontrado, retorna o valor original
     return numeroSemPontos;
   };
+  const getValorLeituraAnterior = (pdf) => {
+    const indexAlias = pdf.queries.findIndex(i => i.alias === 'Leitura anterior?');
+    if (indexAlias === -1) return false;
+  
+    const numeroComPontos = pdf.queries[indexAlias].content;
+    const numeroSemPontos = numeroComPontos.replace(/\./g, '');
+  
+    // Verificar se o formato é "dd MMM" (dia e mês abreviado)
+    const match = numeroSemPontos.match(/(\d{2})\s*([A-Z]{3})/i);
+    if (match) {
+      const dia = match[1];
+      const mesAbreviado = match[2].toUpperCase();
+  
+      // Coleção de meses abreviados
+      const mesesAbreviados = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+  
+      // Verificar se a letra corresponde a um mês abreviado
+      const mesIndex = mesesAbreviados.indexOf(mesAbreviado);
+      if (mesIndex !== -1) {
+        // Converter mês abreviado para número de 1 a 12
+        const mesNumero = mesIndex + 1;
+  
+        // Concatenar dia e mês em formato de número final
+        const numeroFinal = `${dia}/${mesNumero.toString().padStart(2, '0')}`;
+  
+        return numeroFinal;
+      }
+    }
+  
+    // Se o formato não for "dd MMM" ou o mês abreviado não for encontrado, retorna o valor original
+    return numeroSemPontos;
+  };
   const getLeituraAtual = (pdf) => {
     const indexAlias = pdf.queries.findIndex(i => i.alias == 'Leitura atual?');
     if (indexAlias === -1) return "Initial Value"; // Return the initial value when alias is not found
@@ -26812,15 +26844,6 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
   
     return numeroComPontos; // Return the initial value if the conditions don't match
   };
-  // const geValorLeituraAtual = (pdf) => {
-  //   const indexAlias = pdf.queries.findIndex(i => i.alias == 'Leitura atual?');
-  //   if (indexAlias == -1) return false;
-
-  //   return (`${pdf.queries[indexAlias].content}`).toString();
-
-  // };
-
-
   const geValorLeituraAtual = (pdf) => {
     const indexAlias = pdf.queries.findIndex(i => i.alias === 'Leitura atual?');
     if (indexAlias === -1) return false;
@@ -26830,22 +26853,20 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
     const lastNumber = extractLastNumber(cleanedString);
     return lastNumber === null ? false : parseInt(lastNumber);
   };
-  
-  const extractLastNumber = (str) => {
-    const parts = str.split(' ');
-    let lastNumber = null;
+    const extractLastNumber = (str) => {
+      const parts = str.split(' ');
+      let lastNumber = null;
     
-    for (let i = parts.length - 1; i >= 0; i--) {
-      const num = parseInt(parts[i]);
-      if (!isNaN(num)) {
-        lastNumber = num.toString();
-        break; // Saia do loop quando encontrar o último número válido
-      }
+      for (let i = parts.length - 1; i >= 0; i--) {
+        const num = parseInt(parts[i]);
+        if (!isNaN(num)) {
+          lastNumber = num.toString();
+          break; // Saia do loop quando encontrar o último número válido
+        }
     }
     
     return lastNumber;
   };
-  
   const getProximaleitura = (pdf) => {
     const indexAlias = pdf.queries.findIndex(i => i.alias == 'Proxima leitura?',);
     if (indexAlias === -1) return false;
@@ -27211,6 +27232,7 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
       const vlrUFERFORAPONTATEvalueICMS = getUFERFORAPONTATEvalueICMS(pdf)
       const vlrUFERFORAPONTATEvalueVALOR = getUFERFORAPONTATEvalueVALOR(pdf)
       const vlrUFERFORAPONTATETARIFASeIMPOSTOS = getUFERFORAPONTATETARIFASeIMPOSTOS(pdf)//
+      const vlrValorLeituraAnterior = getValorLeituraAnterior(pdf)
 
       // let splitEmissao = false 
       // let vlrDiaEmissao = false
@@ -27246,6 +27268,7 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
           vlrNdainstalacao,
           vlrNdomedidor,
           vlrLeituraAnterior,
+          vlrValorLeituraAnterior,
           vlrLeituraAtual,
           vlrValorLeituraAtual,
           vlrProximaleitura,
@@ -27276,27 +27299,27 @@ const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
           vlrConsumoAtivoPontaTUSDBaseICMS,//Conta A
           vlrConsumoAtivoPontaTUSDaliqICMS,//Conta A
           vlrConsumoAtivoPontaTUSDvalueTARIFASeIMPOSTOS,//Conta A
-          vlrConsumoAtivoFpontaTUSDFATURADO,// 
+          vlrConsumoAtivoFpontaTUSDFATURADO,//CONTA A
           vlrConsumoAtivoFpontaTUSDtarifaCICMS,//
-          vlrConsumoAtivoFpontaTUSDBaseICMS,
-          vlrConsumoAtivoFpontaTUSDaliqICMS,
-          vlrConsumoAtivoFpontaTUSDvalueICMS,
-          vlrConsumoAtivoFpontaTUSDvalueVALOR,
-          vlrConsumoAtivoFpontaTUSDTARIFASeIMPOSTOS,
-          vlrUFERPONTATEFATURADO,
-          vlrUFERPONTATEtarifaCICMS,
-          vlrUFERPONTATEBaseICMS,
-          vlrUFERPONTATEaliqICMS,
-          vlrUFERPONTATEvalueICMS,
-          vlrUFERPONTATEvalueVALOR,
-          vlrUFERPONTATETARIFASeIMPOSTOS,
-          vlrUFERFORAPONTATEFATURADO,
-          vlrUFERFORAPONTATEtarifaICMS,
-          vlrUFERFORAPONTATEBaseICMS,
-          vlrUFERFORAPONTATEaliqICMS,
-          vlrUFERFORAPONTATEvalueICMS,
-          vlrUFERFORAPONTATEvalueVALOR,
-          vlrUFERFORAPONTATETARIFASeIMPOSTOS,
+          vlrConsumoAtivoFpontaTUSDBaseICMS,//CONTA A
+          vlrConsumoAtivoFpontaTUSDaliqICMS,//CONTA A
+          vlrConsumoAtivoFpontaTUSDvalueICMS,//CONTA A
+          vlrConsumoAtivoFpontaTUSDvalueVALOR,//CONTA A
+          vlrConsumoAtivoFpontaTUSDTARIFASeIMPOSTOS,//CONTA A
+          vlrUFERPONTATEFATURADO,//CONTA A
+          vlrUFERPONTATEtarifaCICMS,//CONTA A
+          vlrUFERPONTATEBaseICMS,//CONTA A
+          vlrUFERPONTATEaliqICMS,//CONTA A
+          vlrUFERPONTATEvalueICMS,//CONTA A
+          vlrUFERPONTATEvalueVALOR,//CONTA A
+          vlrUFERPONTATETARIFASeIMPOSTOS,//CONTA A
+          vlrUFERFORAPONTATEFATURADO,//CONTA A
+          vlrUFERFORAPONTATEtarifaICMS,//CONTA A
+          vlrUFERFORAPONTATEBaseICMS,//CONTA A
+          vlrUFERFORAPONTATEaliqICMS,//CONTA A
+          vlrUFERFORAPONTATEvalueICMS,//CONTA A
+          vlrUFERFORAPONTATEvalueVALOR,//CONTA A
+          vlrUFERFORAPONTATETARIFASeIMPOSTOS,//CONTA A
 
 
 
