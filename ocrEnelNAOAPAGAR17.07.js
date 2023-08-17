@@ -44477,7 +44477,6 @@ function dadosNota(pdfData) {
 
     return `${dia}/${mesNumero.toString().padStart(2, '0')}/${ano}`;
   };
-
   const getSerieDoTipoDeConta = (pdf) => {
     const indexAlias = pdf.queries.findIndex(i => i.alias == 'Serie?');
     if (indexAlias == -1) return false;
@@ -44504,10 +44503,10 @@ function dadosNota(pdfData) {
       return false;
     }
     const valor = row[8] || row[7];
-    const valorSubstituido = valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-    return valorSubstituido;
-  };
+  };//certo
   //"UFERFORAPONTATE"
   //TARIFASeIMPOSTOS
   const getUFERFORAPONTATETARIFASeIMPOSTOS = (pdf) => {
@@ -44530,8 +44529,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[11];
-    return valor?.replace(/,/g, '.');
-  };
+    return valor
+    // return valor?.replace(/,/g, '.');
+
+  };//certo
   //value VALOR
   const getUFERFORAPONTATEvalueVALOR = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
@@ -44577,9 +44578,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[9];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   //aliqICMS
   const getUFERFORAPONTATEaliqICMS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
@@ -44601,9 +44603,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[8];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   //BaseICMS
   const getUFERFORAPONTATEBaseICMS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
@@ -44625,9 +44628,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[7];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   //tarifaCICMS
   const getUFERFORAPONTATEtarifaICMS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
@@ -44649,9 +44653,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[6];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   //FATURADO
   const getUFERFORAPONTATEFATURADO = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
@@ -44673,9 +44678,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[5];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   //UFER PONTA TE
   //TARIFASeIMPOSTOS
   const getUFERPONTATETARIFASeIMPOSTOS = (pdf) => {
@@ -44698,8 +44704,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[11];
-    return valor?.replace(/,/g, '.');
-  };
+    return valor
+    // return valor?.replace(/,/g, '.');
+
+  };//certo
   //value VALOR
   const getUFERPONTATEvalueVALOR = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
@@ -44721,9 +44729,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[10];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   //valueICMS
   const getUFERPONTATEvalueICMS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
@@ -44745,9 +44754,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[9];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   //aliqICMS
   const getUFERPONTATEaliqICMS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
@@ -44769,9 +44779,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[8];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   //BaseICMS
   const getUFERPONTATEBaseICMS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
@@ -44793,9 +44804,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[7];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   //tarifaCICMS
   const getUFERPONTATEtarifaCICMS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
@@ -44817,9 +44829,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[6];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   const getUFERPONTATEFATURADO = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -44840,9 +44853,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[5];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   const getConsumoAtivoFpontaTUSDTARIFASeIMPOSTOS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -44863,9 +44877,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[11];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   const getConsumoAtivoFpontaTUSDvalueVALOR = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -44886,9 +44901,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[10];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   const getConsumoAtivoFpontaTUSDvalueICMS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -44909,9 +44925,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[9];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   const getConsumoAtivoFpontaTUSDaliqICMS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -44932,9 +44949,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[8];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   const getConsumoAtivoFpontaTUSDBaseICMS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -44955,9 +44973,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[7];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   const getConsumoAtivoFpontaTUSDtarifaCICMS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -44978,9 +44997,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[6];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -45004,9 +45024,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[5];
-    return valor?.replace(/,/g, '.');
+    return valor
+    // return valor?.replace(/,/g, '.');
 
-  };
+  };//certo
   const getConsumoAtivoPontaTUSDvalueTARIFASeIMPOSTOS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -45027,9 +45048,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[11];
-    return valor?.replace(/,/g, '.');
+    // return valor?.replace(/,/g, '.');
+    return valor
 
-  };
+  };//certo
   const getConsumoAtivoPontaTUSDvalueVALOR = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -45040,8 +45062,9 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[10];
-    return valor?.replace(/,/g, '.');
-  };
+    return valor
+    // return valor?.replace(/,/g, '.');
+  };//certo
   const getConsumoAtivoPontaTUSDvalueICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -45052,8 +45075,9 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[9];
-    return valor?.replace(/,/g, '.');
-  };
+    return valor
+    // return valor?.replace(/,/g, '.');
+  };//certo
   const getConsumoAtivoPontaTUSDaliqICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -45064,8 +45088,9 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[8];
-    return valor?.replace(/,/g, '.');
-  };
+    return valor
+    // return valor?.replace(/,/g, '.');
+  };//certo
   const getConsumoAtivoPontaTUSDBaseICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -45076,8 +45101,9 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[7];
-    return valor?.replace(/,/g, '.');
-  };
+    return valor
+    //return valor?.replace(/,/g, '.');
+  };;//certo
   const getConsumoAtivoPontaTUSDtarifaCICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -45088,8 +45114,9 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[6];
-    return valor?.replace(/,/g, '.');
-  };
+    return valor
+    //return valor?.replace(/,/g, '.');
+  };//certo
   const getConsumoAtivoPontaTUSDFATURADO = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -45100,8 +45127,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[5];
-    return valor?.replace(/,/g, '.');
-  };
+    // console.log(valor)
+    return(valor)
+    //return valor?.replace(/,/g, '.');
+  };//certo
   const getAUferPontaLeituraREGISTRADO = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -45120,10 +45149,10 @@ function dadosNota(pdfData) {
     }
 
     const valor = row[4];
-    const valorSubstituido = valor?.replace(/,/g, '.');
-
-    return valorSubstituido;
-  };
+    // const valorSubstituido = valor?.replace(/,/g, '.');
+  return valor
+    // return valorSubstituido;
+  };//certo
   const getAUferPontaLeituraATUAL = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -45142,10 +45171,11 @@ function dadosNota(pdfData) {
     }
 
     const valor = row[3];
-    const valorSubstituido = valor?.replace(/,/g, '.');
+    return valor
+    // const valorSubstituido = valor?.replace(/,/g, '.');
 
-    return valorSubstituido;
-  };
+    // return valorSubstituido;
+  };//certo
   const getAUferPontaLeituraANTERIOR = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -45164,10 +45194,11 @@ function dadosNota(pdfData) {
     }
 
     const valor = row[2];
-    const valorSubstituido = valor?.replace(/,/g, '.');
+    return valor
+    // const valorSubstituido = valor?.replace(/,/g, '.');
 
-    return valorSubstituido;
-  };
+    // return valorSubstituido;
+  };//certo
   const getADemandaForaPontaIndutivaREGISTRADO = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -45186,10 +45217,11 @@ function dadosNota(pdfData) {
     }
 
     const valor = row[4];
-    const valorSubstituido = valor?.replace(/,/g, '.');
+    return valor
+    //const valorSubstituido = valor?.replace(/,/g, '.');
 
-    return valorSubstituido;
-  };
+ //   return valorSubstituido;
+  };//certo
   const getADemandaForaPontaIndutivaATUAL = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -45208,10 +45240,11 @@ function dadosNota(pdfData) {
     }
 
     const valor = row[3];
-    const valorSubstituido = valor?.replace(/,/g, '.');
+    return valor
+    //const valorSubstituido = valor?.replace(/,/g, '.');
 
-    return valorSubstituido;
-  };
+ //   return valorSubstituido;
+  };//certo
   const getADemandaForaPontaIndutivaANTERIOR = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -45230,10 +45263,11 @@ function dadosNota(pdfData) {
     }
 
     const valor = row[2];
-    const valorSubstituido = valor?.replace(/,/g, '.');
+    return valor
+    //const valorSubstituido = valor?.replace(/,/g, '.');
 
-    return valorSubstituido;
-  };
+ //   return valorSubstituido;
+  };//certo
   const getADemandaPontaREGISTRADO = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -45252,10 +45286,11 @@ function dadosNota(pdfData) {
     }
 
     const valor = row[4];
-    const valorSubstituido = valor?.replace(/,/g, '.');
+    return valor
+    //const valorSubstituido = valor?.replace(/,/g, '.');
 
-    return valorSubstituido;
-  };
+ //   return valorSubstituido;
+  };//certo
   const getADemandaPontaATUAL = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -45274,10 +45309,12 @@ function dadosNota(pdfData) {
     }
 
     const valor = row[3];
-    const valorSubstituido = valor?.replace(/,/g, '.');
+    return valor
+    //const valorSubstituido = valor?.replace(/,/g, '.');
 
-    return valorSubstituido;
-  };
+ //   return valorSubstituido;
+
+  };//certo
   const getADemandaPontaANTERIOR = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -45296,10 +45333,11 @@ function dadosNota(pdfData) {
     }
 
     const valor = row[2];
-    const valorSubstituido = valor?.replace(/,/g, '.');
+    return valor
+    //const valorSubstituido = valor?.replace(/,/g, '.');
 
-    return valorSubstituido;
-  };
+ //   return valorSubstituido;
+  };//certo
   const getENERGIA0601 = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -45324,10 +45362,11 @@ function dadosNota(pdfData) {
     }
 
     const valor = row[8] || row[7];
-    const valorSubstituido = valor?.replace(/,/g, '.');
+    return valor
+    //const valorSubstituido = valor?.replace(/,/g, '.');
 
-    return valorSubstituido;
-  };
+ //   return valorSubstituido;
+  };//certo
   const getCOFINS = (pdf, vlrSerieDoTipoDeConta) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -45347,6 +45386,7 @@ function dadosNota(pdfData) {
     }
 
     if (vlrSerieDoTipoDeConta === "A") {
+
       // const valor = row[10];
       // //console.log(row)
       // const valorFinal = valor?.replace(/,/g, '.');
@@ -45354,11 +45394,12 @@ function dadosNota(pdfData) {
       return false;
     }
     const valor = row[8] || row[7];
-    const valorSubstituido = valor?.replace(/,/g, '.');
+    return valor
+    //const valorSubstituido = valor?.replace(/,/g, '.');
 
-    return valorSubstituido;
+ //   return valorSubstituido;
 
-  };
+  };//certo
   const getTUSD0605 = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -45380,11 +45421,12 @@ function dadosNota(pdfData) {
     }
 
     const valor = row[8] || row[7];
-    const valorSubstituido = valor?.replace(/,/g, '.');
+    return valor
+    // const valorSubstituido = valor?.replace(/,/g, '.');
 
-    //console.log('Final value:', valorSubstituido);
-    return valorSubstituido;
-  };
+    // //console.log('Final value:', valorSubstituido);
+    // return valorSubstituido;
+  };//certo
   const getCodigo0807 = (pdf, vlrSerieDoTipoDeConta) => {
     const table = pdf.tables.find(table => {
       const valuesContent = table.valuesContent;
@@ -45408,17 +45450,18 @@ function dadosNota(pdfData) {
     if (vlrSerieDoTipoDeConta === "A") {
       const valor = row[10];
       //console.log(row)
-      const valorFinal = valor?.replace(/,/g, '.');
+      // const valorFinal = valor?.replace(/,/g, '.');
 
-      return valorFinal;
+      return valor;
     }
 
     const valor = row[8] || row[7];
-    const valorSubstituido = valor?.replace(/,/g, '.');
+    return valor
+    //const valorSubstituido = valor?.replace(/,/g, '.');
 
-    return valorSubstituido;
+ //   return valorSubstituido;
 
-  };
+  };//certo
   const getMensagens = (pdf) => {
     const indexAlias = pdf.queries.findIndex(i => i.alias == 'Mensagens?');
     const startMessage = "Mensagens";
@@ -45453,8 +45496,9 @@ function dadosNota(pdfData) {
       formatTotalaPagar = formatTotalaPagar.split('R$')[1].trim();
     }
 
-    return formatTotalaPagar?.replace(/,/g, '.');
-  };
+    return formatTotalaPagar   
+    //  ?.replace(/,/g, '.');
+  };//certo
   const getLeituraAnterior = (pdf) => {
     const indexAlias = pdf.queries.findIndex(i => i.alias === 'Leitura anterior?');
     if (indexAlias === -1) return false;
@@ -45576,57 +45620,6 @@ function dadosNota(pdfData) {
       return false; // Retorna false se não encontrar o valor final
     }
   };
-
-
-
-  // const getProximaleitura = (pdf, vlrLeituraAtual) => {
-  //   const indexAlias = pdf.queries.findIndex(i => i.alias == 'Leitura atual?');
-  //   if (indexAlias === -1) return "Initial Value"; // Return the initial value when alias is not found
-  
-  //   const numeroComPontos = pdf.queries[indexAlias].content;
-  //   const numeroSemPontos = numeroComPontos?.replace(/,/g, '.');
-  
-  //   // Extrair dia e mês
-  //   const diaMes = numeroSemPontos.match(/\d{2}\s*[A-Za-z]{3}/)[0];
-  
-  //   // Separar dia e mês
-  //   const dia = diaMes.substr(0, 2);
-  //   const mesAbreviado = diaMes.substr(2).trim();
-  
-  //   // Converter mês abreviado para número de 1 a 12
-  //   const mesesAbreviados = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
-  //   const mesNumero = mesesAbreviados.indexOf(mesAbreviado) + 1;
-  
-  //   // Formatar data final
-  //   let numeroFinal = `${dia}/${mesNumero.toString().padStart(2, '0')}`;
-  
-  //   // Verificar se o mês é "00" e substituir pelo mês da leitura anterior
-  //   if (mesNumero === 0) {
-  //     const mesLeituraAnterior = getContaReferenteA(pdf).split('/')[1];
-
-  //     numeroFinal = numeroFinal.replace(/\/00\//, `/${mesLeituraAnterior}/`);
-  //   }
-  
-  //   // Verificar se o valor recebido de outra função é válido
-  //   if (!numeroSemPontos.match(/\d{2}\s*[A-Za-z]{3}/i) && vlrLeituraAtual.match(/^\d{2}\/\d{2}\/\d{4}$/)) {
-  //     const matchDia = vlrLeituraAtual.match(/^(\d{2})/);
-  //     const matchMes = vlrLeituraAtual.match(/\/(\d{2})\//); // Captura os dois dígitos do meio como o mês
-  //     const matchAno = vlrLeituraAtual.match(/\/(\d{4})$/); // Captura os quatro últimos dígitos como o ano
-      
-  //     if (matchDia && matchMes && matchAno) {
-  //       const diaOutraFuncao = matchDia[1];
-  //       const mesOutraFuncao = matchMes[1];
-  //       const anoOutraFuncao = matchAno[1];
-  
-  //       // Concatenar o dia, mês e ano da outra função ao valor final
-  //       return `${diaOutraFuncao}/${mesOutraFuncao}/${anoOutraFuncao}`;
-  //     }
-  //   }
-
-  //   return numeroFinal; // Retorna o valor original se as condições não forem atendidas
-  // };
-
-
   const getProximaleitura = (pdf, vlrLeituraAtual) => {
     const indexAlias = pdf.queries.findIndex(i => i.alias === 'Leitura atual?');
     if (indexAlias === -1) return "Initial Value"; // Return the initial value when alias is not found
@@ -45673,22 +45666,7 @@ function dadosNota(pdfData) {
     }
   
     return numeroFinal; // Retorna o valor formatado, incluindo o ano do formato do getVencimento
-  };
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
+  }; 
   const getCFOP = (pdf) => {
     const indexAlias = pdf.queries.findIndex((i) => i.alias === 'Qual CFOP?');
     if (indexAlias === -1) return false;
