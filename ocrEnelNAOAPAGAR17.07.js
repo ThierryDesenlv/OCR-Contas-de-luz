@@ -45576,8 +45576,59 @@ function dadosNota(pdfData) {
       return false; // Retorna false se não encontrar o valor final
     }
   };
+
+
+
+  // const getProximaleitura = (pdf, vlrLeituraAtual) => {
+  //   const indexAlias = pdf.queries.findIndex(i => i.alias == 'Leitura atual?');
+  //   if (indexAlias === -1) return "Initial Value"; // Return the initial value when alias is not found
+  
+  //   const numeroComPontos = pdf.queries[indexAlias].content;
+  //   const numeroSemPontos = numeroComPontos?.replace(/,/g, '.');
+  
+  //   // Extrair dia e mês
+  //   const diaMes = numeroSemPontos.match(/\d{2}\s*[A-Za-z]{3}/)[0];
+  
+  //   // Separar dia e mês
+  //   const dia = diaMes.substr(0, 2);
+  //   const mesAbreviado = diaMes.substr(2).trim();
+  
+  //   // Converter mês abreviado para número de 1 a 12
+  //   const mesesAbreviados = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+  //   const mesNumero = mesesAbreviados.indexOf(mesAbreviado) + 1;
+  
+  //   // Formatar data final
+  //   let numeroFinal = `${dia}/${mesNumero.toString().padStart(2, '0')}`;
+  
+  //   // Verificar se o mês é "00" e substituir pelo mês da leitura anterior
+  //   if (mesNumero === 0) {
+  //     const mesLeituraAnterior = getContaReferenteA(pdf).split('/')[1];
+
+  //     numeroFinal = numeroFinal.replace(/\/00\//, `/${mesLeituraAnterior}/`);
+  //   }
+  
+  //   // Verificar se o valor recebido de outra função é válido
+  //   if (!numeroSemPontos.match(/\d{2}\s*[A-Za-z]{3}/i) && vlrLeituraAtual.match(/^\d{2}\/\d{2}\/\d{4}$/)) {
+  //     const matchDia = vlrLeituraAtual.match(/^(\d{2})/);
+  //     const matchMes = vlrLeituraAtual.match(/\/(\d{2})\//); // Captura os dois dígitos do meio como o mês
+  //     const matchAno = vlrLeituraAtual.match(/\/(\d{4})$/); // Captura os quatro últimos dígitos como o ano
+      
+  //     if (matchDia && matchMes && matchAno) {
+  //       const diaOutraFuncao = matchDia[1];
+  //       const mesOutraFuncao = matchMes[1];
+  //       const anoOutraFuncao = matchAno[1];
+  
+  //       // Concatenar o dia, mês e ano da outra função ao valor final
+  //       return `${diaOutraFuncao}/${mesOutraFuncao}/${anoOutraFuncao}`;
+  //     }
+  //   }
+
+  //   return numeroFinal; // Retorna o valor original se as condições não forem atendidas
+  // };
+
+
   const getProximaleitura = (pdf, vlrLeituraAtual) => {
-    const indexAlias = pdf.queries.findIndex(i => i.alias == 'Leitura atual?');
+    const indexAlias = pdf.queries.findIndex(i => i.alias === 'Leitura atual?');
     if (indexAlias === -1) return "Initial Value"; // Return the initial value when alias is not found
   
     const numeroComPontos = pdf.queries[indexAlias].content;
@@ -45600,15 +45651,17 @@ function dadosNota(pdfData) {
     // Verificar se o mês é "00" e substituir pelo mês da leitura anterior
     if (mesNumero === 0) {
       const mesLeituraAnterior = getContaReferenteA(pdf).split('/')[1];
+      const anoFormatoVencimento = getVencimento(pdf).split('/')[2];
       numeroFinal = numeroFinal.replace(/\/00\//, `/${mesLeituraAnterior}/`);
+      numeroFinal = `${numeroFinal}/${anoFormatoVencimento}`;
     }
   
     // Verificar se o valor recebido de outra função é válido
-    if (!numeroSemPontos.match(/\d{2}\s*[A-Za-z]{3}/i) && vlrLeituraAtual.match(/^\d{2}\/\d{2}\/\d{4}$/)) {
+    if (vlrLeituraAtual.match(/^\d{2}\/\d{2}\/\d{4}$/)) {
       const matchDia = vlrLeituraAtual.match(/^(\d{2})/);
       const matchMes = vlrLeituraAtual.match(/\/(\d{2})\//); // Captura os dois dígitos do meio como o mês
       const matchAno = vlrLeituraAtual.match(/\/(\d{4})$/); // Captura os quatro últimos dígitos como o ano
-      
+  
       if (matchDia && matchMes && matchAno) {
         const diaOutraFuncao = matchDia[1];
         const mesOutraFuncao = matchMes[1];
@@ -45618,8 +45671,10 @@ function dadosNota(pdfData) {
         return `${diaOutraFuncao}/${mesOutraFuncao}/${anoOutraFuncao}`;
       }
     }
-    return numeroFinal; // Retorna o valor original se as condições não forem atendidas
+  
+    return numeroFinal; // Retorna o valor formatado, incluindo o ano do formato do getVencimento
   };
+  
   
 
 
