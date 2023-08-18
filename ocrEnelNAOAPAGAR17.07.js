@@ -44457,7 +44457,6 @@ function dadosNota(pdfData) {
     if (vlr.length >= 4) return vlr.reverse().join('');
     return '0';
   };
-
   const getVencimento = (pdf) => {
     const indexAlias = pdf.queries.findIndex(i => i.alias == 'VENCIMENTO?');
 
@@ -44949,8 +44948,8 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[8];
-    return valor
-    // return valor?.replace(/,/g, '.');
+    // return valor
+    return valor?.replace('%', '');
 
   };//certo
   const getConsumoAtivoFpontaTUSDBaseICMS = (pdf) => {
@@ -45048,8 +45047,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[11];
-    // return valor?.replace(/,/g, '.');
-    return valor
+    
+
+    return valor.replace('.', ',');
+    // return valor
 
   };//certo
   const getConsumoAtivoPontaTUSDvalueVALOR = (pdf) => {
@@ -45088,8 +45089,8 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[8];
-    return valor
-    // return valor?.replace(/,/g, '.');
+    //return valor
+    return valor?.replace('%', '');
   };//certo
   const getConsumoAtivoPontaTUSDBaseICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
@@ -45114,9 +45115,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[6];
-    return valor
-    //return valor?.replace(/,/g, '.');
-  };//certo
+    const valorSubstituido = valor.replace('.', ',');
+
+    return valorSubstituido;
+  }//certo
   const getConsumoAtivoPontaTUSDFATURADO = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -45269,27 +45271,28 @@ function dadosNota(pdfData) {
  //   return valorSubstituido;
   };//certo
   const getADemandaPontaREGISTRADO = (pdf) => {
+    const targetRowKeywords = ["DEMANDA PONTA", "DEMANDAPONTA"];
+    
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
-      // testar colocar numeros diferentes na porcentagem
-      return valuesContent.some((row) => row.includes("DEMANDA PONTA") || (row[1] && row[1].includes("DEMANDAPONTA")));
+      return valuesContent.some((row) => targetRowKeywords.some(keyword => row.includes(keyword)));
     });
-
-    if (!table) return false;
-
-    const valuesContent = table.valuesContent;
-    const row = valuesContent.find((row) => row.includes("DEMANDA PONTA") || (row[1] && row[1].includes("DEMANDAPONTA")));
-
-    if (!row) {
-
+  
+    if (!table) {
       return false;
     }
-
+  
+    const valuesContent = table.valuesContent;
+    const row = valuesContent.find((row) => targetRowKeywords.some(keyword => row.includes(keyword)));
+  
+    if (!row) {
+      return false;
+    }
+  
     const valor = row[4];
-    return valor
-    //const valorSubstituido = valor?.replace(/,/g, '.');
-
- //   return valorSubstituido;
+    const valorSubstituido = valor?.replace('.', ',');
+  
+    return valorSubstituido;
   };//certo
   const getADemandaPontaATUAL = (pdf) => {
     const table = pdf.tables.find((table) => {
