@@ -45625,50 +45625,26 @@ function dadosNota(pdfData) {
   };
   const getProximaleitura = (pdf, vlrLeituraAtual) => {
     const indexAlias = pdf.queries.findIndex(i => i.alias === 'Leitura atual?');
-    if (indexAlias === -1) return "Initial Value"; // Return the initial value when alias is not found
+    if (indexAlias === -1) return "Initial Value";
   
-    const numeroComPontos = pdf.queries[indexAlias].content;
-    const numeroSemPontos = numeroComPontos?.replace(/,/g, '.');
+    const numeroSemPontos = pdf.queries[indexAlias].content.replace(/,/g, '.');
   
-    // Extrair dia e mês
-    const diaMes = numeroSemPontos.match(/\d{2}\s*[A-Za-z]{3}/)[0];
+    const [dia, mesAbreviado] = numeroSemPontos.match(/\d{2}\s*[A-Za-z]{3}/)[0].split(' ');
+    const mesNumero = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"].indexOf(mesAbreviado) + 1;
   
-    // Separar dia e mês
-    const dia = diaMes.substr(0, 2);
-    const mesAbreviado = diaMes.substr(2).trim();
-  
-    // Converter mês abreviado para número de 1 a 12
-    const mesesAbreviados = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
-    const mesNumero = mesesAbreviados.indexOf(mesAbreviado) + 1;
-  
-    // Formatar data final
     let numeroFinal = `${dia}/${mesNumero.toString().padStart(2, '0')}`;
   
-    // Verificar se o mês é "00" e substituir pelo mês da leitura anterior
     if (mesNumero === 0) {
       const mesLeituraAnterior = getContaReferenteA(pdf).split('/')[1];
-      const anoFormatoVencimento = getVencimento(pdf).split('/')[2];
-      numeroFinal = numeroFinal.replace(/\/00\//, `/${mesLeituraAnterior}/`);
-      numeroFinal = `${numeroFinal}/${anoFormatoVencimento}`;
+      numeroFinal = numeroFinal.replace(/\/00\//, `/${mesLeituraAnterior}/`) + `/${getVencimento(pdf).split('/')[2]}`;
     }
   
-    // Verificar se o valor recebido de outra função é válido
     if (vlrLeituraAtual.match(/^\d{2}\/\d{2}\/\d{4}$/)) {
-      const matchDia = vlrLeituraAtual.match(/^(\d{2})/);
-      const matchMes = vlrLeituraAtual.match(/\/(\d{2})\//); // Captura os dois dígitos do meio como o mês
-      const matchAno = vlrLeituraAtual.match(/\/(\d{4})$/); // Captura os quatro últimos dígitos como o ano
-  
-      if (matchDia && matchMes && matchAno) {
-        const diaOutraFuncao = matchDia[1];
-        const mesOutraFuncao = matchMes[1];
-        const anoOutraFuncao = matchAno[1];
-  
-        // Concatenar o dia, mês e ano da outra função ao valor final
-        return `${diaOutraFuncao}/${mesOutraFuncao}/${anoOutraFuncao}`;
-      }
+      const [, diaOutraFuncao, mesOutraFuncao, anoOutraFuncao] = vlrLeituraAtual.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+      return `${diaOutraFuncao}/${mesOutraFuncao}/${anoOutraFuncao}`;
     }
   
-    return numeroFinal; // Retorna o valor formatado, incluindo o ano do formato do getVencimento
+    return numeroFinal;
   }; 
   const getCFOP = (pdf) => {
     const indexAlias = pdf.queries.findIndex((i) => i.alias === 'Qual CFOP?');
@@ -45742,60 +45718,51 @@ function dadosNota(pdfData) {
     return `${dia}/${mesDia}`;
   };
   const getDataDeEmissao = (pdf) => {
+    const meses = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+    
     const indexAlias = pdf.queries.findIndex(i => i.alias == 'Qual a data de emissao?');
-
+  
     if (indexAlias != -1) {
-      const meses = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
       const regex = /(\d{2})\D*(\w{3,4})\D*(\d{4})/i;
-
       const match = pdf.queries[indexAlias].content.match(regex);
-
+  
       if (match) {
         const dia = match[1];
         const mesAbreviado = match[2].toUpperCase();
         const ano = match[3];
         const mesIndex = meses.indexOf(mesAbreviado);
-
+  
         if (mesIndex !== -1) {
-          const mesNumerico = mesIndex + 1;
+          const mesNumerico = (mesIndex + 1).toString().padStart(2, '0');
           return `${dia}/${mesNumerico}/${ano}`;
         }
       }
     }
-
-    // Caso o alias não seja encontrado ou o formato de consulta não bata,
-    // procurar em forms
+  
+    // Caso o alias não seja encontrado ou o formato de consulta não bata, procurar em forms
     const formEntry = pdf.forms.find(entry => entry.key === 'Data de Emissão');
-
+  
     if (formEntry) {
       const formMatch = formEntry.value.match(/(\d{2}) (\w{3}) (\d{4})/);
-
+  
       if (formMatch) {
         const dia = formMatch[1];
         const mesAbreviado = formMatch[2].toUpperCase();
         const ano = formMatch[3];
-        const mesesNumerico = {
-          "JAN": 1,
-          "FEV": 2,
-          "MAR": 3,
-          "ABR": 4,
-          "MAI": 5,
-          "JUN": 6,
-          "JUL": 7,
-          "AGO": 8,
-          "SET": 9,
-          "OUT": 10,
-          "NOV": 11,
-          "DEZ": 12
-        };
-        const mesNumerico = mesesNumerico[mesAbreviado];
-
-        if (mesNumerico) {
-          return `${dia}/${mesNumerico}/${ano}`;
+        const mesIndex = meses.indexOf(mesAbreviado);
+      
+        if (mesIndex !== -1) {
+          const mesNumerico = mesIndex + 1;
+      
+          if (mesNumerico > 0 && mesNumerico < 10) {
+            return `${dia}/0${mesNumerico}/${ano}`;
+          } else if (mesNumerico >= 10 && mesNumerico <= 12) {
+            return `${dia}/${mesNumerico}/${ano}`;
+          }
         }
       }
     }
-
+  
     return false;
   };
   const validarCNPJ = (cnpj) => {
@@ -46129,10 +46096,14 @@ function dadosNota(pdfData) {
 // console.log(dadosNota(ocrSaoBernardo1))
 // console.log(dadosNota(ocrEusebio1))
 
+// uma nota use abaixo
 for (let nota in notas) {
-  //   if(nota !== "ocrContaA") {
-  //    continue
-  //  }
+  // uma nota use abaixo
+//     if(nota !== "ocrContaA") {
+//      continue
+   
+//uma nota so use acima ou comente
+
   console.log(`---------- ${nota} ----------`)
   dadosNota(notas[nota])
 
