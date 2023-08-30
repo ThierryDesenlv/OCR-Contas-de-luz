@@ -44523,7 +44523,7 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[11];
-    return valor
+    return valor?.replace('.', ',');
     // return valor?.replace(/,/g, '.');
 
   };//certo
@@ -44548,7 +44548,7 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[10];
-    return valor?.replace(/,/g, '.');
+    return valor?.replace('.', ',');
 
   };
   //valueICMS
@@ -44572,7 +44572,7 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[9];
-    return valor
+    return valor?.replace('.', ',');
     // return valor?.replace(/,/g, '.');
 
   };//certo
@@ -44597,7 +44597,8 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[8];
-    return valor
+    // return valor
+    return valor?.replace('%', '');
     // return valor?.replace(/,/g, '.');
 
   };//certo
@@ -44622,7 +44623,7 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[7];
-    return valor
+    return valor?.replace('.', ',');
     // return valor?.replace(/,/g, '.');
 
   };//certo
@@ -44647,7 +44648,7 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[6];
-    return valor
+    return valor?.replace('.', ',');
     // return valor?.replace(/,/g, '.');
 
   };//certo
@@ -44672,7 +44673,8 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[5];
-    return valor
+    //return valor
+    return valor?.replace('.', ',');
     // return valor?.replace(/,/g, '.');
 
   };//certo
@@ -44698,7 +44700,7 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[11];
-    return valor
+    return valor?.replace('.', ',');
     // return valor?.replace(/,/g, '.');
 
   };//certo
@@ -44723,7 +44725,7 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[10];
-    return valor
+    return valor?.replace('.', ',');
     // return valor?.replace(/,/g, '.');
 
   };//certo
@@ -44748,9 +44750,9 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[9];
-    return valor
+    // return valor
+    return valor?.replace('.', ',');
     // return valor?.replace(/,/g, '.');
-
   };//certo
   //aliqICMS
   const getUFERPONTATEaliqICMS = (pdf) => {
@@ -44773,7 +44775,7 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[8];
-    return valor
+    return valor?.replace('%', '');
     // return valor?.replace(/,/g, '.');
 
   };//certo
@@ -44798,7 +44800,7 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[7];
-    return valor
+    return valor?.replace('.', ',');
     // return valor?.replace(/,/g, '.');
 
   };//certo
@@ -44823,7 +44825,7 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[6];
-    return valor
+    return valor?.replace('.', ',');
     // return valor?.replace(/,/g, '.');
 
   };//certo
@@ -44851,7 +44853,7 @@ function dadosNota(pdfData) {
 
     const valor = row[5];
     //console.log(valor)
-    return valor
+    return valor?.replace('.', ',');
     // return valor?.replace(/,/g, '.');
 
   };//certo
@@ -45056,10 +45058,14 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[10];
-  //   return valor
-  return valor.replace('.', ',');
-    // return valor?.replace(/,/g, '.');
-  };//certo
+    const parts = valor.split(',');
+    if (parts.length > 1) {
+        parts[0] = parts[0]?.replace(/\./g, '');
+        parts[1] = parts[1]?.replace(/\./g, ',');
+    }
+
+    return parts?.join('.');
+};
   const getConsumoAtivoPontaTUSDvalueICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -45098,10 +45104,16 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[7];
-    //return valor
-    return valor.replace('.', ',');
-    //return valor?.replace(/,/g, '.');
-  };//certo
+    const parts = valor.split(',');
+    if (parts.length > 1) {
+        parts[0] = parts[0]?.replace(/\./g, '');
+        parts[1] = parts[1]?.replace(/\./g, ',');
+    }
+
+    return parts?.join('.');
+};//certo
+
+
   const getConsumoAtivoPontaTUSDtarifaCICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -45127,9 +45139,14 @@ function dadosNota(pdfData) {
 
     const valor = row[5];
  
-    return valor.replace('.', ',');
-    
-  };//certo
+    const parts = valor.split(',');
+    if (parts.length > 1) {
+        parts[0] = parts[0]?.replace(/\./g, '');
+        parts[1] = parts[1]?.replace(/\./g, ',');
+    }
+
+    return parts?.join('.');
+};//certo
   const getAUferPontaLeituraREGISTRADO = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -45984,7 +46001,7 @@ function dadosNota(pdfData) {
     const vlrADemandaPontaANTERIOR = getADemandaPontaANTERIOR(pdf)
     const vlrADemandaPontaATUAL = getADemandaPontaATUAL(pdf)
     const vlrADemandaPontaREGISTRADO = getADemandaPontaREGISTRADO(pdf)
-    const vlrADemandaForaPontaIndutivaANTERIOR = getADemandaForaPontaIndutivaANTERIOR(pdf) //
+    const vlrADemandaForaPontaIndutivaANTERIOR = getADemandaForaPontaIndutivaANTERIOR(pdf) 
     const vlrADemandaForaPontaIndutivaATUAL = getADemandaForaPontaIndutivaATUAL(pdf)
     const vlrADemandaForaPontaIndutivaREGISTRADO = getADemandaForaPontaIndutivaREGISTRADO(pdf)
     const vlrConsumoAtivoPontaTUSDFATURADO = getConsumoAtivoPontaTUSDFATURADO(pdf) //getConsumoAtivoPontaTUSDFATURADO
