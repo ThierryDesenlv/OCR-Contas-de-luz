@@ -44829,7 +44829,6 @@ function dadosNota(pdfData) {
     // return valor?.replace(/,/g, '.');
 
   };//certo
-
   const getUFERPONTATEFATURADO = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -45065,7 +45064,7 @@ function dadosNota(pdfData) {
     }
 
     return parts?.join('.');
-};
+  };
   const getConsumoAtivoPontaTUSDvalueICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -45111,9 +45110,7 @@ function dadosNota(pdfData) {
     }
 
     return parts?.join('.');
-};//certo
-
-
+  };//certo
   const getConsumoAtivoPontaTUSDtarifaCICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -45146,7 +45143,7 @@ function dadosNota(pdfData) {
     }
 
     return parts?.join('.');
-};//certo
+  };//certo
   const getAUferPontaLeituraREGISTRADO = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -45572,7 +45569,6 @@ function dadosNota(pdfData) {
       //console.log('Não foi encontrado um valor numérico válido.');
       return false; // Se não for um número, retorna false
   };
-  //const getLeituraAtual = (pdf) => {
   const getLeituraAtual = (pdf) => {
           //console.log("Início da função getLeituraAtual");
       
@@ -45610,7 +45606,7 @@ function dadosNota(pdfData) {
       
           //console.log("Formato de leitura atual inválido ou mês abreviado não encontrado");
           return numeroSemPontos;
-  };    
+  };  
   const geValorLeituraAtual = (pdf) => {
       const indexAlias = pdf.queries.findIndex(i => i.alias === 'Leitura atual?');
       if (indexAlias === -1) return false;
@@ -46097,7 +46093,6 @@ function dadosNota(pdfData) {
       vlrUFERFORAPONTATEvalueVALOR, //CONTA A
       vlrUFERFORAPONTATETARIFASeIMPOSTOS, //CONTA A
       vlrNumeroSubGrupo,
-      // vlrTUSD0605TWO,
     };
   };
   //ate aqui
