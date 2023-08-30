@@ -11251,11 +11251,7 @@ const notas = {
         "key": "Fator multiplicador",
         "value": "1,00000"
       },
-      {
-        "page": 1,
-        "key": "Leitura anterior",
-        "value": "18 MAI 3021"
-      },
+ 
       {
         "page": 1,
         "key": "mai/22",
@@ -44442,7 +44438,6 @@ const notas = {
     }]
   }
 }
-
 function dadosNota(pdfData) {
   const checkOnlyNumber = (str) => `${str}`.trim().split('').filter(a => a != ' ').reduce((n, c) => !isNaN(Number(c)) ? n + 1 : n, 0) === `${str}`.trim().length;
   const checkContainsNumber = (str) => `${str}`.trim().split('').filter(a => a != ' ').reduce((n, c) => !isNaN(Number(c)) ? n + 1 : n, 0);
@@ -44832,6 +44827,7 @@ function dadosNota(pdfData) {
     // return valor?.replace(/,/g, '.');
 
   };//certo
+
   const getUFERPONTATEFATURADO = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -44846,12 +44842,15 @@ function dadosNota(pdfData) {
     const row = table.valuesContent.find((row) => {
       return row.some((cell) => {
         const formatCell = cell?.replace(/\s/g, "");
+        //console.log(formatCell.includes("UFERPONTATE"))
         return formatCell.includes("UFERPONTATE");
+        
       });
     });
     if (!row) return false;
 
     const valor = row[5];
+    //console.log(valor)
     return valor
     // return valor?.replace(/,/g, '.');
 
@@ -44876,8 +44875,8 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[11];
-    return valor
-    // return valor?.replace(/,/g, '.');
+  //   return valor?.replace(/,/g, '.');
+    return valor?.replace('.', ',');
 
   };//certo
   const getConsumoAtivoFpontaTUSDvalueVALOR = (pdf) => {
@@ -44900,7 +44899,7 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[10];
-    return valor
+    return valor?.replace('.', ',');
     // return valor?.replace(/,/g, '.');
 
   };//certo
@@ -44924,7 +44923,8 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[9];
-    return valor
+    return valor?.replace('.', ',');
+
     // return valor?.replace(/,/g, '.');
 
   };//certo
@@ -44973,6 +44973,7 @@ function dadosNota(pdfData) {
 
     const valor = row[7];
     return valor
+    //return valor?.replace(/,/g, '.');
     // return valor?.replace(/,/g, '.');
 
   };//certo
@@ -44996,62 +44997,54 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[6];
-    return valor
+  //   return valor
+  //   return valor?.replace(/,/g, '.');
+    return valor?.replace('.', ',');
     // return valor?.replace(/,/g, '.');
 
   };//certo
   const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
-    const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
-      //console.log(row)
-      return row.some((cell) => {
-        //console.log(`'${cell}'`) 
-        const formatcell = cell?.replace(/\s/g, "");
-        if (formatcell.includes('CONSUMOATIVOFPONTATUSD')) return true
-        //console.log(formatcell) 
-
-        return false
-
-      })
-    }));
-    if (!table) return false;
-    const row = table.valuesContent.find((row) => {
-      return row.some((cell) => {
-        const formatCell = cell?.replace(/\s/g, "");
-        return formatCell.includes('CONSUMOATIVOFPONTATUSD');
+      const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
+          const formatRow = row.map(cell => cell?.replace(/\s/g, ""));
+          return formatRow.includes('CONSUMOATIVOFPONTATUSD');
+      }));
+  
+      if (!table) return false;
+  
+      const row = table.valuesContent.find((row) => {
+          const formatRow = row.map(cell => cell?.replace(/\s/g, ""));
+          return formatRow.includes("CONSUMOATIVOFPONTATUSD");
       });
-    });
-    if (!row) return false;
-
-    const valor = row[5];
-    return valor
-    // return valor?.replace(/,/g, '.');
-
-  };//certo
+  
+      if (!row) return false;
+  
+      const valor = row[5];
+  
+      // Substituir vírgulas por pontos na parte decimal e pontos por vírgulas na parte inteira
+      const parts = valor.split(',');
+      if (parts.length > 1) {
+          parts[0] = parts[0]?.replace(/\./g, '');
+          parts[1] = parts[1]?.replace(/\./g, ',');
+      }
+  
+      return parts?.join('.');
+  };
   const getConsumoAtivoPontaTUSDvalueTARIFASeIMPOSTOS = (pdf) => {
-    const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
-      //console.log(row)
-      return row.some((cell) => {
-        //console.log(`'${cell}'`) 
-        const formatcell = cell?.replace(" ", "")
-        if (formatcell.includes('CONSUMOATIVOPONTATUSD')) return true
-        return false
-      })
-    }));
-    if (!table) return false;
-    const row = table.valuesContent.find((row) => {
-      return row.some((cell) => {
-        const formatCell = cell?.replace(/\s/g, "");
-        return formatCell.includes("CONSUMOATIVOPONTATUSD");
-      });
-    });
-    if (!row) return false;
+      const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
+      const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
+  
+      if (!table) return false;
+  
+      const row = table.valuesContent.find((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword))));
+      if (!row) return false;
+  
+      const valor = row[11];
+      // return valor
+      // return valor?.replace(/,/g, '.');
+      return valor.replace('.', ',');
+      
 
-    const valor = row[11];
-    
-
-    return valor.replace('.', ',');
-    // return valor
-
+      // return valor?.replace(/./g, ',');
   };//certo
   const getConsumoAtivoPontaTUSDvalueVALOR = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
@@ -45063,7 +45056,8 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[10];
-    return valor
+  //   return valor
+  return valor.replace('.', ',');
     // return valor?.replace(/,/g, '.');
   };//certo
   const getConsumoAtivoPontaTUSDvalueICMS = (pdf) => {
@@ -45076,8 +45070,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[9];
-    return valor
-    // return valor?.replace(/,/g, '.');
+    //return valor
+  //   return valor?.replace(/,/g, '.');
+    return valor.replace('.', ',');
+    
   };//certo
   const getConsumoAtivoPontaTUSDaliqICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
@@ -45102,9 +45098,10 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[7];
-    return valor
+    //return valor
+    return valor.replace('.', ',');
     //return valor?.replace(/,/g, '.');
-  };;//certo
+  };//certo
   const getConsumoAtivoPontaTUSDtarifaCICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -45129,9 +45126,9 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[5];
-    // console.log(valor)
-    return(valor)
-    //return valor?.replace(/,/g, '.');
+ 
+    return valor.replace('.', ',');
+    
   };//certo
   const getAUferPontaLeituraREGISTRADO = (pdf) => {
     const table = pdf.tables.find((table) => {
@@ -45152,7 +45149,7 @@ function dadosNota(pdfData) {
 
     const valor = row[4];
     // const valorSubstituido = valor?.replace(/,/g, '.');
-  return valor
+    return valor?.replace('.', ',');
     // return valorSubstituido;
   };//certo
   const getAUferPontaLeituraATUAL = (pdf) => {
@@ -45173,7 +45170,7 @@ function dadosNota(pdfData) {
     }
 
     const valor = row[3];
-    return valor
+    return valor?.replace(/,/g, '.');
     // const valorSubstituido = valor?.replace(/,/g, '.');
 
     // return valorSubstituido;
@@ -45196,7 +45193,7 @@ function dadosNota(pdfData) {
     }
 
     const valor = row[2];
-    return valor
+    return valor?.replace(/,/g, '.');
     // const valorSubstituido = valor?.replace(/,/g, '.');
 
     // return valorSubstituido;
@@ -45219,10 +45216,10 @@ function dadosNota(pdfData) {
     }
 
     const valor = row[4];
-    return valor
-    //const valorSubstituido = valor?.replace(/,/g, '.');
+    //return valor
+    return valor?.replace('.', ',');
+   
 
- //   return valorSubstituido;
   };//certo
   const getADemandaForaPontaIndutivaATUAL = (pdf) => {
     const table = pdf.tables.find((table) => {
@@ -45242,7 +45239,8 @@ function dadosNota(pdfData) {
     }
 
     const valor = row[3];
-    return valor
+    return valor?.replace(/,/g, '.');
+
     //const valorSubstituido = valor?.replace(/,/g, '.');
 
  //   return valorSubstituido;
@@ -45266,9 +45264,8 @@ function dadosNota(pdfData) {
 
     const valor = row[2];
     return valor
-    //const valorSubstituido = valor?.replace(/,/g, '.');
+  //   return valor.replace('.', ',');
 
- //   return valorSubstituido;
   };//certo
   const getADemandaPontaREGISTRADO = (pdf) => {
     const targetRowKeywords = ["DEMANDA PONTA", "DEMANDAPONTA"];
@@ -45535,117 +45532,92 @@ function dadosNota(pdfData) {
     return numeroSemPontos;
   };
   const getValorLeituraAnterior = (pdf) => {
-    const indexAlias = pdf.queries.findIndex(i => i.alias === 'Leitura anterior?');
-    if (indexAlias === -1) return false;
-
-    const numeroComPontos = pdf.queries[indexAlias].content;
-    const numeroSemPontos = numeroComPontos?.replace(/,/g, '.');;
-
-    // Verificar se o formato é "dd MMM" (dia e mês abreviado)
-    const match = numeroSemPontos.match(/(\d{2})\s*([A-Z]{3})/i);
-    if (match) {
-      const dia = match[1];
-      const mesAbreviado = match[2].toUpperCase();
-
-      // Coleção de meses abreviados
-      const mesesAbreviados = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
-
-      // Verificar se a letra corresponde a um mês abreviado
-      const mesIndex = mesesAbreviados.indexOf(mesAbreviado);
-      if (mesIndex !== -1) {
-        // Converter mês abreviado para número de 1 a 12
-        const mesNumero = mesIndex + 1;
-
-        // Concatenar dia e mês em formato de número final
-        const numeroFinal = `${dia}/${mesNumero.toString().padStart(2, '0')}`;
-
-        return numeroFinal;
+      const indexAlias = pdf.queries.findIndex(i => i.alias === 'Leitura anterior?');
+      if (indexAlias === -1) return false;
+      const numeroComPontos = pdf.queries[indexAlias].content;
+      const numeroSemPontos = numeroComPontos?.replace(/,/g, '.');
+      const partes = numeroSemPontos.split(' '); // Dividir a string em partes separadas por espaços
+      const ultimoValorNumerico = partes[partes.length - 1]; // Último valor numérico
+      //console.log('Valor numérico da leitura anterior:', ultimoValorNumerico);
+      if (!isNaN(ultimoValorNumerico.replace('.', ''))) {
+        //console.log('Retornando valor numérico da leitura anterior:', ultimoValorNumerico);
+        return ultimoValorNumerico; // Retornar o último valor numérico encontrado
       }
-    }
-
-    // Se o formato não for "dd MMM" ou o mês abreviado não for encontrado, retorna o valor original
-    return numeroSemPontos;
+      const medicaoTable = pdf.tables.find(table => table.headersContent[0] === 'Dados de Medição');
+      if (medicaoTable) {
+        const leituraAnteriorRow = medicaoTable.valuesContent.find(row => row[0] === 'Leitura anterior');
+        if (leituraAnteriorRow) {
+          const valorLeituraAnterior = leituraAnteriorRow[1]?.replace(/[^0-9\.]/g, '');
+          //console.log('Retornando valor numérico da tabela:', valorLeituraAnterior);
+          return valorLeituraAnterior;
+        }
+      }
+      //console.log('Não foi encontrado um valor numérico válido.');
+      return false; // Se não for um número, retorna false
   };
+  //const getLeituraAtual = (pdf) => {
   const getLeituraAtual = (pdf) => {
-    const indexAlias = pdf.queries.findIndex(i => i.alias == 'Leitura atual?');
-    if (indexAlias === -1) return "Initial Value"; // Return the initial value when alias is not found
-  
-    const numeroComPontos = pdf.queries[indexAlias].content;
-    const numeroSemPontos = numeroComPontos?.replace(/,/g, '.');
-  
-    // Extrair dia e mês
-    const diaMes = numeroSemPontos.match(/\d{2}\s*[A-Za-z]{3}/)[0];
-  
-    // Separar dia e mês
-    const dia = diaMes.substr(0, 2);
-    const mesAbreviado = diaMes.substr(3).trim(); // Ajustar o índice para pegar o mês corretamente
-  
-    // Converter mês abreviado para número de 1 a 12
-    const mesesAbreviados = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
-    const mesNumero = mesesAbreviados.indexOf(mesAbreviado) + 1;
-  
-    // Verificar se o mês não foi reconhecido corretamente e utilizar o formato do getVencimento
-    if (mesNumero === 0) {
-      const mesFormatoVencimento = getVencimento(pdf).split('/')[1];
-      return `${dia}/${mesFormatoVencimento}/${getVencimento(pdf).split('/')[2]}`;
-    }
-  
-    // Obter o ano da função getVencimento(pdf)
-    const anoVencimento = getVencimento(pdf).split('/')[2];
-  
-    // Formatar data final com o ano da função getVencimento
-    const numeroFinal = `${dia}/${mesNumero.toString().padStart(2, '0')}/${anoVencimento}`;
-  
-    return numeroFinal;
-  };
+          //console.log("Início da função getLeituraAtual");
+      
+          const indexAlias = pdf.queries.findIndex(i => i.alias === 'Leitura atual?');
+          if (indexAlias === -1) {
+              //console.log("Alias não encontrado, retornando false");
+              return false;
+          }
+      
+          const numeroComPontos = pdf.queries[indexAlias].content;
+          const numeroSemPontos = numeroComPontos?.replace(/,/g, '.');
+          //console.log("Número sem pontos:", numeroSemPontos);
+      
+          const match = numeroSemPontos.match(/(\d{2})\s*([A-Z]{3})/i);
+          if (match) {
+              const dia = match[1];
+              const mesAbreviado = match[2].toUpperCase();
+              //console.log("Dia:", dia);
+              //console.log("Mês abreviado:", mesAbreviado);
+      
+              const mesesAbreviados = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+              const mesIndex = mesesAbreviados.indexOf(mesAbreviado === "AGC" ? "AGO" : mesAbreviado);
+              //console.log("Índice do mês abreviado:", mesIndex);
+      
+              if (mesIndex !== -1) {
+                  const anoVencimento = getVencimento(pdf).split('/')[2];
+                  //console.log("Ano de vencimento:", anoVencimento);
+      
+                  const numeroFinal = `${dia}/${(mesIndex + 1).toString().padStart(2, '0')}/${anoVencimento}`;
+                  //console.log("Número final formatado:", numeroFinal);
+      
+                  return numeroFinal;
+              }
+          }
+      
+          //console.log("Formato de leitura atual inválido ou mês abreviado não encontrado");
+          return numeroSemPontos;
+  };    
   const geValorLeituraAtual = (pdf) => {
-    const indexAlias = pdf.queries.findIndex(i => i.alias == 'Leitura atual?');
-    if (indexAlias === -1) return "Initial Value"; // Return the initial value when alias is not found
-
-    const numeroComPontos = pdf.queries[indexAlias].content;
-    const numeroSemPontos = numeroComPontos?.replace(/,/g, '.');;
-
-    //console.log('numeroSemPontos:', numeroSemPontos);
-
-    // Encontrar os números no final usando reverse
-    const reversedNumeroSemPontos = numeroSemPontos?.split('').reverse().join('');
-    //console.log('reversedNumeroSemPontos:', reversedNumeroSemPontos);
-
-    const matchResultado = reversedNumeroSemPontos?.match(/\d+/);
-    //console.log('matchResultado:', matchResultado);
-
-    if (matchResultado) {
-      const numeroFinalReversed = matchResultado[0]; // Valor numérico no final (reversed)
-      const numeroFinal = numeroFinalReversed ?.split('').reverse().join(''); // Inverter de volta
-      //console.log('numeroFinal:', numeroFinal);
-      return numeroFinal;
-    } else {
-      return false; // Retorna false se não encontrar o valor final
-    }
-  };
-  const getProximaleitura = (pdf, vlrLeituraAtual) => {
-    const indexAlias = pdf.queries.findIndex(i => i.alias === 'Leitura atual?');
-    if (indexAlias === -1) return "Initial Value";
-  
-    const numeroSemPontos = pdf.queries[indexAlias].content.replace(/,/g, '.');
-  
-    const [dia, mesAbreviado] = numeroSemPontos.match(/\d{2}\s*[A-Za-z]{3}/)[0].split(' ');
-    const mesNumero = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"].indexOf(mesAbreviado) + 1;
-  
-    let numeroFinal = `${dia}/${mesNumero.toString().padStart(2, '0')}`;
-  
-    if (mesNumero === 0) {
-      const mesLeituraAnterior = getContaReferenteA(pdf).split('/')[1];
-      numeroFinal = numeroFinal.replace(/\/00\//, `/${mesLeituraAnterior}/`) + `/${getVencimento(pdf).split('/')[2]}`;
-    }
-  
-    if (vlrLeituraAtual.match(/^\d{2}\/\d{2}\/\d{4}$/)) {
-      const [, diaOutraFuncao, mesOutraFuncao, anoOutraFuncao] = vlrLeituraAtual.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
-      return `${diaOutraFuncao}/${mesOutraFuncao}/${anoOutraFuncao}`;
-    }
-  
-    return numeroFinal;
-  }; 
+      const indexAlias = pdf.queries.findIndex(i => i.alias === 'Leitura atual?');
+      if (indexAlias === -1) return false;
+      const numeroComPontos = pdf.queries[indexAlias].content;
+      const numeroSemPontos = numeroComPontos?.replace(/,/g, '.');
+      const partes = numeroSemPontos.split(' '); // Dividir a string em partes separadas por espaços
+      const ultimoValorNumerico = partes[partes.length - 1]; // Último valor numérico
+      //console.log('Valor numérico da leitura anterior:', ultimoValorNumerico);
+      if (!isNaN(ultimoValorNumerico.replace('.', ''))) {
+      //console.log('Retornando valor numérico da leitura anterior:', ultimoValorNumerico);
+      return ultimoValorNumerico; // Retornar o último valor numérico encontrado
+      }
+      const medicaoTable = pdf.tables.find(table => table.headersContent[0] === 'Dados de Medição');
+      if (medicaoTable) {
+      const leituraAnteriorRow = medicaoTable.valuesContent.find(row => row[0] === 'Leitura atual?');
+      if (leituraAnteriorRow) {
+          const valorLeituraAnterior = leituraAnteriorRow[1]?.replace(/[^0-9\.]/g, '');
+          //console.log('Retornando valor numérico da tabela:', valorLeituraAnterior);
+          return valorLeituraAnterior;
+      }
+      }
+      //console.log('Não foi encontrado um valor numérico válido.');
+      return false; // Se não for um número, retorna false
+  };      
   const getCFOP = (pdf) => {
     const indexAlias = pdf.queries.findIndex((i) => i.alias === 'Qual CFOP?');
     if (indexAlias === -1) return false;
@@ -45660,6 +45632,20 @@ function dadosNota(pdfData) {
 
     return false;
   };
+  const getValorSubgrupo = (pdf) => {
+      const subgrupoField = pdf.forms.find(field => field.key === 'Subgrupo');
+    
+      if (subgrupoField) {
+        const valorSubgrupo = subgrupoField.value;
+        const numeroSubgrupo = valorSubgrupo?.match(/\d+/); // Extrai os números usando expressão regular
+    
+        if (numeroSubgrupo) {
+          return numeroSubgrupo[0]; // Retorna o número encontrado
+        }
+      }
+    
+      return false; // Se não encontrar o subgrupo ou o número, retorna false
+  };//novo
   const getNdomedidor = (pdf) => {
     const indexAlias = pdf.queries.findIndex(i => i.alias == 'N do medidor?');
     if (indexAlias == -1) return false;
@@ -45681,41 +45667,80 @@ function dadosNota(pdfData) {
     return Number(`${pdf.queries[indexAlias].content}`).toString() || (`${pdf.queries[indexAlias].content}`).toString()
   };
   const getConsumoDoMes = (pdf) => {
-    const indexAlias = pdf.queries.findIndex(i => i.alias == 'Qual o Consumo do mes (kwh)?');
-    if (indexAlias === -1) return false;
-
-    const consumoComPontosEVirgulas = pdf.queries[indexAlias].content;
-    const consumoSemPontosEVirgulas = consumoComPontosEVirgulas?.replace(/[,\.]/g, '.');
-
-    return consumoSemPontosEVirgulas;
+      const indexAlias = pdf.queries.findIndex(i => i.alias == 'Qual o Consumo do mes (kwh)?');
+      if (indexAlias === -1) return false;
+    
+      const consumoComPontosEVirgulas = pdf.queries[indexAlias].content;
+    
+      return consumoComPontosEVirgulas;
   };
   const getContaReferenteA = (pdf) => {
-    const indexAlias = pdf.queries.findIndex(i => i.alias === 'CONTA REFERENTE A?');
+      const indexAlias = pdf.queries.findIndex(i => i.alias === 'CONTA REFERENTE A?');
+    
+      if (indexAlias === -1) return false;
+      const meses = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+      const regex = /[^A-Z]*(\w{3}|\w{4}) *(\d{4})/i;
+      const match = pdf.queries[indexAlias].content.match(regex);
+    
+      if (!match) return false;
+    
+      const mesAbreviado = match[1].toUpperCase();
+      const ano = match[2];
+      const mesIndex = meses.indexOf(mesAbreviado);
+      if (mesIndex === -1) return false;
+    
+      const mesNumero = mesIndex + 1;
+      if (mesNumero < 1 || mesNumero > 12) return false;
+    
+      const mesDia = `${mesNumero.toString().padStart(2, '0')}/${ano}`;
+      const dia = '01'; // Padroniza o dia para 01
+    
+      return `${dia}/${mesDia}`;
+  };
+  const getProximaleitura = (pdf, vlrLeituraAtual) => {
+      const indexAlias = pdf.queries.findIndex(i => i.alias === 'Proxima leitura?');
+      if (indexAlias === -1) {
+          return false;
+      }
   
-    if (indexAlias === -1) return false;
-    const meses = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
-    const regex = /[^A-Z]*(\w{3}|\w{4}) *(\d{4})/i;
-    const match = pdf.queries[indexAlias].content.match(regex);
+      const numeroSemPontos = pdf.queries[indexAlias]?.content?.replace(/,/g, '.');
+      const dataAbreviada = numeroSemPontos?.match(/\d+\s*[A-Za-z]{3}/)?.[0]?.trim();
+      const dia = dataAbreviada?.split(' ')[0].padStart(2, '0');
+      const mesAbreviado = dataAbreviada?.split(' ')[1]?.trim().toUpperCase();
   
-    if (!match) return false;
+      let mesNumero = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"].indexOf(mesAbreviado) + 1;
   
-    const mesAbreviado = match[1].toUpperCase();
-    const ano = match[2];
-    const mesIndex = meses.indexOf(mesAbreviado);
-    if (mesIndex === -1) return false;
+      if (mesNumero === 0) {
+          return false;
+      }
   
-    const mesNumero = mesIndex + 1;
-    if (mesNumero < 1 || mesNumero > 12) return false;
+      let anoReferenteA = getContaReferenteA(pdf);
+      if (!anoReferenteA) {
+          anoReferenteA = new Date().getFullYear();
+      } else {
+          const anoMatch = anoReferenteA.match(/\d{4}/);
+          if (anoMatch) {
+              anoReferenteA = anoMatch[0];
+          } else {
+              return false;
+          }
+      }
   
-    const mesDia = `${mesNumero.toString().padStart(2, '0')}/${ano}`;
-    const diaVencimento = getVencimento(pdf);
-    const diaVencimentoSplit = diaVencimento.split('/'); // Divide a data completa em partes
+      let numeroFinal = `${dia}/${mesNumero?.toString()?.padStart(2, '0')}/${anoReferenteA}`;
   
-    if (diaVencimentoSplit.length !== 3) return false; // Verifica se o formato está correto
+      if (mesNumero === 0) {
+          const mesLeituraAnterior = getContaReferenteA(pdf)?.split('/')[1];
+          if (mesLeituraAnterior !== "00" && mesLeituraAnterior.length > 1) {
+              numeroFinal = numeroFinal?.replace(/\/00\//, `/${mesLeituraAnterior}/`);
+          }
+      }
   
-    const dia = diaVencimentoSplit[0]; // Obtém o dia da data de vencimento
+      if (/^\d{2}\s+\d{2}\s+\d{4}$/.test(vlrLeituraAtual)) {
+          const [, diaOutraFuncao, mesOutraFuncao, anoOutraFuncao] = vlrLeituraAtual.match(/^(\d{2})\s+(\d{2})\s+(\d{4})$/);
+          return `${diaOutraFuncao}/${mesOutraFuncao?.padStart(2, '0')}/${anoReferenteA}`;
+      }
   
-    return `${dia}/${mesDia}`;
+      return numeroFinal;
   };
   const getDataDeEmissao = (pdf) => {
     const meses = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
@@ -45932,6 +45957,19 @@ function dadosNota(pdfData) {
     const vlrConsumoDoMes = getConsumoDoMes(pdf);
     const vlrLeituraAtual = getLeituraAtual(pdf);
     const vlrValorLeituraAtual = geValorLeituraAtual(pdf);
+
+  //   const vlrRetornoProximaleitura = getProximaleitura(pdf, vlrContaReferente); // Suponhamos que o valor seja "11/12/2023" ou "10/00/2023" ou "10/000"
+  //   let partesProximaLeitura = vlrRetornoProximaleitura.split('/');
+  //   if (partesProximaLeitura[1] === "00" || partesProximaLeitura[1].startsWith("0")) {
+  //       const partesVlrContaReferente = vlrContaReferente.split('/');
+  //       partesProximaLeitura[1] = partesVlrContaReferente[1];
+    
+  //       if (partesProximaLeitura.length < 3) {
+  //           partesProximaLeitura[2] = partesVlrContaReferente[2];
+  //       }
+  //   }
+  //   const vlrProximaleitura = `${partesProximaLeitura[0].padStart(2, '0')}/${partesProximaLeitura[1].padStart(2, '0')}/${partesProximaLeitura[2]}`;
+  //   console.log(vlrProximaleitura)
     const vlrProximaleitura = getProximaleitura(pdf, vlrLeituraAtual);
     const vlrDataDeEmissao = getDataDeEmissao(pdf);
     const vlrMensagens = getMensagens(pdf) //
@@ -45978,33 +46016,8 @@ function dadosNota(pdfData) {
     const vlrUFERFORAPONTATEvalueVALOR = getUFERFORAPONTATEvalueVALOR(pdf)
     const vlrUFERFORAPONTATETARIFASeIMPOSTOS = getUFERFORAPONTATETARIFASeIMPOSTOS(pdf) //
     const vlrValorLeituraAnterior = getValorLeituraAnterior(pdf)
-    // const vlrTUSD0605TWO = getTUSD0605TWO(pdf)
+    const vlrNumeroSubGrupo = getValorSubgrupo(pdf)
 
-    // let splitProximaLeitura = false 
-    // let vlrProximaLeitura = false
-    // let vlrProximaLeitura= false
-    // let ProximaLeitura = false
-    // if (vlrEmissao) {
-    //   splitEmissao = vlrEmissao.split('/')
-    //   vlrDiaEmissao = splitEmissao[0]
-    //   vlrMesEmissao = getMesEmissao(splitEmissao[1])
-    //   vlrAnoEmissao = splitEmissao[2]
-    // }
-    //  const vlrEmissao = getEmissao(pdf)
-    // const vlrNome = getNome(pdf)
-    // const vlrMunicipio = getMunicipio(pdf)
-    // let vlrCidade = false
-    // let vlrUF = false
-    // if (vlrMunicipio != false) {
-    //   if (vlrMunicipio.split(' ').length > 1) {
-    //     vlrCidade = trataCidade(vlrMunicipio.slice(0, -2).trim())
-    //     vlrUF = vlrMunicipio.slice(-2).trim()
-    //   }
-    // }
-    // const vlrServico = getServico(pdf)
-    // const vlrAliquota = getAliquota(pdf)
-    // const vlrTotalServico = getTotalServico(pdf)
-    // const vlrMunicipioPrestacao = getMunicipioPrestacao(pdf)
     return {
       vlrCNPJ,
       vlrCPF,
@@ -46066,21 +46079,8 @@ function dadosNota(pdfData) {
       vlrUFERFORAPONTATEvalueICMS, //CONTA A
       vlrUFERFORAPONTATEvalueVALOR, //CONTA A
       vlrUFERFORAPONTATETARIFASeIMPOSTOS, //CONTA A
+      vlrNumeroSubGrupo,
       // vlrTUSD0605TWO,
-
-
-
-      //   vlrDiaEmissao,
-      //   vlrMesEmissao,
-      //   vlrAnoEmissao,
-      //   vlrCNPJ,
-      //   vlrNome,
-      //   vlrCidade,
-      //   vlrUF,
-      //   vlrServico,
-      //   vlrAliquota,
-      //   vlrTotalServico,
-      //   vlrMunicipioPrestacao
     };
   };
   //ate aqui
