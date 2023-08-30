@@ -44438,6 +44438,7 @@ const notas = {
     }]
   }
 }
+
 function dadosNota(pdfData) {
   const checkOnlyNumber = (str) => `${str}`.trim().split('').filter(a => a != ' ').reduce((n, c) => !isNaN(Number(c)) ? n + 1 : n, 0) === `${str}`.trim().length;
   const checkContainsNumber = (str) => `${str}`.trim().split('').filter(a => a != ' ').reduce((n, c) => !isNaN(Number(c)) ? n + 1 : n, 0);
@@ -44509,7 +44510,7 @@ function dadosNota(pdfData) {
       return row.some((cell) => {
         //console.log(`'${cell}'`) 
         const formatcell = cell?.replace(/\s/g, "");
-        if (formatcell.includes("UFERFORAPONTATE")) return true
+        if (formatcell.includes("UFERFORAPONTATE")|| formatcell.includes('UFFRFORAPONTATE')) return true
         return false
       })
     }));
@@ -44517,7 +44518,7 @@ function dadosNota(pdfData) {
     const row = table.valuesContent.find((row) => {
       return row.some((cell) => {
         const formatCell = cell?.replace(/\s/g, "");
-        return formatCell.includes("UFERFORAPONTATE");
+        return formatCell.includes("UFERFORAPONTATE") || formatCell.includes('UFFRFORAPONTATE');
       });
     });
     if (!row) return false;
@@ -44534,7 +44535,7 @@ function dadosNota(pdfData) {
       return row.some((cell) => {
         //console.log(`'${cell}'`) 
         const formatcell = cell?.replace(/\s/g, "");
-        if (formatcell.includes('UFERFORAPONTATE')) return true
+        if (formatcell.includes('UFERFORAPONTATE') || formatcell.includes('UFFRFORAPONTATE')) return true
         return false
       })
     }));
@@ -44542,7 +44543,7 @@ function dadosNota(pdfData) {
     const row = table.valuesContent.find((row) => {
       return row.some((cell) => {
         const formatCell = cell?.replace(/\s/g, "");
-        return formatCell.includes("UFERFORAPONTATE");
+        return formatCell.includes("UFERFORAPONTATE") || formatCell.includes('UFFRFORAPONTATE');
       });
     });
     if (!row) return false;
@@ -44558,7 +44559,7 @@ function dadosNota(pdfData) {
       return row.some((cell) => {
         //console.log(`'${cell}'`) 
         const formatcell = cell?.replace(/\s/g, "");
-        if (formatcell.includes('UFERFORAPONTATE')) return true
+        if (formatcell.includes('UFERFORAPONTATE') || formatcell.includes('UFFRFORAPONTATE')) return true
         return false
       })
     }));
@@ -44566,7 +44567,7 @@ function dadosNota(pdfData) {
     const row = table.valuesContent.find((row) => {
       return row.some((cell) => {
         const formatCell = cell?.replace(/\s/g, "");
-        return formatCell.includes("UFERFORAPONTATE");
+        return formatCell.includes("UFERFORAPONTATE") || formatCell.includes('UFFRFORAPONTATE');
       });
     });
     if (!row) return false;
@@ -44583,7 +44584,7 @@ function dadosNota(pdfData) {
       return row.some((cell) => {
         //console.log(`'${cell}'`) 
         const formatcell = cell?.replace(/\s/g, "");
-        if (formatcell.includes('UFERFORAPONTATE')) return true
+        if (formatcell.includes('UFERFORAPONTATE') || formatcell.includes('UFFRFORAPONTATE')) return true
         return false
       })
     }));
@@ -44591,7 +44592,7 @@ function dadosNota(pdfData) {
     const row = table.valuesContent.find((row) => {
       return row.some((cell) => {
         const formatCell = cell?.replace(/\s/g, "");
-        return formatCell.includes("UFERFORAPONTATE");
+        return formatCell.includes("UFERFORAPONTATE") || formatCell.includes('UFFRFORAPONTATE');
       });
     });
     if (!row) return false;
@@ -44609,7 +44610,7 @@ function dadosNota(pdfData) {
       return row.some((cell) => {
         //console.log(`'${cell}'`) 
         const formatcell = cell?.replace(/\s/g, "");
-        if (formatcell.includes('UFERFORAPONTATE')) return true
+        if (formatcell.includes('UFERFORAPONTATE') || formatcell.includes('UFFRFORAPONTATE')) return true
         return false
       })
     }));
@@ -44617,7 +44618,7 @@ function dadosNota(pdfData) {
     const row = table.valuesContent.find((row) => {
       return row.some((cell) => {
         const formatCell = cell?.replace(/\s/g, "");
-        return formatCell.includes("UFERFORAPONTATE");
+        return formatCell.includes("UFERFORAPONTATE") || formatCell.includes('UFFRFORAPONTATE');
       });
     });
     if (!row) return false;
@@ -44634,7 +44635,7 @@ function dadosNota(pdfData) {
       return row.some((cell) => {
         //console.log(`'${cell}'`) 
         const formatcell = cell?.replace(/\s/g, "");
-        if (formatcell.includes('UFERFORAPONTATE')) return true
+        if (formatcell.includes('UFERFORAPONTATE') || formatcell.includes('UFFRFORAPONTATE')) return true
         return false
       })
     }));
@@ -44642,7 +44643,7 @@ function dadosNota(pdfData) {
     const row = table.valuesContent.find((row) => {
       return row.some((cell) => {
         const formatCell = cell?.replace(/\s/g, "");
-        return formatCell.includes("UFERFORAPONTATE");
+        return formatCell.includes("UFERFORAPONTATE") || formatCell.includes('UFFRFORAPONTATE');
       });
     });
     if (!row) return false;
@@ -44653,31 +44654,32 @@ function dadosNota(pdfData) {
 
   };//certo
   //FATURADO
+
+
   const getUFERFORAPONTATEFATURADO = (pdf) => {
-    const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
-      //console.log(row)
-      return row.some((cell) => {
-        //console.log(`'${cell}'`) 
-        const formatcell = cell?.replace(/\s/g, "");
-        if (formatcell.includes('UFERFORAPONTATE')) return true
-        return false
-      })
-    }));
-    if (!table) return false;
-    const row = table.valuesContent.find((row) => {
-      return row.some((cell) => {
-        const formatCell = cell?.replace(/\s/g, "");
-        return formatCell.includes("UFERFORAPONTATE");
-      });
-    });
-    if (!row) return false;
-
-    const valor = row[5];
-    //return valor
-    return valor?.replace('.', ',');
-    // return valor?.replace(/,/g, '.');
-
-  };//certo
+      const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
+          //console.log(row)
+          return row.some((cell) => {
+            //console.log(`'${cell}'`) 
+            const formatcell = cell?.replace(/\s/g, "");
+            if (formatcell.includes('UFERFORAPONTATE') || formatcell.includes('UFFRFORAPONTATE')) return true
+            return false
+          })
+        }));
+        if (!table) return false;
+        const row = table.valuesContent.find((row) => {
+          return row.some((cell) => {
+            const formatCell = cell?.replace(/\s/g, ""); ///////pesquisar sobre subistituicao e testar casos 
+            return formatCell.includes("UFERFORAPONTATE") || formatCell.includes('UFFRFORAPONTATE');
+          });
+        });
+        if (!row) return false;
+    
+        const valor = row[4] || row[5];
+        return valor?.replace('.', ',');
+        // return valor?.replace(/,/g, '.');
+    
+      };;//certo
   //UFER PONTA TE
   //TARIFASeIMPOSTOS
   const getUFERPONTATETARIFASeIMPOSTOS = (pdf) => {
@@ -44703,7 +44705,11 @@ function dadosNota(pdfData) {
     return valor?.replace('.', ',');
     // return valor?.replace(/,/g, '.');
 
-  };//certo
+  };
+  
+  
+  
+  
   //value VALOR
   const getUFERPONTATEvalueVALOR = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
@@ -45023,13 +45029,25 @@ function dadosNota(pdfData) {
   
       // Substituir vírgulas por pontos na parte decimal e pontos por vírgulas na parte inteira
       const parts = valor.split(',');
-      if (parts.length > 1) {
-          parts[0] = parts[0]?.replace(/\./g, '');
-          parts[1] = parts[1]?.replace(/\./g, ',');
-      }
+  //     if (parts.length > 1) {
+  //         parts[0] = parts[0]?.replace(/\./g, '');
+  //         parts[1] = parts[1]?.replace(/\./g, ',');
+  //     }
   
-      return parts?.join('.');
-  };
+  //     return parts?.join('.');
+  // };
+  if (parts.length > 2) {
+      parts[0] = parts[0]?.replace(/\./g, '');
+      parts[1] = parts[1]?.replace(/\./g, ',');
+      parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
+      else {
+        parts[0] = parts[0]?.replace(/\./g, ',');
+      } 
+  
+  // return parts?.join('.');
+  return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
+
+  }
   const getConsumoAtivoPontaTUSDvalueTARIFASeIMPOSTOS = (pdf) => {
       const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
       const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -45058,13 +45076,16 @@ function dadosNota(pdfData) {
 
     const valor = row[10];
     const parts = valor.split(',');
-    if (parts.length > 1) {
-        parts[0] = parts[0]?.replace(/\./g, '');
-        parts[1] = parts[1]?.replace(/\./g, ',');
-    }
-
-    return parts?.join('.');
-  };
+    if (parts.length > 2) {
+      parts[0] = parts[0]?.replace(/\./g, '');
+      parts[1] = parts[1]?.replace(/\./g, ',');
+      parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
+      else {
+        parts[0] = parts[0]?.replace(/\./g, ',');
+      } 
+  
+  return parts?.join('.');
+  }
   const getConsumoAtivoPontaTUSDvalueICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -45101,15 +45122,23 @@ function dadosNota(pdfData) {
 
     const row = table.valuesContent.find((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword))));
     if (!row) return false;
+    
 
     const valor = row[7];
     const parts = valor.split(',');
-    if (parts.length > 1) {
+
+  //   if (parts.length > 1) {
+       if (parts.length > 2) {
         parts[0] = parts[0]?.replace(/\./g, '');
         parts[1] = parts[1]?.replace(/\./g, ',');
-    }
-
+        parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
+        else {
+          parts[0] = parts[0]?.replace(/\./g, ',');
+        } 
+    
     return parts?.join('.');
+
+
   };//certo
   const getConsumoAtivoPontaTUSDtarifaCICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
