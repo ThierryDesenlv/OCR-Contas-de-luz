@@ -1,4 +1,4844 @@
 const notas = {
+  "contaTesteAnelita": {
+    "words": [{
+        "content": "Eletropaulo",
+        "page": 1
+    }, {
+        "content": "Metropolitana",
+        "page": 1
+    }, {
+        "content": "Eletricidade",
+        "page": 1
+    }, {
+        "content": "de",
+        "page": 1
+    }, {
+        "content": "São",
+        "page": 1
+    }, {
+        "content": "Paulo",
+        "page": 1
+    }, {
+        "content": "S",
+        "page": 1
+    }, {
+        "content": "A",
+        "page": 1
+    }, {
+        "content": "SEGUNDA",
+        "page": 1
+    }, {
+        "content": "VIA",
+        "page": 1
+    }, {
+        "content": "ene",
+        "page": 1
+    }, {
+        "content": "Av",
+        "page": 1
+    }, {
+        "content": "das",
+        "page": 1
+    }, {
+        "content": "Nações",
+        "page": 1
+    }, {
+        "content": "Unidas",
+        "page": 1
+    }, {
+        "content": "14401",
+        "page": 1
+    }, {
+        "content": "Conjuntos",
+        "page": 1
+    }, {
+        "content": "1",
+        "page": 1
+    }, {
+        "content": "4.",
+        "page": 1
+    }, {
+        "content": "ao",
+        "page": 1
+    }, {
+        "content": "23",
+        "page": 1
+    }, {
+        "content": "andar,",
+        "page": 1
+    }, {
+        "content": "Torre",
+        "page": 1
+    }, {
+        "content": "B1",
+        "page": 1
+    }, {
+        "content": "Vila",
+        "page": 1
+    }, {
+        "content": "Gertrudes",
+        "page": 1
+    }, {
+        "content": "São",
+        "page": 1
+    }, {
+        "content": "Paulo/SP",
+        "page": 1
+    }, {
+        "content": "Cep",
+        "page": 1
+    }, {
+        "content": "04794-000",
+        "page": 1
+    }, {
+        "content": "N°",
+        "page": 1
+    }, {
+        "content": "553706160535",
+        "page": 1
+    }, {
+        "content": "Páginas",
+        "page": 1
+    }, {
+        "content": "1",
+        "page": 1
+    }, {
+        "content": "CNPJ",
+        "page": 1
+    }, {
+        "content": "n",
+        "page": 1
+    }, {
+        "content": "61.695.227/0001-93",
+        "page": 1
+    }, {
+        "content": "Inscrição",
+        "page": 1
+    }, {
+        "content": "Estadual",
+        "page": 1
+    }, {
+        "content": "133.122.090.117",
+        "page": 1
+    }, {
+        "content": "Regime",
+        "page": 1
+    }, {
+        "content": "Especial",
+        "page": 1
+    }, {
+        "content": "Proc.",
+        "page": 1
+    }, {
+        "content": "1000635-686924/2005",
+        "page": 1
+    }, {
+        "content": "Dados",
+        "page": 1
+    }, {
+        "content": "do",
+        "page": 1
+    }, {
+        "content": "Cliente/Unidade",
+        "page": 1
+    }, {
+        "content": "Consumidora",
+        "page": 1
+    }, {
+        "content": "Q",
+        "page": 1
+    }, {
+        "content": "Dados",
+        "page": 1
+    }, {
+        "content": "da",
+        "page": 1
+    }, {
+        "content": "Conta",
+        "page": 1
+    }, {
+        "content": "S",
+        "page": 1
+    }, {
+        "content": "Dados",
+        "page": 1
+    }, {
+        "content": "de",
+        "page": 1
+    }, {
+        "content": "Medicão",
+        "page": 1
+    }, {
+        "content": "N°",
+        "page": 1
+    }, {
+        "content": "DA",
+        "page": 1
+    }, {
+        "content": "INSTALAÇÃO",
+        "page": 1
+    }, {
+        "content": "MTE0012927",
+        "page": 1
+    }, {
+        "content": "N°",
+        "page": 1
+    }, {
+        "content": "DO",
+        "page": 1
+    }, {
+        "content": "CLIENTE",
+        "page": 1
+    }, {
+        "content": "10013672",
+        "page": 1
+    }, {
+        "content": "VENCIMENTO",
+        "page": 1
+    }, {
+        "content": "TOTAL",
+        "page": 1
+    }, {
+        "content": "A",
+        "page": 1
+    }, {
+        "content": "PAGAR",
+        "page": 1
+    }, {
+        "content": "(R$)",
+        "page": 1
+    }, {
+        "content": "N°",
+        "page": 1
+    }, {
+        "content": "do",
+        "page": 1
+    }, {
+        "content": "medidor",
+        "page": 1
+    }, {
+        "content": "14133695",
+        "page": 1
+    }, {
+        "content": "CPF/CNPJ",
+        "page": 1
+    }, {
+        "content": "29.744.778/0455-30",
+        "page": 1
+    }, {
+        "content": "INSC",
+        "page": 1
+    }, {
+        "content": "EST:",
+        "page": 1
+    }, {
+        "content": "Leitura",
+        "page": 1
+    }, {
+        "content": "anterior",
+        "page": 1
+    }, {
+        "content": "01 JUL",
+        "page": 1
+    }, {
+        "content": "13",
+        "page": 1
+    }, {
+        "content": "SET",
+        "page": 1
+    }, {
+        "content": "2023",
+        "page": 1
+    }, {
+        "content": "6.079,22",
+        "page": 1
+    }, {
+        "content": "IGREJA",
+        "page": 1
+    }, {
+        "content": "UNIVERSAL",
+        "page": 1
+    }, {
+        "content": "DO",
+        "page": 1
+    }, {
+        "content": "REINODEDEUS",
+        "page": 1
+    }, {
+        "content": "Leitura",
+        "page": 1
+    }, {
+        "content": "atual",
+        "page": 1
+    }, {
+        "content": "01AGO",
+        "page": 1
+    }, {
+        "content": "CONTA",
+        "page": 1
+    }, {
+        "content": "REFERENTE",
+        "page": 1
+    }, {
+        "content": "A",
+        "page": 1
+    }, {
+        "content": "AGO 2023",
+        "page": 1
+    }, {
+        "content": "Próxima",
+        "page": 1
+    }, {
+        "content": "leitura",
+        "page": 1
+    }, {
+        "content": "1 SET",
+        "page": 1
+    }, {
+        "content": "RGUAICURUS683",
+        "page": 1
+    }, {
+        "content": "OEP.",
+        "page": 1
+    }, {
+        "content": "05033-001",
+        "page": 1
+    }, {
+        "content": "SAOPAULO/SP",
+        "page": 1
+    }, {
+        "content": "Histórico",
+        "page": 1
+    }, {
+        "content": "de",
+        "page": 1
+    }, {
+        "content": "Faturamento",
+        "page": 1
+    }, {
+        "content": "Mês/Ano",
+        "page": 1
+    }, {
+        "content": "Demanda",
+        "page": 1
+    }, {
+        "content": "(kW)",
+        "page": 1
+    }, {
+        "content": "Consumo",
+        "page": 1
+    }, {
+        "content": "(kWh)",
+        "page": 1
+    }, {
+        "content": "Dias",
+        "page": 1
+    }, {
+        "content": "8",
+        "page": 1
+    }, {
+        "content": "Classificação",
+        "page": 1
+    }, {
+        "content": "da",
+        "page": 1
+    }, {
+        "content": "Unidade",
+        "page": 1
+    }, {
+        "content": "Consumidora",
+        "page": 1
+    }, {
+        "content": "Hora",
+        "page": 1
+    }, {
+        "content": "Ponta",
+        "page": 1
+    }, {
+        "content": "Hora",
+        "page": 1
+    }, {
+        "content": "Fora",
+        "page": 1
+    }, {
+        "content": "Ponta",
+        "page": 1
+    }, {
+        "content": "Grupo",
+        "page": 1
+    }, {
+        "content": "A",
+        "page": 1
+    }, {
+        "content": "AGO 23",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "851.7",
+        "page": 1
+    }, {
+        "content": "2,619.3",
+        "page": 1
+    }, {
+        "content": "31",
+        "page": 1
+    }, {
+        "content": "Subgrupo",
+        "page": 1
+    }, {
+        "content": "A4",
+        "page": 1
+    }, {
+        "content": "Classe",
+        "page": 1
+    }, {
+        "content": "COMÉRCIO",
+        "page": 1
+    }, {
+        "content": "SERVEOUTRASATIV",
+        "page": 1
+    }, {
+        "content": "JUL/23",
+        "page": 1
+    }, {
+        "content": "160,0",
+        "page": 1
+    }, {
+        "content": "962.3",
+        "page": 1
+    }, {
+        "content": "2,711.7",
+        "page": 1
+    }, {
+        "content": "30",
+        "page": 1
+    }, {
+        "content": "Subclasse",
+        "page": 1
+    }, {
+        "content": "DUTROSSERMÇOSEOUTRASATIVIDADES",
+        "page": 1
+    }, {
+        "content": "JUN/23",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "1.185,6",
+        "page": 1
+    }, {
+        "content": "4,308.4",
+        "page": 1
+    }, {
+        "content": "31",
+        "page": 1
+    }, {
+        "content": "MAI/23",
+        "page": 1
+    }, {
+        "content": "160,0",
+        "page": 1
+    }, {
+        "content": "15194",
+        "page": 1
+    }, {
+        "content": "5,135.9",
+        "page": 1
+    }, {
+        "content": "30",
+        "page": 1
+    }, {
+        "content": "Tipo",
+        "page": 1
+    }, {
+        "content": "de",
+        "page": 1
+    }, {
+        "content": "Fornecimento",
+        "page": 1
+    }, {
+        "content": "Trifásico",
+        "page": 1
+    }, {
+        "content": "Modalidade",
+        "page": 1
+    }, {
+        "content": "Tarifária",
+        "page": 1
+    }, {
+        "content": "Verde",
+        "page": 1
+    }, {
+        "content": "ABR23",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "3,983.8",
+        "page": 1
+    }, {
+        "content": "11.758,5",
+        "page": 1
+    }, {
+        "content": "31",
+        "page": 1
+    }, {
+        "content": "MAR23",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "3.663,7",
+        "page": 1
+    }, {
+        "content": "9,773.8",
+        "page": 1
+    }, {
+        "content": "28",
+        "page": 1
+    }, {
+        "content": "Demanda",
+        "page": 1
+    }, {
+        "content": "/",
+        "page": 1
+    }, {
+        "content": "Energia",
+        "page": 1
+    }, {
+        "content": "Contratada",
+        "page": 1
+    }, {
+        "content": "160,0",
+        "page": 1
+    }, {
+        "content": "FEV/23",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "3,010.5",
+        "page": 1
+    }, {
+        "content": "6,846.5",
+        "page": 1
+    }, {
+        "content": "31",
+        "page": 1
+    }, {
+        "content": "JAN/23",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "2,657.0",
+        "page": 1
+    }, {
+        "content": "8,233.1",
+        "page": 1
+    }, {
+        "content": "31",
+        "page": 1
+    }, {
+        "content": "C",
+        "page": 1
+    }, {
+        "content": "Reservado",
+        "page": 1
+    }, {
+        "content": "ao",
+        "page": 1
+    }, {
+        "content": "Fisco",
+        "page": 1
+    }, {
+        "content": "60DE719F152EC534.1BC5.34ACB453.FF87",
+        "page": 1
+    }, {
+        "content": "DEZ/22",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "1,159.6",
+        "page": 1
+    }, {
+        "content": "5,042.4",
+        "page": 1
+    }, {
+        "content": "30",
+        "page": 1
+    }, {
+        "content": "Data",
+        "page": 1
+    }, {
+        "content": "de",
+        "page": 1
+    }, {
+        "content": "emissão",
+        "page": 1
+    }, {
+        "content": "N°",
+        "page": 1
+    }, {
+        "content": "Nota",
+        "page": 1
+    }, {
+        "content": "fiscal",
+        "page": 1
+    }, {
+        "content": "Série",
+        "page": 1
+    }, {
+        "content": "Base",
+        "page": 1
+    }, {
+        "content": "de",
+        "page": 1
+    }, {
+        "content": "cálculo",
+        "page": 1
+    }, {
+        "content": "Alíquota",
+        "page": 1
+    }, {
+        "content": "ICMS",
+        "page": 1
+    }, {
+        "content": "NOV/22",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "1,056.7",
+        "page": 1
+    }, {
+        "content": "5,348.5",
+        "page": 1
+    }, {
+        "content": "31",
+        "page": 1
+    }, {
+        "content": "21",
+        "page": 1
+    }, {
+        "content": "AGO2023",
+        "page": 1
+    }, {
+        "content": "000858676",
+        "page": 1
+    }, {
+        "content": "A",
+        "page": 1
+    }, {
+        "content": "3,838.95",
+        "page": 1
+    }, {
+        "content": "690.98",
+        "page": 1
+    }, {
+        "content": "OUT/22",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "1.062,1",
+        "page": 1
+    }, {
+        "content": "3,250.0",
+        "page": 1
+    }, {
+        "content": "30",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "SET/22",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "951.8",
+        "page": 1
+    }, {
+        "content": "2.967,1",
+        "page": 1
+    }, {
+        "content": "31",
+        "page": 1
+    }, {
+        "content": "5253:",
+        "page": 1
+    }, {
+        "content": "Vendade",
+        "page": 1
+    }, {
+        "content": "en.",
+        "page": 1
+    }, {
+        "content": "elétricap/",
+        "page": 1
+    }, {
+        "content": "estabeleamento",
+        "page": 1
+    }, {
+        "content": "comercial",
+        "page": 1
+    }, {
+        "content": "AGO 22",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "1,050.8",
+        "page": 1
+    }, {
+        "content": "3.790,3",
+        "page": 1
+    }, {
+        "content": "31",
+        "page": 1
+    }, {
+        "content": "CFOP",
+        "page": 1
+    }, {
+        "content": "P",
+        "page": 1
+    }, {
+        "content": "Bandeira(s)",
+        "page": 1
+    }, {
+        "content": "Tarifária(s)",
+        "page": 1
+    }, {
+        "content": "aplicada(s)",
+        "page": 1
+    }, {
+        "content": "no",
+        "page": 1
+    }, {
+        "content": "mês",
+        "page": 1
+    }, {
+        "content": "Descrição",
+        "page": 1
+    }, {
+        "content": "de",
+        "page": 1
+    }, {
+        "content": "Faturamento",
+        "page": 1
+    }, {
+        "content": "VERDE",
+        "page": 1
+    }, {
+        "content": "CCI",
+        "page": 1
+    }, {
+        "content": "DESCRIÇÃO",
+        "page": 1
+    }, {
+        "content": "LATURA",
+        "page": 1
+    }, {
+        "content": "LEITURA",
+        "page": 1
+    }, {
+        "content": "REGISTRADO",
+        "page": 1
+    }, {
+        "content": "FATURADOKWI",
+        "page": 1
+    }, {
+        "content": "TARIFA",
+        "page": 1
+    }, {
+        "content": "a",
+        "page": 1
+    }, {
+        "content": "ICMS",
+        "page": 1
+    }, {
+        "content": "BASE",
+        "page": 1
+    }, {
+        "content": "ICMS",
+        "page": 1
+    }, {
+        "content": "ALÍQ",
+        "page": 1
+    }, {
+        "content": "TARIFA",
+        "page": 1
+    }, {
+        "content": "S",
+        "page": 1
+    }, {
+        "content": "ICMS",
+        "page": 1
+    }, {
+        "content": "VALOR",
+        "page": 1
+    }, {
+        "content": "ANTERIOR",
+        "page": 1
+    }, {
+        "content": "ATUAL",
+        "page": 1
+    }, {
+        "content": "kW/kWh/kvarh",
+        "page": 1
+    }, {
+        "content": "kWh/kvarh",
+        "page": 1
+    }, {
+        "content": "ICMS",
+        "page": 1
+    }, {
+        "content": "IMPOSTOS",
+        "page": 1
+    }, {
+        "content": "PERDA",
+        "page": 1
+    }, {
+        "content": "DETRANSFORMAÇÃO",
+        "page": 1
+    }, {
+        "content": "2.5%",
+        "page": 1
+    }, {
+        "content": "MEDIDORN",
+        "page": 1
+    }, {
+        "content": "14133695",
+        "page": 1
+    }, {
+        "content": "CONST",
+        "page": 1
+    }, {
+        "content": "POTENCIA",
+        "page": 1
+    }, {
+        "content": "0.06400",
+        "page": 1
+    }, {
+        "content": "CONST.",
+        "page": 1
+    }, {
+        "content": "ATIVO",
+        "page": 1
+    }, {
+        "content": "0.01600",
+        "page": 1
+    }, {
+        "content": "CONST",
+        "page": 1
+    }, {
+        "content": "REATIVO",
+        "page": 1
+    }, {
+        "content": "0.01600",
+        "page": 1
+    }, {
+        "content": "CONSUMO",
+        "page": 1
+    }, {
+        "content": "PONTA",
+        "page": 1
+    }, {
+        "content": "VD",
+        "page": 1
+    }, {
+        "content": "11,265,049",
+        "page": 1
+    }, {
+        "content": "11,316,984",
+        "page": 1
+    }, {
+        "content": "831.0",
+        "page": 1
+    }, {
+        "content": "CONSUMO",
+        "page": 1
+    }, {
+        "content": "FORA",
+        "page": 1
+    }, {
+        "content": "PONTA",
+        "page": 1
+    }, {
+        "content": "CAPACIT",
+        "page": 1
+    }, {
+        "content": "VD",
+        "page": 1
+    }, {
+        "content": "1,629,747",
+        "page": 1
+    }, {
+        "content": "1,641,023",
+        "page": 1
+    }, {
+        "content": "1804",
+        "page": 1
+    }, {
+        "content": "CONSUMO",
+        "page": 1
+    }, {
+        "content": "FORA",
+        "page": 1
+    }, {
+        "content": "PONTA",
+        "page": 1
+    }, {
+        "content": "INDUTIVOVI",
+        "page": 1
+    }, {
+        "content": "43.072.690",
+        "page": 1
+    }, {
+        "content": "43.221.125",
+        "page": 1
+    }, {
+        "content": "2,375.0",
+        "page": 1
+    }, {
+        "content": "DEMANDA",
+        "page": 1
+    }, {
+        "content": "PONTA",
+        "page": 1
+    }, {
+        "content": "965",
+        "page": 1
+    }, {
+        "content": "326",
+        "page": 1
+    }, {
+        "content": "20.9",
+        "page": 1
+    }, {
+        "content": "DEMANDA",
+        "page": 1
+    }, {
+        "content": "FORA",
+        "page": 1
+    }, {
+        "content": "PONTA",
+        "page": 1
+    }, {
+        "content": "CAPACITIVA",
+        "page": 1
+    }, {
+        "content": "146",
+        "page": 1
+    }, {
+        "content": "129",
+        "page": 1
+    }, {
+        "content": "8.3",
+        "page": 1
+    }, {
+        "content": "DEMANDA",
+        "page": 1
+    }, {
+        "content": "FORA",
+        "page": 1
+    }, {
+        "content": "PONTA",
+        "page": 1
+    }, {
+        "content": "INDUTIVA",
+        "page": 1
+    }, {
+        "content": "1.341",
+        "page": 1
+    }, {
+        "content": "855",
+        "page": 1
+    }, {
+        "content": "54.7",
+        "page": 1
+    }, {
+        "content": "ENERGIA",
+        "page": 1
+    }, {
+        "content": "REATIVA",
+        "page": 1
+    }, {
+        "content": "PONTA",
+        "page": 1
+    }, {
+        "content": "4,942,411",
+        "page": 1
+    }, {
+        "content": "4,943,197",
+        "page": 1
+    }, {
+        "content": "12.6",
+        "page": 1
+    }, {
+        "content": "ENERGIA",
+        "page": 1
+    }, {
+        "content": "REATIVA",
+        "page": 1
+    }, {
+        "content": "F",
+        "page": 1
+    }, {
+        "content": "PONTA",
+        "page": 1
+    }, {
+        "content": "IND",
+        "page": 1
+    }, {
+        "content": "20.859.904",
+        "page": 1
+    }, {
+        "content": "20.871.871",
+        "page": 1
+    }, {
+        "content": "1915",
+        "page": 1
+    }, {
+        "content": "UFERPONTA",
+        "page": 1
+    }, {
+        "content": "459,218",
+        "page": 1
+    }, {
+        "content": "459,218",
+        "page": 1
+    }, {
+        "content": "0.0",
+        "page": 1
+    }, {
+        "content": "UFFRFORA",
+        "page": 1
+    }, {
+        "content": "PONTA",
+        "page": 1
+    }, {
+        "content": "CAPACITIVA",
+        "page": 1
+    }, {
+        "content": "164",
+        "page": 1
+    }, {
+        "content": "164",
+        "page": 1
+    }, {
+        "content": "0.0",
+        "page": 1
+    }, {
+        "content": "UFFRFORA",
+        "page": 1
+    }, {
+        "content": "PONTA",
+        "page": 1
+    }, {
+        "content": "INDUTIVA",
+        "page": 1
+    }, {
+        "content": "2414479",
+        "page": 1
+    }, {
+        "content": "2,415,393",
+        "page": 1
+    }, {
+        "content": "14.6",
+        "page": 1
+    }, {
+        "content": "DMCRPONTA",
+        "page": 1
+    }, {
+        "content": "3.512",
+        "page": 1
+    }, {
+        "content": "1,067",
+        "page": 1
+    }, {
+        "content": "17.1",
+        "page": 1
+    }, {
+        "content": "DMCRFORA",
+        "page": 1
+    }, {
+        "content": "PONTA",
+        "page": 1
+    }, {
+        "content": "CAPACITIVA",
+        "page": 1
+    }, {
+        "content": "226",
+        "page": 1
+    }, {
+        "content": "335",
+        "page": 1
+    }, {
+        "content": "5.4",
+        "page": 1
+    }, {
+        "content": "DMCRFORA",
+        "page": 1
+    }, {
+        "content": "PONTA",
+        "page": 1
+    }, {
+        "content": "INDUTIVA",
+        "page": 1
+    }, {
+        "content": "3.932",
+        "page": 1
+    }, {
+        "content": "2.289",
+        "page": 1
+    }, {
+        "content": "36.6",
+        "page": 1
+    }, {
+        "content": "ENERGIA",
+        "page": 1
+    }, {
+        "content": "REATIVA",
+        "page": 1
+    }, {
+        "content": "F",
+        "page": 1
+    }, {
+        "content": "PONTA",
+        "page": 1
+    }, {
+        "content": "CAP",
+        "page": 1
+    }, {
+        "content": "24.234",
+        "page": 1
+    }, {
+        "content": "24.736",
+        "page": 1
+    }, {
+        "content": "8.0",
+        "page": 1
+    }, {
+        "content": "FATORDECARGA",
+        "page": 1
+    }, {
+        "content": "0.083",
+        "page": 1
+    }, {
+        "content": "0602",
+        "page": 1
+    }, {
+        "content": "DEMANDA",
+        "page": 1
+    }, {
+        "content": "56.1",
+        "page": 1
+    }, {
+        "content": "21.95871",
+        "page": 1
+    }, {
+        "content": "1,231.62",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "221.69",
+        "page": 1
+    }, {
+        "content": "1,231.62",
+        "page": 1
+    }, {
+        "content": "18,00613",
+        "page": 1
+    }, {
+        "content": "0605",
+        "page": 1
+    }, {
+        "content": "CONSUMO",
+        "page": 1
+    }, {
+        "content": "ATIVO",
+        "page": 1
+    }, {
+        "content": "PONTA",
+        "page": 1
+    }, {
+        "content": "TUSD",
+        "page": 1
+    }, {
+        "content": "851.7",
+        "page": 1
+    }, {
+        "content": "0.98552",
+        "page": 1
+    }, {
+        "content": "839.40",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "151.09",
+        "page": 1
+    }, {
+        "content": "839.40",
+        "page": 1
+    }, {
+        "content": "0.80814",
+        "page": 1
+    }, {
+        "content": "0601",
+        "page": 1
+    }, {
+        "content": "CONSUMO",
+        "page": 1
+    }, {
+        "content": "ATIVO PONTA",
+        "page": 1
+    }, {
+        "content": "TE",
+        "page": 1
+    }, {
+        "content": "851.7",
+        "page": 1
+    }, {
+        "content": "0.51359",
+        "page": 1
+    }, {
+        "content": "437.44",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "78,73",
+        "page": 1
+    }, {
+        "content": "437.44",
+        "page": 1
+    }, {
+        "content": "0,42116",
+        "page": 1
+    }, {
+        "content": "0605",
+        "page": 1
+    }, {
+        "content": "CONSUMO",
+        "page": 1
+    }, {
+        "content": "ATIVOF",
+        "page": 1
+    }, {
+        "content": "PONTA",
+        "page": 1
+    }, {
+        "content": "TUSD",
+        "page": 1
+    }, {
+        "content": "2,619.3",
+        "page": 1
+    }, {
+        "content": "0.11144",
+        "page": 1
+    }, {
+        "content": "291,88",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "52.54",
+        "page": 1
+    }, {
+        "content": "291.88",
+        "page": 1
+    }, {
+        "content": "0.09138",
+        "page": 1
+    }, {
+        "content": "0601",
+        "page": 1
+    }, {
+        "content": "CONSUMO",
+        "page": 1
+    }, {
+        "content": "ATIVOR",
+        "page": 1
+    }, {
+        "content": "PONTA",
+        "page": 1
+    }, {
+        "content": "TE",
+        "page": 1
+    }, {
+        "content": "2,619.3",
+        "page": 1
+    }, {
+        "content": "0.32558",
+        "page": 1
+    }, {
+        "content": "852.78",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "153.50",
+        "page": 1
+    }, {
+        "content": "852.78",
+        "page": 1
+    }, {
+        "content": "0.26698",
+        "page": 1
+    }, {
+        "content": "0601",
+        "page": 1
+    }, {
+        "content": "UFFRFORA",
+        "page": 1
+    }, {
+        "content": "PONTA",
+        "page": 1
+    }, {
+        "content": "TE",
+        "page": 1
+    }, {
+        "content": "15.0",
+        "page": 1
+    }, {
+        "content": "0.34224",
+        "page": 1
+    }, {
+        "content": "5.13",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "0.91",
+        "page": 1
+    }, {
+        "content": "5.13",
+        "page": 1
+    }, {
+        "content": "0,28086",
+        "page": 1
+    }, {
+        "content": "0602",
+        "page": 1
+    }, {
+        "content": "DEMANDALE",
+        "page": 1
+    }, {
+        "content": "ESTADUAL",
+        "page": 1
+    }, {
+        "content": "16.886/18",
+        "page": 1
+    }, {
+        "content": "103.9",
+        "page": 1
+    }, {
+        "content": "18,00613",
+        "page": 1
+    }, {
+        "content": "0.00",
+        "page": 1
+    }, {
+        "content": "0%",
+        "page": 1
+    }, {
+        "content": "0.00",
+        "page": 1
+    }, {
+        "content": "1,871.04",
+        "page": 1
+    }, {
+        "content": "18,00613",
+        "page": 1
+    }, {
+        "content": "0699",
+        "page": 1
+    }, {
+        "content": "PIS/PASEP(0,84%)",
+        "page": 1
+    }, {
+        "content": "32.19",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "5,79",
+        "page": 1
+    }, {
+        "content": "32,19",
+        "page": 1
+    }, {
+        "content": "0699",
+        "page": 1
+    }, {
+        "content": "PIS/PASEP(0,84%)",
+        "page": 1
+    }, {
+        "content": "0.00",
+        "page": 1
+    }, {
+        "content": "0%",
+        "page": 1
+    }, {
+        "content": "0,00",
+        "page": 1
+    }, {
+        "content": "16.49",
+        "page": 1
+    }, {
+        "content": "0699",
+        "page": 1
+    }, {
+        "content": "COFINS(3,87%)",
+        "page": 1
+    }, {
+        "content": "148,51",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "26,73",
+        "page": 1
+    }, {
+        "content": "148,51",
+        "page": 1
+    }, {
+        "content": "0699",
+        "page": 1
+    }, {
+        "content": "COFINS(3,87%)",
+        "page": 1
+    }, {
+        "content": "0.00",
+        "page": 1
+    }, {
+        "content": "0%",
+        "page": 1
+    }, {
+        "content": "0,00",
+        "page": 1
+    }, {
+        "content": "75.98",
+        "page": 1
+    }, {
+        "content": "0807",
+        "page": 1
+    }, {
+        "content": "-SAOPAULO",
+        "page": 1
+    }, {
+        "content": "MUNICIPAL",
+        "page": 1
+    }, {
+        "content": "276.76",
+        "page": 1
+    }, {
+        "content": "Valor",
+        "page": 1
+    }, {
+        "content": "dos",
+        "page": 1
+    }, {
+        "content": "Tributos",
+        "page": 1
+    }, {
+        "content": "R",
+        "page": 1
+    }, {
+        "content": "931.66",
+        "page": 1
+    }, {
+        "content": "MENSAGENS",
+        "page": 1
+    }, {
+        "content": "Comunicado",
+        "page": 1
+    }, {
+        "content": "Importante:",
+        "page": 1
+    }, {
+        "content": "Com",
+        "page": 1
+    }, {
+        "content": "est",
+        "page": 1
+    }, {
+        "content": "a",
+        "page": 1
+    }, {
+        "content": "fatura",
+        "page": 1
+    }, {
+        "content": "vooê",
+        "page": 1
+    }, {
+        "content": "est",
+        "page": 1
+    }, {
+        "content": "à",
+        "page": 1
+    }, {
+        "content": "recebendo",
+        "page": 1
+    }, {
+        "content": "uma",
+        "page": 1
+    }, {
+        "content": "carta",
+        "page": 1
+    }, {
+        "content": "da",
+        "page": 1
+    }, {
+        "content": "Enel",
+        "page": 1
+    }, {
+        "content": "Distribuição",
+        "page": 1
+    }, {
+        "content": "Slio",
+        "page": 1
+    }, {
+        "content": "Paulo,",
+        "page": 1
+    }, {
+        "content": "que",
+        "page": 1
+    }, {
+        "content": "explica",
+        "page": 1
+    }, {
+        "content": "sobre",
+        "page": 1
+    }, {
+        "content": "o",
+        "page": 1
+    }, {
+        "content": "reajust",
+        "page": 1
+    }, {
+        "content": "tarifário",
+        "page": 1
+    }, {
+        "content": "autorizado",
+        "page": 1
+    }, {
+        "content": "pela",
+        "page": 1
+    }, {
+        "content": "ANEEL",
+        "page": 1
+    }, {
+        "content": "(Agência",
+        "page": 1
+    }, {
+        "content": "Nacional",
+        "page": 1
+    }, {
+        "content": "de",
+        "page": 1
+    }, {
+        "content": "Energia",
+        "page": 1
+    }, {
+        "content": "Bétrica)",
+        "page": 1
+    }, {
+        "content": "para",
+        "page": 1
+    }, {
+        "content": "tarifasdo",
+        "page": 1
+    }, {
+        "content": "Grupo",
+        "page": 1
+    }, {
+        "content": "A",
+        "page": 1
+    }, {
+        "content": "conforme",
+        "page": 1
+    }, {
+        "content": "Resolução",
+        "page": 1
+    }, {
+        "content": "omologatória",
+        "page": 1
+    }, {
+        "content": "n°",
+        "page": 1
+    }, {
+        "content": "3.215/2023",
+        "page": 1
+    }, {
+        "content": "CFOP",
+        "page": 1
+    }, {
+        "content": "5253",
+        "page": 1
+    }, {
+        "content": "(Venda",
+        "page": 1
+    }, {
+        "content": "de",
+        "page": 1
+    }, {
+        "content": "en",
+        "page": 1
+    }, {
+        "content": "elétrica",
+        "page": 1
+    }, {
+        "content": "p/",
+        "page": 1
+    }, {
+        "content": "estabelecimento",
+        "page": 1
+    }, {
+        "content": "comercial)",
+        "page": 1
+    }, {
+        "content": "O",
+        "page": 1
+    }, {
+        "content": "pagamento",
+        "page": 1
+    }, {
+        "content": "desta",
+        "page": 1
+    }, {
+        "content": "conta",
+        "page": 1
+    }, {
+        "content": "não",
+        "page": 1
+    }, {
+        "content": "quita",
+        "page": 1
+    }, {
+        "content": "débitos",
+        "page": 1
+    }, {
+        "content": "anteriores",
+        "page": 1
+    }, {
+        "content": "valor",
+        "page": 1
+    }, {
+        "content": "desta",
+        "page": 1
+    }, {
+        "content": "conta",
+        "page": 1
+    }, {
+        "content": "será",
+        "page": 1
+    }, {
+        "content": "debitado",
+        "page": 1
+    }, {
+        "content": "em",
+        "page": 1
+    }, {
+        "content": "sua",
+        "page": 1
+    }, {
+        "content": "conta",
+        "page": 1
+    }, {
+        "content": "corrente",
+        "page": 1
+    }, {
+        "content": "em",
+        "page": 1
+    }, {
+        "content": "13/09/2023",
+        "page": 1
+    }, {
+        "content": "no",
+        "page": 1
+    }, {
+        "content": "banco",
+        "page": 1
+    }, {
+        "content": "BANCO",
+        "page": 1
+    }, {
+        "content": "DO",
+        "page": 1
+    }, {
+        "content": "BRASIL",
+        "page": 1
+    }, {
+        "content": "Considerar",
+        "page": 1
+    }, {
+        "content": "est",
+        "page": 1
+    }, {
+        "content": "conta",
+        "page": 1
+    }, {
+        "content": "quitada",
+        "page": 1
+    }, {
+        "content": "apósa",
+        "page": 1
+    }, {
+        "content": "efetivação",
+        "page": 1
+    }, {
+        "content": "Débito",
+        "page": 1
+    }, {
+        "content": "Débito",
+        "page": 1
+    }, {
+        "content": "automático",
+        "page": 1
+    }, {
+        "content": "banco",
+        "page": 1
+    }, {
+        "content": "BANCO",
+        "page": 1
+    }, {
+        "content": "DOBRASIL",
+        "page": 1
+    }, {
+        "content": "Sua",
+        "page": 1
+    }, {
+        "content": "conta",
+        "page": 1
+    }, {
+        "content": "com",
+        "page": 1
+    }, {
+        "content": "vencimento",
+        "page": 1
+    }, {
+        "content": "em",
+        "page": 1
+    }, {
+        "content": "14/08/2023",
+        "page": 1
+    }, {
+        "content": "no",
+        "page": 1
+    }, {
+        "content": "valor",
+        "page": 1
+    }, {
+        "content": "de",
+        "page": 1
+    }, {
+        "content": "6.719,57",
+        "page": 1
+    }, {
+        "content": "foi",
+        "page": 1
+    }, {
+        "content": "quitada",
+        "page": 1
+    }, {
+        "content": "através",
+        "page": 1
+    }, {
+        "content": "de",
+        "page": 1
+    }, {
+        "content": "Débito",
+        "page": 1
+    }, {
+        "content": "Automático",
+        "page": 1
+    }, {
+        "content": "N°",
+        "page": 1
+    }, {
+        "content": "da",
+        "page": 1
+    }, {
+        "content": "Conta",
+        "page": 1
+    }, {
+        "content": "Data",
+        "page": 1
+    }, {
+        "content": "de",
+        "page": 1
+    }, {
+        "content": "Emissão",
+        "page": 1
+    }, {
+        "content": "Conta",
+        "page": 1
+    }, {
+        "content": "Referente",
+        "page": 1
+    }, {
+        "content": "a",
+        "page": 1
+    }, {
+        "content": "N°",
+        "page": 1
+    }, {
+        "content": "da",
+        "page": 1
+    }, {
+        "content": "Instalação",
+        "page": 1
+    }, {
+        "content": "enel",
+        "page": 1
+    }, {
+        "content": "Consumo",
+        "page": 1
+    }, {
+        "content": "(kWh)",
+        "page": 1
+    }, {
+        "content": "553706160535",
+        "page": 1
+    }, {
+        "content": "21",
+        "page": 1
+    }, {
+        "content": "AGO",
+        "page": 1
+    }, {
+        "content": "2023",
+        "page": 1
+    }, {
+        "content": "AGO 2023",
+        "page": 1
+    }, {
+        "content": "MTE0012927",
+        "page": 1
+    }, {
+        "content": "3.471,0",
+        "page": 1
+    }, {
+        "content": "VENCIMENTO",
+        "page": 1
+    }, {
+        "content": "13",
+        "page": 1
+    }, {
+        "content": "SET",
+        "page": 1
+    }, {
+        "content": "2023",
+        "page": 1
+    }, {
+        "content": "TOTAL",
+        "page": 1
+    }, {
+        "content": "A",
+        "page": 1
+    }, {
+        "content": "PAGAR",
+        "page": 1
+    }, {
+        "content": "(R$)",
+        "page": 1
+    }, {
+        "content": "6.079,22",
+        "page": 1
+    }, {
+        "content": "o",
+        "page": 1
+    }, {
+        "content": "pagamento",
+        "page": 1
+    }, {
+        "content": "desta",
+        "page": 1
+    }, {
+        "content": "conta",
+        "page": 1
+    }, {
+        "content": "IGREJA",
+        "page": 1
+    }, {
+        "content": "UNIVERSAL",
+        "page": 1
+    }, {
+        "content": "DO",
+        "page": 1
+    }, {
+        "content": "REINODEDEUS",
+        "page": 1
+    }, {
+        "content": "não",
+        "page": 1
+    }, {
+        "content": "quita",
+        "page": 1
+    }, {
+        "content": "débitos",
+        "page": 1
+    }, {
+        "content": "anteriores",
+        "page": 1
+    }, {
+        "content": "836600000605",
+        "page": 1
+    }, {
+        "content": "792200481002",
+        "page": 1
+    }, {
+        "content": "541431745721",
+        "page": 1
+    }, {
+        "content": "000000165704",
+        "page": 1
+    }, {
+        "content": "Autenticação",
+        "page": 1
+    }, {
+        "content": "mecânica",
+        "page": 1
+    }, {
+        "content": "não",
+        "page": 1
+    }, {
+        "content": "vale",
+        "page": 1
+    }, {
+        "content": "como",
+        "page": 1
+    }, {
+        "content": "recibo.",
+        "page": 1
+    }, {
+        "content": "2",
+        "page": 2
+    }, {
+        "content": "enel",
+        "page": 2
+    }, {
+        "content": "Data",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "emissão",
+        "page": 2
+    }, {
+        "content": "Conta",
+        "page": 2
+    }, {
+        "content": "referente",
+        "page": 2
+    }, {
+        "content": "a",
+        "page": 2
+    }, {
+        "content": "Vencimento",
+        "page": 2
+    }, {
+        "content": "21",
+        "page": 2
+    }, {
+        "content": "AGO",
+        "page": 2
+    }, {
+        "content": "2023",
+        "page": 2
+    }, {
+        "content": "AGC",
+        "page": 2
+    }, {
+        "content": "2023",
+        "page": 2
+    }, {
+        "content": "13",
+        "page": 2
+    }, {
+        "content": "SET",
+        "page": 2
+    }, {
+        "content": "2023",
+        "page": 2
+    }, {
+        "content": "CONHECA",
+        "page": 2
+    }, {
+        "content": "NOSSOS",
+        "page": 2
+    }, {
+        "content": "CANAIS",
+        "page": 2
+    }, {
+        "content": "DE",
+        "page": 2
+    }, {
+        "content": "ATENDIMENTO",
+        "page": 2
+    }, {
+        "content": "INFORMAÇÕES",
+        "page": 2
+    }, {
+        "content": "AOS",
+        "page": 2
+    }, {
+        "content": "CLIENTES",
+        "page": 2
+    }, {
+        "content": "Site",
+        "page": 2
+    }, {
+        "content": "Para",
+        "page": 2
+    }, {
+        "content": "solicitar",
+        "page": 2
+    }, {
+        "content": "ligação",
+        "page": 2
+    }, {
+        "content": "nova",
+        "page": 2
+    }, {
+        "content": "religação",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "unidade",
+        "page": 2
+    }, {
+        "content": "cortada",
+        "page": 2
+    }, {
+        "content": "Informações",
+        "page": 2
+    }, {
+        "content": "suplementares",
+        "page": 2
+    }, {
+        "content": "desta",
+        "page": 2
+    }, {
+        "content": "conta",
+        "page": 2
+    }, {
+        "content": "podem",
+        "page": 2
+    }, {
+        "content": "ser",
+        "page": 2
+    }, {
+        "content": "consultadas",
+        "page": 2
+    }, {
+        "content": "no",
+        "page": 2
+    }, {
+        "content": "site,",
+        "page": 2
+    }, {
+        "content": "na",
+        "page": 2
+    }, {
+        "content": "área",
+        "page": 2
+    }, {
+        "content": "reservada",
+        "page": 2
+    }, {
+        "content": "ao",
+        "page": 2
+    }, {
+        "content": "cliente;",
+        "page": 2
+    }, {
+        "content": "eneldistribuicaosp.com.br",
+        "page": 2
+    }, {
+        "content": "segunda",
+        "page": 2
+    }, {
+        "content": "via",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "conta",
+        "page": 2
+    }, {
+        "content": "outros",
+        "page": 2
+    }, {
+        "content": "serviços.",
+        "page": 2
+    }, {
+        "content": "As",
+        "page": 2
+    }, {
+        "content": "condições",
+        "page": 2
+    }, {
+        "content": "gerais",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "fornecimento",
+        "page": 2
+    }, {
+        "content": "tarifas,",
+        "page": 2
+    }, {
+        "content": "produtos,",
+        "page": 2
+    }, {
+        "content": "serviços",
+        "page": 2
+    }, {
+        "content": "prestados",
+        "page": 2
+    }, {
+        "content": "tributos",
+        "page": 2
+    }, {
+        "content": "entre",
+        "page": 2
+    }, {
+        "content": "outras",
+        "page": 2
+    }, {
+        "content": "SMS",
+        "page": 2
+    }, {
+        "content": "Envie",
+        "page": 2
+    }, {
+        "content": "um",
+        "page": 2
+    }, {
+        "content": "SMS",
+        "page": 2
+    }, {
+        "content": "gratuito",
+        "page": 2
+    }, {
+        "content": "para",
+        "page": 2
+    }, {
+        "content": "27373",
+        "page": 2
+    }, {
+        "content": "com",
+        "page": 2
+    }, {
+        "content": "palavra",
+        "page": 2
+    }, {
+        "content": "LUZ",
+        "page": 2
+    }, {
+        "content": "quando",
+        "page": 2
+    }, {
+        "content": "faltar",
+        "page": 2
+    }, {
+        "content": "informações,",
+        "page": 2
+    }, {
+        "content": "podem",
+        "page": 2
+    }, {
+        "content": "ser",
+        "page": 2
+    }, {
+        "content": "consultadas",
+        "page": 2
+    }, {
+        "content": "no",
+        "page": 2
+    }, {
+        "content": "site",
+        "page": 2
+    }, {
+        "content": "e",
+        "page": 2
+    }, {
+        "content": "nos",
+        "page": 2
+    }, {
+        "content": "demais",
+        "page": 2
+    }, {
+        "content": "canais",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "atendimento:",
+        "page": 2
+    }, {
+        "content": "energia,",
+        "page": 2
+    }, {
+        "content": "CONTA",
+        "page": 2
+    }, {
+        "content": "para",
+        "page": 2
+    }, {
+        "content": "segunda",
+        "page": 2
+    }, {
+        "content": "via",
+        "page": 2
+    }, {
+        "content": "RELIGA",
+        "page": 2
+    }, {
+        "content": "para",
+        "page": 2
+    }, {
+        "content": "religação",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "27373",
+        "page": 2
+    }, {
+        "content": "energia.",
+        "page": 2
+    }, {
+        "content": "Sempre",
+        "page": 2
+    }, {
+        "content": "com",
+        "page": 2
+    }, {
+        "content": "o",
+        "page": 2
+    }, {
+        "content": "número",
+        "page": 2
+    }, {
+        "content": "da",
+        "page": 2
+    }, {
+        "content": "instalação",
+        "page": 2
+    }, {
+        "content": "junto.",
+        "page": 2
+    }, {
+        "content": "A",
+        "page": 2
+    }, {
+        "content": "falta",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "pagamento",
+        "page": 2
+    }, {
+        "content": "desta",
+        "page": 2
+    }, {
+        "content": "conta",
+        "page": 2
+    }, {
+        "content": "implicará",
+        "page": 2
+    }, {
+        "content": "na",
+        "page": 2
+    }, {
+        "content": "suspensão",
+        "page": 2
+    }, {
+        "content": "do",
+        "page": 2
+    }, {
+        "content": "fornecimento",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "energia",
+        "page": 2
+    }, {
+        "content": "a",
+        "page": 2
+    }, {
+        "content": "partir",
+        "page": 2
+    }, {
+        "content": "do",
+        "page": 2
+    }, {
+        "content": "16°",
+        "page": 2
+    }, {
+        "content": "dia",
+        "page": 2
+    }, {
+        "content": "da",
+        "page": 2
+    }, {
+        "content": "notificação",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "débito.",
+        "page": 2
+    }, {
+        "content": "No",
+        "page": 2
+    }, {
+        "content": "caso",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "Tarifa",
+        "page": 2
+    }, {
+        "content": "Social",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "Baixa",
+        "page": 2
+    }, {
+        "content": "Renda,",
+        "page": 2
+    }, {
+        "content": "a",
+        "page": 2
+    }, {
+        "content": "suspensão",
+        "page": 2
+    }, {
+        "content": "do",
+        "page": 2
+    }, {
+        "content": "fornecimento",
+        "page": 2
+    }, {
+        "content": "Central",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "Relacionamento",
+        "page": 2
+    }, {
+        "content": "Atendimento",
+        "page": 2
+    }, {
+        "content": "Emergência",
+        "page": 2
+    }, {
+        "content": "disponível",
+        "page": 2
+    }, {
+        "content": "24",
+        "page": 2
+    }, {
+        "content": "horas",
+        "page": 2
+    }, {
+        "content": "deverá",
+        "page": 2
+    }, {
+        "content": "ocorrer",
+        "page": 2
+    }, {
+        "content": "com",
+        "page": 2
+    }, {
+        "content": "intervalo",
+        "page": 2
+    }, {
+        "content": "mínimo",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "30",
+        "page": 2
+    }, {
+        "content": "dias",
+        "page": 2
+    }, {
+        "content": "entre",
+        "page": 2
+    }, {
+        "content": "a",
+        "page": 2
+    }, {
+        "content": "data",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "vencimento",
+        "page": 2
+    }, {
+        "content": "e",
+        "page": 2
+    }, {
+        "content": "efetiva",
+        "page": 2
+    }, {
+        "content": "suspensão.",
+        "page": 2
+    }, {
+        "content": "Corporativo",
+        "page": 2
+    }, {
+        "content": "e",
+        "page": 2
+    }, {
+        "content": "Clientes",
+        "page": 2
+    }, {
+        "content": "Publicos",
+        "page": 2
+    }, {
+        "content": "Atendimento",
+        "page": 2
+    }, {
+        "content": "Comercial:",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "Segunda",
+        "page": 2
+    }, {
+        "content": "Sexta,",
+        "page": 2
+    }, {
+        "content": "das",
+        "page": 2
+    }, {
+        "content": "8h",
+        "page": 2
+    }, {
+        "content": "às",
+        "page": 2
+    }, {
+        "content": "18h",
+        "page": 2
+    }, {
+        "content": "0800",
+        "page": 2
+    }, {
+        "content": "72",
+        "page": 2
+    }, {
+        "content": "71",
+        "page": 2
+    }, {
+        "content": "196",
+        "page": 2
+    }, {
+        "content": "Contas",
+        "page": 2
+    }, {
+        "content": "pagas",
+        "page": 2
+    }, {
+        "content": "após",
+        "page": 2
+    }, {
+        "content": "O",
+        "page": 2
+    }, {
+        "content": "vencimento",
+        "page": 2
+    }, {
+        "content": "terão",
+        "page": 2
+    }, {
+        "content": "multa",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "2%",
+        "page": 2
+    }, {
+        "content": "juros",
+        "page": 2
+    }, {
+        "content": "mora",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "0.033%",
+        "page": 2
+    }, {
+        "content": "ao",
+        "page": 2
+    }, {
+        "content": "dia",
+        "page": 2
+    }, {
+        "content": "e",
+        "page": 2
+    }, {
+        "content": "atualização",
+        "page": 2
+    }, {
+        "content": "financeira",
+        "page": 2
+    }, {
+        "content": "na",
+        "page": 2
+    }, {
+        "content": "próxima",
+        "page": 2
+    }, {
+        "content": "conta;",
+        "page": 2
+    }, {
+        "content": "Atendimento",
+        "page": 2
+    }, {
+        "content": "Especial",
+        "page": 2
+    }, {
+        "content": "Atendimento",
+        "page": 2
+    }, {
+        "content": "24",
+        "page": 2
+    }, {
+        "content": "horas.",
+        "page": 2
+    }, {
+        "content": "exclusivo",
+        "page": 2
+    }, {
+        "content": "para",
+        "page": 2
+    }, {
+        "content": "deficientes",
+        "page": 2
+    }, {
+        "content": "auditivos",
+        "page": 2
+    }, {
+        "content": "TUSD",
+        "page": 2
+    }, {
+        "content": "Tarifa",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "Uso",
+        "page": 2
+    }, {
+        "content": "do",
+        "page": 2
+    }, {
+        "content": "Sistema",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "Distribuição",
+        "page": 2
+    }, {
+        "content": "TE",
+        "page": 2
+    }, {
+        "content": "Tarifa",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "Energia;",
+        "page": 2
+    }, {
+        "content": "0800",
+        "page": 2
+    }, {
+        "content": "77",
+        "page": 2
+    }, {
+        "content": "28",
+        "page": 2
+    }, {
+        "content": "626",
+        "page": 2
+    }, {
+        "content": "Informações",
+        "page": 2
+    }, {
+        "content": "sobre",
+        "page": 2
+    }, {
+        "content": "a",
+        "page": 2
+    }, {
+        "content": "contribuição",
+        "page": 2
+    }, {
+        "content": "para",
+        "page": 2
+    }, {
+        "content": "custeio",
+        "page": 2
+    }, {
+        "content": "do",
+        "page": 2
+    }, {
+        "content": "serviço",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "Iluminação",
+        "page": 2
+    }, {
+        "content": "Pública",
+        "page": 2
+    }, {
+        "content": "(CIP/COSIP)",
+        "page": 2
+    }, {
+        "content": "do",
+        "page": 2
+    }, {
+        "content": "seu",
+        "page": 2
+    }, {
+        "content": "Ouvidoria",
+        "page": 2
+    }, {
+        "content": "Para",
+        "page": 2
+    }, {
+        "content": "acionar",
+        "page": 2
+    }, {
+        "content": "Ouvidoria",
+        "page": 2
+    }, {
+        "content": "é",
+        "page": 2
+    }, {
+        "content": "importante",
+        "page": 2
+    }, {
+        "content": "que",
+        "page": 2
+    }, {
+        "content": "você",
+        "page": 2
+    }, {
+        "content": "tenha",
+        "page": 2
+    }, {
+        "content": "procurado",
+        "page": 2
+    }, {
+        "content": "Município,",
+        "page": 2
+    }, {
+        "content": "estão",
+        "page": 2
+    }, {
+        "content": "disponíveis",
+        "page": 2
+    }, {
+        "content": "no",
+        "page": 2
+    }, {
+        "content": "site",
+        "page": 2
+    }, {
+        "content": "da",
+        "page": 2
+    }, {
+        "content": "distribuidora,",
+        "page": 2
+    }, {
+        "content": "no",
+        "page": 2
+    }, {
+        "content": "campo",
+        "page": 2
+    }, {
+        "content": "\"impostos",
+        "page": 2
+    }, {
+        "content": "e",
+        "page": 2
+    }, {
+        "content": "outros",
+        "page": 2
+    }, {
+        "content": "encargos\";",
+        "page": 2
+    }, {
+        "content": "0800",
+        "page": 2
+    }, {
+        "content": "72",
+        "page": 2
+    }, {
+        "content": "73",
+        "page": 2
+    }, {
+        "content": "110",
+        "page": 2
+    }, {
+        "content": "antes",
+        "page": 2
+    }, {
+        "content": "nossos",
+        "page": 2
+    }, {
+        "content": "Canais",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "Atendimento",
+        "page": 2
+    }, {
+        "content": "nos",
+        "page": 2
+    }, {
+        "content": "informe",
+        "page": 2
+    }, {
+        "content": "o",
+        "page": 2
+    }, {
+        "content": "número",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "protocolo.",
+        "page": 2
+    }, {
+        "content": "(dias",
+        "page": 2
+    }, {
+        "content": "uteis",
+        "page": 2
+    }, {
+        "content": "das",
+        "page": 2
+    }, {
+        "content": "8h",
+        "page": 2
+    }, {
+        "content": "às",
+        "page": 2
+    }, {
+        "content": "18h).",
+        "page": 2
+    }, {
+        "content": "Você",
+        "page": 2
+    }, {
+        "content": "pode",
+        "page": 2
+    }, {
+        "content": "solicitar",
+        "page": 2
+    }, {
+        "content": "o",
+        "page": 2
+    }, {
+        "content": "cancelamento",
+        "page": 2
+    }, {
+        "content": "da",
+        "page": 2
+    }, {
+        "content": "cobrança",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "serviços",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "terceiros",
+        "page": 2
+    }, {
+        "content": "incluídos",
+        "page": 2
+    }, {
+        "content": "em",
+        "page": 2
+    }, {
+        "content": "sua",
+        "page": 2
+    }, {
+        "content": "conta,",
+        "page": 2
+    }, {
+        "content": "bem",
+        "page": 2
+    }, {
+        "content": "como",
+        "page": 2
+    }, {
+        "content": "a",
+        "page": 2
+    }, {
+        "content": "emissão",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "uma",
+        "page": 2
+    }, {
+        "content": "nova",
+        "page": 2
+    }, {
+        "content": "sem",
+        "page": 2
+    }, {
+        "content": "essa",
+        "page": 2
+    }, {
+        "content": "cobrança;",
+        "page": 2
+    }, {
+        "content": "ARSESP",
+        "page": 2
+    }, {
+        "content": "0800",
+        "page": 2
+    }, {
+        "content": "72",
+        "page": 2
+    }, {
+        "content": "70",
+        "page": 2
+    }, {
+        "content": "167",
+        "page": 2
+    }, {
+        "content": "Agência",
+        "page": 2
+    }, {
+        "content": "Reguladora",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "Saneamento",
+        "page": 2
+    }, {
+        "content": "Energia",
+        "page": 2
+    }, {
+        "content": "do",
+        "page": 2
+    }, {
+        "content": "Estado",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "Sao",
+        "page": 2
+    }, {
+        "content": "Paulo.",
+        "page": 2
+    }, {
+        "content": "Central",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "Serviços",
+        "page": 2
+    }, {
+        "content": "Metlife",
+        "page": 2
+    }, {
+        "content": "(dúvidas,",
+        "page": 2
+    }, {
+        "content": "esclarecimentos",
+        "page": 2
+    }, {
+        "content": "e",
+        "page": 2
+    }, {
+        "content": "solicitações).",
+        "page": 2
+    }, {
+        "content": "3004.9212",
+        "page": 2
+    }, {
+        "content": "(capital",
+        "page": 2
+    }, {
+        "content": "e",
+        "page": 2
+    }, {
+        "content": "grandes",
+        "page": 2
+    }, {
+        "content": "ANEEL",
+        "page": 2
+    }, {
+        "content": "167",
+        "page": 2
+    }, {
+        "content": "Agência",
+        "page": 2
+    }, {
+        "content": "Nacional",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "Energia",
+        "page": 2
+    }, {
+        "content": "Elétrica",
+        "page": 2
+    }, {
+        "content": "(Ligação",
+        "page": 2
+    }, {
+        "content": "gratuita",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "telefones",
+        "page": 2
+    }, {
+        "content": "fixos",
+        "page": 2
+    }, {
+        "content": "móveis)",
+        "page": 2
+    }, {
+        "content": "cidades)",
+        "page": 2
+    }, {
+        "content": "ou",
+        "page": 2
+    }, {
+        "content": "0800",
+        "page": 2
+    }, {
+        "content": "727",
+        "page": 2
+    }, {
+        "content": "92",
+        "page": 2
+    }, {
+        "content": "12",
+        "page": 2
+    }, {
+        "content": "(demais",
+        "page": 2
+    }, {
+        "content": "localidades)",
+        "page": 2
+    }, {
+        "content": "Horário",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "atendimento:",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "segunda",
+        "page": 2
+    }, {
+        "content": "a",
+        "page": 2
+    }, {
+        "content": "sexta.",
+        "page": 2
+    }, {
+        "content": "das",
+        "page": 2
+    }, {
+        "content": "9b",
+        "page": 2
+    }, {
+        "content": "às",
+        "page": 2
+    }, {
+        "content": "18h",
+        "page": 2
+    }, {
+        "content": "(dias",
+        "page": 2
+    }, {
+        "content": "úteis)",
+        "page": 2
+    }, {
+        "content": "Acesse:",
+        "page": 2
+    }, {
+        "content": "www.facebook.com/EnelClientesBR",
+        "page": 2
+    }, {
+        "content": "Endereço",
+        "page": 2
+    }, {
+        "content": "para",
+        "page": 2
+    }, {
+        "content": "devolução",
+        "page": 2
+    }, {
+        "content": "uso",
+        "page": 2
+    }, {
+        "content": "exclusivo",
+        "page": 2
+    }, {
+        "content": "dos",
+        "page": 2
+    }, {
+        "content": "Correios",
+        "page": 2
+    }, {
+        "content": "Eletropaulo",
+        "page": 2
+    }, {
+        "content": "Metropolitana",
+        "page": 2
+    }, {
+        "content": "Eletricidade",
+        "page": 2
+    }, {
+        "content": "de",
+        "page": 2
+    }, {
+        "content": "São",
+        "page": 2
+    }, {
+        "content": "Paulo",
+        "page": 2
+    }, {
+        "content": "S.A",
+        "page": 2
+    }, {
+        "content": "TENSÃO",
+        "page": 2
+    }, {
+        "content": "NOMINAL",
+        "page": 2
+    }, {
+        "content": "(V)",
+        "page": 2
+    }, {
+        "content": "13,800",
+        "page": 2
+    }, {
+        "content": "(MT)",
+        "page": 2
+    }, {
+        "content": "LIMITEMÁXIMO",
+        "page": 2
+    }, {
+        "content": "ADEQUADO(V)",
+        "page": 2
+    }, {
+        "content": "13,860",
+        "page": 2
+    }, {
+        "content": "Av.",
+        "page": 2
+    }, {
+        "content": "das",
+        "page": 2
+    }, {
+        "content": "Nações",
+        "page": 2
+    }, {
+        "content": "Unidas,",
+        "page": 2
+    }, {
+        "content": "14401",
+        "page": 2
+    }, {
+        "content": "Conjuntos",
+        "page": 2
+    }, {
+        "content": "1",
+        "page": 2
+    }, {
+        "content": "ao",
+        "page": 2
+    }, {
+        "content": "4.",
+        "page": 2
+    }, {
+        "content": "17°",
+        "page": 2
+    }, {
+        "content": "ao",
+        "page": 2
+    }, {
+        "content": "23°",
+        "page": 2
+    }, {
+        "content": "andar,",
+        "page": 2
+    }, {
+        "content": "Torre",
+        "page": 2
+    }, {
+        "content": "B1",
+        "page": 2
+    }, {
+        "content": "TENSÃO",
+        "page": 2
+    }, {
+        "content": "CONTRATADA",
+        "page": 2
+    }, {
+        "content": "(V)",
+        "page": 2
+    }, {
+        "content": "13,200",
+        "page": 2
+    }, {
+        "content": "UMITEMÍNIMO",
+        "page": 2
+    }, {
+        "content": "ADEQUADO",
+        "page": 2
+    }, {
+        "content": "12,276",
+        "page": 2
+    }, {
+        "content": "Vila",
+        "page": 2
+    }, {
+        "content": "Gertrudes",
+        "page": 2
+    }, {
+        "content": "São",
+        "page": 2
+    }, {
+        "content": "Paulo/SP",
+        "page": 2
+    }, {
+        "content": "Cep",
+        "page": 2
+    }, {
+        "content": "04794-000",
+        "page": 2
+    }, {
+        "content": "Responsável",
+        "page": 2
+    }, {
+        "content": "pela",
+        "page": 2
+    }, {
+        "content": "iluminação",
+        "page": 2
+    }, {
+        "content": "pública",
+        "page": 2
+    }, {
+        "content": "em",
+        "page": 2
+    }, {
+        "content": "sua",
+        "page": 2
+    }, {
+        "content": "rua/região",
+        "page": 2
+    }, {
+        "content": "ENEL",
+        "page": 2
+    }, {
+        "content": "DISTRIBUIÇÃO",
+        "page": 2
+    }, {
+        "content": "SÃO",
+        "page": 2
+    }, {
+        "content": "PAULO",
+        "page": 2
+    }, {
+        "content": "0800",
+        "page": 2
+    }, {
+        "content": "72",
+        "page": 2
+    }, {
+        "content": "72",
+        "page": 2
+    }, {
+        "content": "196",
+        "page": 2
+    }],
+    "lines": [{
+        "content": "Eletropaulo Metropolitana Eletricidade de São Paulo S A",
+        "page": 1
+    }, {
+        "content": "SEGUNDA VIA",
+        "page": 1
+    }, {
+        "content": "ene",
+        "page": 1
+    }, {
+        "content": "Av das Nações Unidas 14401 Conjuntos 1 4. ao 23 andar, Torre B1 Vila Gertrudes",
+        "page": 1
+    }, {
+        "content": "São Paulo/SP Cep 04794-000",
+        "page": 1
+    }, {
+        "content": "N° 553706160535",
+        "page": 1
+    }, {
+        "content": "Páginas",
+        "page": 1
+    }, {
+        "content": "1",
+        "page": 1
+    }, {
+        "content": "CNPJ n 61.695.227/0001-93 Inscrição Estadual 133.122.090.117 Regime Especial Proc. 1000635-686924/2005",
+        "page": 1
+    }, {
+        "content": "Dados do Cliente/Unidade Consumidora",
+        "page": 1
+    }, {
+        "content": "Q",
+        "page": 1
+    }, {
+        "content": "Dados da Conta",
+        "page": 1
+    }, {
+        "content": "S Dados de Medicão",
+        "page": 1
+    }, {
+        "content": "N° DA INSTALAÇÃO MTE0012927",
+        "page": 1
+    }, {
+        "content": "N° DO CLIENTE",
+        "page": 1
+    }, {
+        "content": "10013672",
+        "page": 1
+    }, {
+        "content": "VENCIMENTO",
+        "page": 1
+    }, {
+        "content": "TOTAL A PAGAR (R$)",
+        "page": 1
+    }, {
+        "content": "N° do medidor 14133695",
+        "page": 1
+    }, {
+        "content": "CPF/CNPJ 29.744.778/0455-30",
+        "page": 1
+    }, {
+        "content": "INSC EST:",
+        "page": 1
+    }, {
+        "content": "Leitura anterior 01 JUL",
+        "page": 1
+    }, {
+        "content": "13 SET 2023",
+        "page": 1
+    }, {
+        "content": "6.079,22",
+        "page": 1
+    }, {
+        "content": "IGREJA UNIVERSAL DO REINODEDEUS",
+        "page": 1
+    }, {
+        "content": "Leitura atual 01AGO",
+        "page": 1
+    }, {
+        "content": "CONTA REFERENTE A",
+        "page": 1
+    }, {
+        "content": "AGO 2023",
+        "page": 1
+    }, {
+        "content": "Próxima leitura 1 SET",
+        "page": 1
+    }, {
+        "content": "RGUAICURUS683",
+        "page": 1
+    }, {
+        "content": "OEP. 05033-001 SAOPAULO/SP",
+        "page": 1
+    }, {
+        "content": "Histórico de Faturamento",
+        "page": 1
+    }, {
+        "content": "Mês/Ano",
+        "page": 1
+    }, {
+        "content": "Demanda (kW)",
+        "page": 1
+    }, {
+        "content": "Consumo (kWh)",
+        "page": 1
+    }, {
+        "content": "Dias",
+        "page": 1
+    }, {
+        "content": "8 Classificação da Unidade Consumidora",
+        "page": 1
+    }, {
+        "content": "Hora Ponta",
+        "page": 1
+    }, {
+        "content": "Hora Fora Ponta",
+        "page": 1
+    }, {
+        "content": "Grupo A",
+        "page": 1
+    }, {
+        "content": "AGO 23",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "851.7",
+        "page": 1
+    }, {
+        "content": "2,619.3",
+        "page": 1
+    }, {
+        "content": "31",
+        "page": 1
+    }, {
+        "content": "Subgrupo A4",
+        "page": 1
+    }, {
+        "content": "Classe COMÉRCIO SERVEOUTRASATIV",
+        "page": 1
+    }, {
+        "content": "JUL/23",
+        "page": 1
+    }, {
+        "content": "160,0",
+        "page": 1
+    }, {
+        "content": "962.3",
+        "page": 1
+    }, {
+        "content": "2,711.7",
+        "page": 1
+    }, {
+        "content": "30",
+        "page": 1
+    }, {
+        "content": "Subclasse DUTROSSERMÇOSEOUTRASATIVIDADES",
+        "page": 1
+    }, {
+        "content": "JUN/23",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "1.185,6",
+        "page": 1
+    }, {
+        "content": "4,308.4",
+        "page": 1
+    }, {
+        "content": "31",
+        "page": 1
+    }, {
+        "content": "MAI/23",
+        "page": 1
+    }, {
+        "content": "160,0",
+        "page": 1
+    }, {
+        "content": "15194",
+        "page": 1
+    }, {
+        "content": "5,135.9",
+        "page": 1
+    }, {
+        "content": "30",
+        "page": 1
+    }, {
+        "content": "Tipo de Fornecimento Trifásico",
+        "page": 1
+    }, {
+        "content": "Modalidade Tarifária Verde",
+        "page": 1
+    }, {
+        "content": "ABR23",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "3,983.8",
+        "page": 1
+    }, {
+        "content": "11.758,5",
+        "page": 1
+    }, {
+        "content": "31",
+        "page": 1
+    }, {
+        "content": "MAR23",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "3.663,7",
+        "page": 1
+    }, {
+        "content": "9,773.8",
+        "page": 1
+    }, {
+        "content": "28",
+        "page": 1
+    }, {
+        "content": "Demanda / Energia Contratada 160,0",
+        "page": 1
+    }, {
+        "content": "FEV/23",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "3,010.5",
+        "page": 1
+    }, {
+        "content": "6,846.5",
+        "page": 1
+    }, {
+        "content": "31",
+        "page": 1
+    }, {
+        "content": "JAN/23",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "2,657.0",
+        "page": 1
+    }, {
+        "content": "8,233.1",
+        "page": 1
+    }, {
+        "content": "31",
+        "page": 1
+    }, {
+        "content": "C Reservado ao Fisco",
+        "page": 1
+    }, {
+        "content": "60DE719F152EC534.1BC5.34ACB453.FF87",
+        "page": 1
+    }, {
+        "content": "DEZ/22",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "1,159.6",
+        "page": 1
+    }, {
+        "content": "5,042.4",
+        "page": 1
+    }, {
+        "content": "30",
+        "page": 1
+    }, {
+        "content": "Data de emissão",
+        "page": 1
+    }, {
+        "content": "N° Nota fiscal",
+        "page": 1
+    }, {
+        "content": "Série",
+        "page": 1
+    }, {
+        "content": "Base de cálculo",
+        "page": 1
+    }, {
+        "content": "Alíquota",
+        "page": 1
+    }, {
+        "content": "ICMS",
+        "page": 1
+    }, {
+        "content": "NOV/22",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "1,056.7",
+        "page": 1
+    }, {
+        "content": "5,348.5",
+        "page": 1
+    }, {
+        "content": "31",
+        "page": 1
+    }, {
+        "content": "21 AGO2023",
+        "page": 1
+    }, {
+        "content": "000858676",
+        "page": 1
+    }, {
+        "content": "A",
+        "page": 1
+    }, {
+        "content": "3,838.95",
+        "page": 1
+    }, {
+        "content": "690.98",
+        "page": 1
+    }, {
+        "content": "OUT/22",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "1.062,1",
+        "page": 1
+    }, {
+        "content": "3,250.0",
+        "page": 1
+    }, {
+        "content": "30",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "SET/22",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "951.8",
+        "page": 1
+    }, {
+        "content": "2.967,1",
+        "page": 1
+    }, {
+        "content": "31",
+        "page": 1
+    }, {
+        "content": "5253: Vendade en. elétricap/ estabeleamento comercial",
+        "page": 1
+    }, {
+        "content": "AGO 22",
+        "page": 1
+    }, {
+        "content": "160.0",
+        "page": 1
+    }, {
+        "content": "1,050.8",
+        "page": 1
+    }, {
+        "content": "3.790,3",
+        "page": 1
+    }, {
+        "content": "31",
+        "page": 1
+    }, {
+        "content": "CFOP",
+        "page": 1
+    }, {
+        "content": "P",
+        "page": 1
+    }, {
+        "content": "Bandeira(s) Tarifária(s) aplicada(s) no mês",
+        "page": 1
+    }, {
+        "content": "Descrição de Faturamento",
+        "page": 1
+    }, {
+        "content": "VERDE",
+        "page": 1
+    }, {
+        "content": "CCI",
+        "page": 1
+    }, {
+        "content": "DESCRIÇÃO",
+        "page": 1
+    }, {
+        "content": "LATURA",
+        "page": 1
+    }, {
+        "content": "LEITURA",
+        "page": 1
+    }, {
+        "content": "REGISTRADO",
+        "page": 1
+    }, {
+        "content": "FATURADOKWI",
+        "page": 1
+    }, {
+        "content": "TARIFA a ICMS",
+        "page": 1
+    }, {
+        "content": "BASE ICMS",
+        "page": 1
+    }, {
+        "content": "ALÍQ",
+        "page": 1
+    }, {
+        "content": "TARIFA S",
+        "page": 1
+    }, {
+        "content": "ICMS",
+        "page": 1
+    }, {
+        "content": "VALOR",
+        "page": 1
+    }, {
+        "content": "ANTERIOR",
+        "page": 1
+    }, {
+        "content": "ATUAL",
+        "page": 1
+    }, {
+        "content": "kW/kWh/kvarh",
+        "page": 1
+    }, {
+        "content": "kWh/kvarh",
+        "page": 1
+    }, {
+        "content": "ICMS",
+        "page": 1
+    }, {
+        "content": "IMPOSTOS",
+        "page": 1
+    }, {
+        "content": "PERDA DETRANSFORMAÇÃO 2.5%",
+        "page": 1
+    }, {
+        "content": "MEDIDORN 14133695",
+        "page": 1
+    }, {
+        "content": "CONST POTENCIA 0.06400",
+        "page": 1
+    }, {
+        "content": "CONST. ATIVO 0.01600",
+        "page": 1
+    }, {
+        "content": "CONST REATIVO 0.01600",
+        "page": 1
+    }, {
+        "content": "CONSUMO PONTA VD",
+        "page": 1
+    }, {
+        "content": "11,265,049",
+        "page": 1
+    }, {
+        "content": "11,316,984",
+        "page": 1
+    }, {
+        "content": "831.0",
+        "page": 1
+    }, {
+        "content": "CONSUMO FORA PONTA CAPACIT VD",
+        "page": 1
+    }, {
+        "content": "1,629,747",
+        "page": 1
+    }, {
+        "content": "1,641,023",
+        "page": 1
+    }, {
+        "content": "1804",
+        "page": 1
+    }, {
+        "content": "CONSUMO FORA PONTA INDUTIVOVI",
+        "page": 1
+    }, {
+        "content": "43.072.690",
+        "page": 1
+    }, {
+        "content": "43.221.125",
+        "page": 1
+    }, {
+        "content": "2,375.0",
+        "page": 1
+    }, {
+        "content": "DEMANDA PONTA",
+        "page": 1
+    }, {
+        "content": "965",
+        "page": 1
+    }, {
+        "content": "326",
+        "page": 1
+    }, {
+        "content": "20.9",
+        "page": 1
+    }, {
+        "content": "DEMANDA FORA PONTA CAPACITIVA",
+        "page": 1
+    }, {
+        "content": "146",
+        "page": 1
+    }, {
+        "content": "129",
+        "page": 1
+    }, {
+        "content": "8.3",
+        "page": 1
+    }, {
+        "content": "DEMANDA FORA PONTA INDUTIVA",
+        "page": 1
+    }, {
+        "content": "1.341",
+        "page": 1
+    }, {
+        "content": "855",
+        "page": 1
+    }, {
+        "content": "54.7",
+        "page": 1
+    }, {
+        "content": "ENERGIA REATIVA PONTA",
+        "page": 1
+    }, {
+        "content": "4,942,411",
+        "page": 1
+    }, {
+        "content": "4,943,197",
+        "page": 1
+    }, {
+        "content": "12.6",
+        "page": 1
+    }, {
+        "content": "ENERGIA REATIVA F PONTA IND",
+        "page": 1
+    }, {
+        "content": "20.859.904",
+        "page": 1
+    }, {
+        "content": "20.871.871",
+        "page": 1
+    }, {
+        "content": "1915",
+        "page": 1
+    }, {
+        "content": "UFERPONTA",
+        "page": 1
+    }, {
+        "content": "459,218",
+        "page": 1
+    }, {
+        "content": "459,218",
+        "page": 1
+    }, {
+        "content": "0.0",
+        "page": 1
+    }, {
+        "content": "UFFRFORA PONTA CAPACITIVA",
+        "page": 1
+    }, {
+        "content": "164",
+        "page": 1
+    }, {
+        "content": "164",
+        "page": 1
+    }, {
+        "content": "0.0",
+        "page": 1
+    }, {
+        "content": "UFFRFORA PONTA INDUTIVA",
+        "page": 1
+    }, {
+        "content": "2414479",
+        "page": 1
+    }, {
+        "content": "2,415,393",
+        "page": 1
+    }, {
+        "content": "14.6",
+        "page": 1
+    }, {
+        "content": "DMCRPONTA",
+        "page": 1
+    }, {
+        "content": "3.512",
+        "page": 1
+    }, {
+        "content": "1,067",
+        "page": 1
+    }, {
+        "content": "17.1",
+        "page": 1
+    }, {
+        "content": "DMCRFORA PONTA CAPACITIVA",
+        "page": 1
+    }, {
+        "content": "226",
+        "page": 1
+    }, {
+        "content": "335",
+        "page": 1
+    }, {
+        "content": "5.4",
+        "page": 1
+    }, {
+        "content": "DMCRFORA PONTA INDUTIVA",
+        "page": 1
+    }, {
+        "content": "3.932",
+        "page": 1
+    }, {
+        "content": "2.289",
+        "page": 1
+    }, {
+        "content": "36.6",
+        "page": 1
+    }, {
+        "content": "ENERGIA REATIVA F PONTA CAP",
+        "page": 1
+    }, {
+        "content": "24.234",
+        "page": 1
+    }, {
+        "content": "24.736",
+        "page": 1
+    }, {
+        "content": "8.0",
+        "page": 1
+    }, {
+        "content": "FATORDECARGA",
+        "page": 1
+    }, {
+        "content": "0.083",
+        "page": 1
+    }, {
+        "content": "0602",
+        "page": 1
+    }, {
+        "content": "DEMANDA",
+        "page": 1
+    }, {
+        "content": "56.1",
+        "page": 1
+    }, {
+        "content": "21.95871",
+        "page": 1
+    }, {
+        "content": "1,231.62",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "221.69",
+        "page": 1
+    }, {
+        "content": "1,231.62",
+        "page": 1
+    }, {
+        "content": "18,00613",
+        "page": 1
+    }, {
+        "content": "0605",
+        "page": 1
+    }, {
+        "content": "CONSUMO ATIVO PONTA TUSD",
+        "page": 1
+    }, {
+        "content": "851.7",
+        "page": 1
+    }, {
+        "content": "0.98552",
+        "page": 1
+    }, {
+        "content": "839.40",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "151.09",
+        "page": 1
+    }, {
+        "content": "839.40",
+        "page": 1
+    }, {
+        "content": "0.80814",
+        "page": 1
+    }, {
+        "content": "0601",
+        "page": 1
+    }, {
+        "content": "CONSUMO ATIVO PONTA TE",
+        "page": 1
+    }, {
+        "content": "851.7",
+        "page": 1
+    }, {
+        "content": "0.51359",
+        "page": 1
+    }, {
+        "content": "437.44",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "78,73",
+        "page": 1
+    }, {
+        "content": "437.44",
+        "page": 1
+    }, {
+        "content": "0,42116",
+        "page": 1
+    }, {
+        "content": "0605",
+        "page": 1
+    }, {
+        "content": "CONSUMO ATIVOF PONTA TUSD",
+        "page": 1
+    }, {
+        "content": "2,619.3",
+        "page": 1
+    }, {
+        "content": "0.11144",
+        "page": 1
+    }, {
+        "content": "291,88",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "52.54",
+        "page": 1
+    }, {
+        "content": "291.88",
+        "page": 1
+    }, {
+        "content": "0.09138",
+        "page": 1
+    }, {
+        "content": "0601",
+        "page": 1
+    }, {
+        "content": "CONSUMO ATIVOR PONTA TE",
+        "page": 1
+    }, {
+        "content": "2,619.3",
+        "page": 1
+    }, {
+        "content": "0.32558",
+        "page": 1
+    }, {
+        "content": "852.78",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "153.50",
+        "page": 1
+    }, {
+        "content": "852.78",
+        "page": 1
+    }, {
+        "content": "0.26698",
+        "page": 1
+    }, {
+        "content": "0601",
+        "page": 1
+    }, {
+        "content": "UFFRFORA PONTA TE",
+        "page": 1
+    }, {
+        "content": "15.0",
+        "page": 1
+    }, {
+        "content": "0.34224",
+        "page": 1
+    }, {
+        "content": "5.13",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "0.91",
+        "page": 1
+    }, {
+        "content": "5.13",
+        "page": 1
+    }, {
+        "content": "0,28086",
+        "page": 1
+    }, {
+        "content": "0602",
+        "page": 1
+    }, {
+        "content": "DEMANDALE ESTADUAL 16.886/18",
+        "page": 1
+    }, {
+        "content": "103.9",
+        "page": 1
+    }, {
+        "content": "18,00613",
+        "page": 1
+    }, {
+        "content": "0.00",
+        "page": 1
+    }, {
+        "content": "0%",
+        "page": 1
+    }, {
+        "content": "0.00",
+        "page": 1
+    }, {
+        "content": "1,871.04",
+        "page": 1
+    }, {
+        "content": "18,00613",
+        "page": 1
+    }, {
+        "content": "0699",
+        "page": 1
+    }, {
+        "content": "PIS/PASEP(0,84%)",
+        "page": 1
+    }, {
+        "content": "32.19",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "5,79",
+        "page": 1
+    }, {
+        "content": "32,19",
+        "page": 1
+    }, {
+        "content": "0699",
+        "page": 1
+    }, {
+        "content": "PIS/PASEP(0,84%)",
+        "page": 1
+    }, {
+        "content": "0.00",
+        "page": 1
+    }, {
+        "content": "0%",
+        "page": 1
+    }, {
+        "content": "0,00",
+        "page": 1
+    }, {
+        "content": "16.49",
+        "page": 1
+    }, {
+        "content": "0699",
+        "page": 1
+    }, {
+        "content": "COFINS(3,87%)",
+        "page": 1
+    }, {
+        "content": "148,51",
+        "page": 1
+    }, {
+        "content": "18%",
+        "page": 1
+    }, {
+        "content": "26,73",
+        "page": 1
+    }, {
+        "content": "148,51",
+        "page": 1
+    }, {
+        "content": "0699",
+        "page": 1
+    }, {
+        "content": "COFINS(3,87%)",
+        "page": 1
+    }, {
+        "content": "0.00",
+        "page": 1
+    }, {
+        "content": "0%",
+        "page": 1
+    }, {
+        "content": "0,00",
+        "page": 1
+    }, {
+        "content": "75.98",
+        "page": 1
+    }, {
+        "content": "0807",
+        "page": 1
+    }, {
+        "content": "-SAOPAULO MUNICIPAL",
+        "page": 1
+    }, {
+        "content": "276.76",
+        "page": 1
+    }, {
+        "content": "Valor dos Tributos R 931.66",
+        "page": 1
+    }, {
+        "content": "MENSAGENS",
+        "page": 1
+    }, {
+        "content": "Comunicado Importante: Com est a fatura vooê est à recebendo uma carta da Enel Distribuição Slio Paulo, que explica sobre o reajust tarifário autorizado pela ANEEL (Agência Nacional",
+        "page": 1
+    }, {
+        "content": "de Energia Bétrica) para tarifasdo Grupo A conforme Resolução omologatória n° 3.215/2023",
+        "page": 1
+    }, {
+        "content": "CFOP 5253 (Venda de en elétrica p/ estabelecimento comercial)",
+        "page": 1
+    }, {
+        "content": "O pagamento desta conta não quita débitos anteriores",
+        "page": 1
+    }, {
+        "content": "valor desta conta será debitado em sua conta corrente em 13/09/2023 no banco BANCO DO BRASIL Considerar est conta quitada apósa efetivação Débito",
+        "page": 1
+    }, {
+        "content": "Débito automático banco BANCO DOBRASIL",
+        "page": 1
+    }, {
+        "content": "Sua conta com vencimento em 14/08/2023 no valor de 6.719,57 foi quitada através de Débito Automático",
+        "page": 1
+    }, {
+        "content": "N° da Conta",
+        "page": 1
+    }, {
+        "content": "Data de Emissão",
+        "page": 1
+    }, {
+        "content": "Conta Referente a",
+        "page": 1
+    }, {
+        "content": "N° da Instalação",
+        "page": 1
+    }, {
+        "content": "enel",
+        "page": 1
+    }, {
+        "content": "Consumo (kWh)",
+        "page": 1
+    }, {
+        "content": "553706160535",
+        "page": 1
+    }, {
+        "content": "21 AGO 2023",
+        "page": 1
+    }, {
+        "content": "AGO 2023",
+        "page": 1
+    }, {
+        "content": "MTE0012927",
+        "page": 1
+    }, {
+        "content": "3.471,0",
+        "page": 1
+    }, {
+        "content": "VENCIMENTO",
+        "page": 1
+    }, {
+        "content": "13 SET 2023 TOTAL A PAGAR (R$)",
+        "page": 1
+    }, {
+        "content": "6.079,22",
+        "page": 1
+    }, {
+        "content": "o pagamento desta conta",
+        "page": 1
+    }, {
+        "content": "IGREJA UNIVERSAL DO REINODEDEUS",
+        "page": 1
+    }, {
+        "content": "não quita débitos anteriores",
+        "page": 1
+    }, {
+        "content": "836600000605 792200481002 541431745721 000000165704",
+        "page": 1
+    }, {
+        "content": "Autenticação mecânica",
+        "page": 1
+    }, {
+        "content": "não vale como recibo.",
+        "page": 1
+    }, {
+        "content": "2",
+        "page": 2
+    }, {
+        "content": "enel",
+        "page": 2
+    }, {
+        "content": "Data de emissão",
+        "page": 2
+    }, {
+        "content": "Conta referente a",
+        "page": 2
+    }, {
+        "content": "Vencimento",
+        "page": 2
+    }, {
+        "content": "21 AGO 2023",
+        "page": 2
+    }, {
+        "content": "AGC 2023",
+        "page": 2
+    }, {
+        "content": "13 SET 2023",
+        "page": 2
+    }, {
+        "content": "CONHECA NOSSOS CANAIS DE ATENDIMENTO",
+        "page": 2
+    }, {
+        "content": "INFORMAÇÕES AOS CLIENTES",
+        "page": 2
+    }, {
+        "content": "Site",
+        "page": 2
+    }, {
+        "content": "Para solicitar ligação nova religação de unidade cortada",
+        "page": 2
+    }, {
+        "content": "Informações suplementares desta conta podem ser consultadas no site, na área reservada ao cliente;",
+        "page": 2
+    }, {
+        "content": "eneldistribuicaosp.com.br",
+        "page": 2
+    }, {
+        "content": "segunda via de conta outros serviços.",
+        "page": 2
+    }, {
+        "content": "As condições gerais de fornecimento tarifas, produtos, serviços prestados tributos entre outras",
+        "page": 2
+    }, {
+        "content": "SMS",
+        "page": 2
+    }, {
+        "content": "Envie um SMS gratuito para 27373 com palavra LUZ quando faltar",
+        "page": 2
+    }, {
+        "content": "informações, podem ser consultadas no site e nos demais canais de atendimento:",
+        "page": 2
+    }, {
+        "content": "energia, CONTA para segunda via RELIGA para religação de",
+        "page": 2
+    }, {
+        "content": "27373",
+        "page": 2
+    }, {
+        "content": "energia. Sempre com o número da instalação junto.",
+        "page": 2
+    }, {
+        "content": "A falta de pagamento desta conta implicará na suspensão do fornecimento de energia a partir do 16°",
+        "page": 2
+    }, {
+        "content": "dia da notificação de débito. No caso de Tarifa Social de Baixa Renda, a suspensão do fornecimento",
+        "page": 2
+    }, {
+        "content": "Central de Relacionamento",
+        "page": 2
+    }, {
+        "content": "Atendimento Emergência disponível 24 horas",
+        "page": 2
+    }, {
+        "content": "deverá ocorrer com intervalo mínimo de 30 dias entre a data de vencimento e efetiva suspensão.",
+        "page": 2
+    }, {
+        "content": "Corporativo e Clientes Publicos",
+        "page": 2
+    }, {
+        "content": "Atendimento Comercial: de Segunda Sexta, das 8h às 18h",
+        "page": 2
+    }, {
+        "content": "0800 72 71 196",
+        "page": 2
+    }, {
+        "content": "Contas pagas após O vencimento terão multa de 2% juros mora de 0.033% ao dia e atualização",
+        "page": 2
+    }, {
+        "content": "financeira na próxima conta;",
+        "page": 2
+    }, {
+        "content": "Atendimento Especial",
+        "page": 2
+    }, {
+        "content": "Atendimento 24 horas. exclusivo para deficientes auditivos",
+        "page": 2
+    }, {
+        "content": "TUSD Tarifa de Uso do Sistema de Distribuição TE Tarifa de Energia;",
+        "page": 2
+    }, {
+        "content": "0800 77 28 626",
+        "page": 2
+    }, {
+        "content": "Informações sobre a contribuição para custeio do serviço de Iluminação Pública (CIP/COSIP) do seu",
+        "page": 2
+    }, {
+        "content": "Ouvidoria",
+        "page": 2
+    }, {
+        "content": "Para acionar Ouvidoria é importante que você tenha procurado",
+        "page": 2
+    }, {
+        "content": "Município, estão disponíveis no site da distribuidora, no campo \"impostos e outros encargos\";",
+        "page": 2
+    }, {
+        "content": "0800 72 73 110",
+        "page": 2
+    }, {
+        "content": "antes nossos Canais de Atendimento nos informe o número de",
+        "page": 2
+    }, {
+        "content": "protocolo.",
+        "page": 2
+    }, {
+        "content": "(dias uteis das 8h às 18h).",
+        "page": 2
+    }, {
+        "content": "Você pode solicitar o cancelamento da cobrança de serviços de terceiros incluídos em sua conta,",
+        "page": 2
+    }, {
+        "content": "bem como a emissão de uma nova sem essa cobrança;",
+        "page": 2
+    }, {
+        "content": "ARSESP 0800 72 70 167",
+        "page": 2
+    }, {
+        "content": "Agência Reguladora de Saneamento Energia do Estado de Sao Paulo.",
+        "page": 2
+    }, {
+        "content": "Central de Serviços Metlife (dúvidas, esclarecimentos e solicitações). 3004.9212 (capital e grandes",
+        "page": 2
+    }, {
+        "content": "ANEEL 167",
+        "page": 2
+    }, {
+        "content": "Agência Nacional de Energia Elétrica (Ligação gratuita de telefones fixos móveis)",
+        "page": 2
+    }, {
+        "content": "cidades) ou 0800 727 92 12 (demais localidades) Horário de atendimento: de segunda a sexta. das 9b",
+        "page": 2
+    }, {
+        "content": "às 18h (dias úteis)",
+        "page": 2
+    }, {
+        "content": "Acesse: www.facebook.com/EnelClientesBR",
+        "page": 2
+    }, {
+        "content": "Endereço para devolução uso exclusivo dos Correios",
+        "page": 2
+    }, {
+        "content": "Eletropaulo Metropolitana Eletricidade de São Paulo S.A",
+        "page": 2
+    }, {
+        "content": "TENSÃO NOMINAL (V) 13,800 (MT)",
+        "page": 2
+    }, {
+        "content": "LIMITEMÁXIMO ADEQUADO(V) 13,860",
+        "page": 2
+    }, {
+        "content": "Av. das Nações Unidas, 14401 Conjuntos 1 ao 4. 17° ao 23° andar, Torre B1",
+        "page": 2
+    }, {
+        "content": "TENSÃO CONTRATADA (V) 13,200",
+        "page": 2
+    }, {
+        "content": "UMITEMÍNIMO ADEQUADO 12,276",
+        "page": 2
+    }, {
+        "content": "Vila Gertrudes São Paulo/SP Cep 04794-000",
+        "page": 2
+    }, {
+        "content": "Responsável pela iluminação pública em sua rua/região",
+        "page": 2
+    }, {
+        "content": "ENEL DISTRIBUIÇÃO SÃO PAULO 0800 72 72 196",
+        "page": 2
+    }],
+    "queries": [{
+        "alias": "VENCIMENTO?",
+        "content": "13 SET 2023",
+        "page": 1
+    }, {
+        "alias": "VENCIMENTO?",
+        "content": "13 SET 2023",
+        "page": 1
+    }, {
+        "alias": "TOTAL A PAGAR (R$)?",
+        "content": "6.079,22",
+        "page": 1
+    }, {
+        "alias": "TOTAL A PAGAR (R$)?",
+        "content": "6.079,22",
+        "page": 1
+    }, {
+        "alias": "CONTA REFERENTE A?",
+        "content": "AGO 2023",
+        "page": 1
+    }, {
+        "alias": "CONTA REFERENTE A?",
+        "content": "AGO 2023",
+        "page": 1
+    }, {
+        "alias": "Leitura anterior?",
+        "content": "01 JUL",
+        "page": 1
+    }, {
+        "alias": "Leitura atual?",
+        "content": "01AGO",
+        "page": 1
+    }, {
+        "alias": "Proxima leitura?",
+        "content": "1 SET",
+        "page": 1
+    }, {
+        "alias": "N do medidor?",
+        "content": "14133695",
+        "page": 1
+    }, {
+        "alias": "Qual o Consumo do mes (kwh)?",
+        "content": "3.471,0",
+        "page": 1
+    }, {
+        "alias": "Qual a data de emissao?",
+        "content": "21 AGO2023",
+        "page": 1
+    }, {
+        "alias": "Qual a data de emissao?",
+        "content": "21 AGO 2023",
+        "page": 1
+    }, {
+        "alias": "N Nota fiscal?",
+        "content": "000858676",
+        "page": 1
+    }, {
+        "alias": "Serie?",
+        "content": "A",
+        "page": 1
+    }, {
+        "alias": "Qual o CPF/CNPJ?",
+        "content": "29.744.778/0455-30",
+        "page": 1
+    }, {
+        "alias": "N da instalacao?",
+        "content": "MTE0012927",
+        "page": 1
+    }, {
+        "alias": "N da instalacao?",
+        "content": "MTE0012927",
+        "page": 1
+    }, {
+        "alias": "VENCIMENTO?",
+        "content": "13 SET 2023",
+        "page": 2
+    }, {
+        "alias": "CONTA REFERENTE A?",
+        "content": "AGC 2023",
+        "page": 2
+    }, {
+        "alias": "Qual a data de emissao?",
+        "content": "21 AGO 2023",
+        "page": 2
+    }],
+    "forms": [{
+        "page": 1,
+        "key": "VENCIMENTO",
+        "value": "13 SET 2023"
+    }, {
+        "page": 1,
+        "key": "Leitura anterior",
+        "value": "01 JUL"
+    }, {
+        "page": 1,
+        "key": "N° do medidor",
+        "value": "14133695"
+    }, {
+        "page": 1,
+        "key": "Próxima leitura",
+        "value": "1 SET"
+    }, {
+        "page": 1,
+        "key": "CONTA REFERENTE A",
+        "value": "AGO 2023"
+    }, {
+        "page": 1,
+        "key": "Leitura atual",
+        "value": "01AGO"
+    }, {
+        "page": 1,
+        "key": "TOTAL A PAGAR (R$)",
+        "value": "6.079,22"
+    }, {
+        "page": 1,
+        "key": "N° DO CLIENTE",
+        "value": "10013672"
+    }, {
+        "page": 1,
+        "key": "Modalidade Tarifária",
+        "value": "Verde"
+    }, {
+        "page": 1,
+        "key": "Classe",
+        "value": "COMÉRCIO SERVEOUTRASATIV"
+    }, {
+        "page": 1,
+        "key": "N° DA INSTALAÇÃO",
+        "value": "MTE0012927"
+    }, {
+        "page": 1,
+        "key": "Subgrupo",
+        "value": "A4"
+    }, {
+        "page": 1,
+        "key": "Grupo",
+        "value": "A"
+    }, {
+        "page": 1,
+        "key": "Data de emissão",
+        "value": "21 AGO2023"
+    }, {
+        "page": 1,
+        "key": "Consumo (kWh)",
+        "value": "3.471,0"
+    }, {
+        "page": 1,
+        "key": "Conta Referente a",
+        "value": "AGO 2023"
+    }, {
+        "page": 1,
+        "key": "N° Nota fiscal",
+        "value": "000858676"
+    }, {
+        "page": 1,
+        "key": "Data de Emissão",
+        "value": "21 AGO 2023"
+    }, {
+        "page": 1,
+        "key": "Alíquota",
+        "value": "18%"
+    }, {
+        "page": 1,
+        "key": "Demanda / Energia Contratada",
+        "value": "160,0"
+    }, {
+        "page": 1,
+        "key": "Subclasse",
+        "value": "DUTROSSERMÇOSEOUTRASATIVIDADES"
+    }, {
+        "page": 1,
+        "key": "N° da Instalação",
+        "value": "MTE0012927"
+    }, {
+        "page": 1,
+        "key": "Série",
+        "value": "A"
+    }, {
+        "page": 1,
+        "key": "N° da Conta",
+        "value": "553706160535"
+    }, {
+        "page": 1,
+        "key": "Tipo de Fornecimento",
+        "value": "Trifásico"
+    }, {
+        "page": 1,
+        "key": "ICMS",
+        "value": "690.98"
+    }, {
+        "page": 1,
+        "key": "Base de cálculo",
+        "value": "3,838.95"
+    }, {
+        "page": 1,
+        "key": "VENCIMENTO",
+        "value": "13 SET 2023"
+    }, {
+        "page": 1,
+        "key": "TOTAL A PAGAR (R$)",
+        "value": "6.079,22"
+    }, {
+        "page": 1,
+        "key": "P Bandeira(s) Tarifária(s) aplicada(s) no mês",
+        "value": "VERDE"
+    }, {
+        "page": 1,
+        "key": "CPF/CNPJ 29.744.778/0455-30",
+        "value": "IGREJA UNIVERSAL DO REINODEDEUS RGUAICURUS683 OEP. 05033-001 SAOPAULO/SP"
+    }, {
+        "page": 1,
+        "key": "5253:",
+        "value": "Vendade en. elétricap/ estabeleamento comercial"
+    }, {
+        "page": 1,
+        "key": "C Reservado ao Fisco",
+        "value": "60DE719F152EC534.1BC5.34ACB453.FF87"
+    }, {
+        "page": 1,
+        "key": "Inscrição Estadual",
+        "value": "133.122.090.117"
+    }, {
+        "page": 1,
+        "key": "Regime Especial Proc.",
+        "value": "1000635-686924/2005"
+    }, {
+        "page": 1,
+        "key": "Valor dos Tributos",
+        "value": "R 931.66"
+    }, {
+        "page": 2,
+        "key": "Data de emissão",
+        "value": "21 AGO 2023"
+    }, {
+        "page": 2,
+        "key": "Conta referente a",
+        "value": "AGC 2023"
+    }, {
+        "page": 2,
+        "key": "Vencimento",
+        "value": "13 SET 2023"
+    }, {
+        "page": 2,
+        "key": "Responsável pela iluminação pública em sua rua/região",
+        "value": "ENEL DISTRIBUIÇÃO SÃO PAULO 0800 72 72 196"
+    }, {
+        "page": 2,
+        "key": "SMS 27373",
+        "value": "NOT_SELECTED"
+    }, {
+        "page": 2,
+        "key": "TENSÃO NOMINAL (V) 13,800 (MT)",
+        "value": "LIMITEMÁXIMO ADEQUADO(V) 13,860"
+    }, {
+        "page": 2,
+        "key": "TENSÃO CONTRATADA (V) 13,200",
+        "value": "UMITEMÍNIMO ADEQUADO 12,276"
+    }, {
+        "page": 2,
+        "key": "Ouvidoria",
+        "value": "0800 72 73 110 (dias uteis das 8h às 18h)."
+    }, {
+        "page": 2,
+        "key": "Site",
+        "value": "eneldistribuicaosp.com.br"
+    }, {
+        "page": 2,
+        "key": "ARSESP 0800 72 70 167",
+        "value": "ANEEL 167"
+    }, {
+        "page": 2,
+        "key": "Central de Relacionamento Corporativo e Clientes Publicos",
+        "value": "0800 72 71 196"
+    }, {
+        "page": 2,
+        "key": "Atendimento Especial",
+        "value": "0800 77 28 626"
+    }],
+    "tables": [{
+        "headersContent": ["Q Dados da Conta "],
+        "headersSize": 1,
+        "valuesContent": [
+            ["VENCIMENTO", "TOTAL A PAGAR (R$)"],
+            ["13 SET 2023", "6.079,22"],
+            ["CONTA REFERENTE", "A AGO 2023"]
+        ],
+        "valuesSize": 3,
+        "page": 1
+    }, {
+        "headersContent": ["S Dados de Medicão "],
+        "headersSize": 1,
+        "valuesContent": [
+            ["N° do medidor 14133695", ""],
+            ["Leitura anterior 01 JUL", ""],
+            ["Leitura atual 01AGO", ""],
+            ["Próxima leitura 1 SET", ""]
+        ],
+        "valuesSize": 4,
+        "page": 1
+    }, {
+        "headersContent": ["    "],
+        "headersSize": 1,
+        "valuesContent": [
+            ["Mês/Ano", "Demanda (kW)", "Consumo (kWh)", "Dias"],
+            ["", "", "Hora Ponta", "Hora Fora Ponta", ""],
+            ["AGO 23", "160.0", "851.7", "2,619.3", "31"],
+            ["JUL/23", "160,0", "962.3", "2,711.7", "30"],
+            ["JUN/23", "160.0", "1.185,6", "4,308.4", "31"],
+            ["MAI/23", "160,0", "15194", "5,135.9", "30"],
+            ["ABR23", "160.0", "3,983.8", "11.758,5", "31"],
+            ["MAR23", "160.0", "3.663,7", "9,773.8", "28"],
+            ["FEV/23", "160.0", "3,010.5", "6,846.5", "31"],
+            ["JAN/23", "160.0", "2,657.0", "8,233.1", "31"],
+            ["DEZ/22", "160.0", "1,159.6", "5,042.4", "30"],
+            ["NOV/22", "160.0", "1,056.7", "5,348.5", "31"],
+            ["OUT/22", "160.0", "1.062,1", "3,250.0", "30"],
+            ["SET/22", "160.0", "951.8", "2.967,1", "31"],
+            ["AGO 22", "160.0", "1,050.8", "3.790,3", "31"]
+        ],
+        "valuesSize": 15,
+        "page": 1
+    }, {
+        "headersContent": ["Data de emissão", "N° Nota fiscal", "Série", "Base de cálculo", "Alíquota", "ICMS"],
+        "headersSize": 6,
+        "valuesContent": [
+            ["21 AGO2023", "000858676", "A", "3,838.95", "18%", "690.98"]
+        ],
+        "valuesSize": 1,
+        "page": 1
+    }, {
+        "headersContent": ["CCI", "DESCRIÇÃO", "LATURA ANTERIOR", "LEITURA ATUAL", "REGISTRADO kW/kWh/kvarh", "FATURADOKWI kWh/kvarh", "TARIFA a ICMS", "BASE ICMS", "ALÍQ ICMS", "ICMS", "VALOR", "TARIFA S IMPOSTOS"],
+        "headersSize": 12,
+        "valuesContent": [
+            ["", "PERDA DETRANSFORMAÇÃO 2.5%", "", "", "", "", "", "", "", "", "", ""],
+            ["", "MEDIDORN 14133695", "", "", "", "", "", "", "", "", "", ""],
+            ["", "CONST POTENCIA 0.06400", "", "", "", "", "", "", "", "", "", ""],
+            ["", "CONST. ATIVO 0.01600", "", "", "", "", "", "", "", "", "", ""],
+            ["", "CONST REATIVO 0.01600", "", "", "", "", "", "", "", "", "", ""],
+            ["", "CONSUMO PONTA VD", "11,265,049", "11,316,984", "831.0", "", "", "", "", "", "", ""],
+            ["", "CONSUMO FORA PONTA CAPACIT VD", "1,629,747", "1,641,023", "1804", "", "", "", "", "", "", ""],
+            ["", "CONSUMO FORA PONTA INDUTIVOVI", "43.072.690", "43.221.125", "2,375.0", "", "", "", "", "", "", ""],
+            ["", "DEMANDA PONTA", "965", "326", "20.9", "", "", "", "", "", "", ""],
+            ["", "DEMANDA FORA PONTA CAPACITIVA", "146", "129", "8.3", "", "", "", "", "", "", ""],
+            ["", "DEMANDA FORA PONTA INDUTIVA", "1.341", "855", "54.7", "", "", "", "", "", "", ""],
+            ["", "ENERGIA REATIVA PONTA", "4,942,411", "4,943,197", "12.6", "", "", "", "", "", "", ""],
+            ["", "ENERGIA REATIVA F PONTA IND", "20.859.904", "20.871.871", "1915", "", "", "", "", "", "", ""],
+            ["", "UFERPONTA", "459,218", "459,218", "0.0", "", "", "", "", "", "", ""],
+            ["", "UFFRFORA PONTA CAPACITIVA", "164", "164", "0.0", "", "", "", "", "", "", ""],
+            ["", "UFFRFORA PONTA INDUTIVA", "2414479", "2,415,393", "14.6", "", "", "", "", "", "", ""],
+            ["", "DMCRPONTA", "3.512", "1,067", "17.1", "", "", "", "", "", "", ""],
+            ["", "DMCRFORA PONTA CAPACITIVA", "226", "335", "5.4", "", "", "", "", "", "", ""],
+            ["", "DMCRFORA PONTA INDUTIVA", "3.932", "2.289", "36.6", "", "", "", "", "", "", ""],
+            ["", "ENERGIA REATIVA F PONTA CAP", "24.234", "24.736", "8.0", "", "", "", "", "", "", ""],
+            ["", "FATORDECARGA", "", "", "0.083", "", "", "", "", "", "", ""],
+            ["0602", "DEMANDA", "", "", "", "56.1", "21.95871", "1,231.62", "18%", "221.69", "1,231.62", "18,00613"],
+            ["0605", "CONSUMO ATIVO PONTA TUSD", "", "", "", "851.7", "0.98552", "839.40", "18%", "151.09", "839.40", "0.80814"],
+            ["0601", "CONSUMO ATIVO PONTA TE", "", "", "", "851.7", "0.51359", "437.44", "18%", "78,73", "437.44", "0,42116"],
+            ["0605", "CONSUMO ATIVOF PONTA TUSD", "", "", "", "2,619.3", "0.11144", "291,88", "18%", "52.54", "291.88", "0.09138"],
+            ["0601", "CONSUMO ATIVOR PONTA TE", "", "", "", "2,619.3", "0.32558", "852.78", "18%", "153.50", "852.78", "0.26698"],
+            ["0601", "UFFRFORA PONTA TE", "", "", "", "15.0", "0.34224", "5.13", "18%", "0.91", "5.13", "0,28086"],
+            ["0602", "DEMANDALE ESTADUAL 16.886/18", "", "", "", "103.9", "18,00613", "0.00", "0%", "0.00", "1,871.04", "18,00613"],
+            ["0699", "PIS/PASEP(0,84%)", "", "", "", "", "", "32.19", "18%", "5,79", "32,19", ""],
+            ["0699", "PIS/PASEP(0,84%)", "", "", "", "", "", "0.00", "0%", "0,00", "16.49", ""],
+            ["0699", "COFINS(3,87%)", "", "", "", "", "", "148,51", "18%", "26,73", "148,51", ""],
+            ["0699", "COFINS(3,87%)", "", "", "", "", "", "0.00", "0%", "0,00", "75.98", ""],
+            ["0807", "-SAOPAULO MUNICIPAL", "", "", "", "", "", "", "", "", "276.76", ""]
+        ],
+        "valuesSize": 33,
+        "page": 1
+    }, {
+        "headersContent": ["Data de emissão", "Conta referente a", "Vencimento"],
+        "headersSize": 3,
+        "valuesContent": [
+            ["21 AGO 2023", "AGC 2023", "13 SET 2023"]
+        ],
+        "valuesSize": 1,
+        "page": 2
+    }]
+ },
   "ocrEnel": {
     "words": [{
         "content": "Eletropaulo",
@@ -44676,10 +49516,18 @@ function dadosNota(pdfData) {
         if (!row) return false;
     
         const valor = row[4] || row[5];
-        return valor?.replace('.', ',');
-        // return valor?.replace(/,/g, '.');
+        const parts = valor.split(',');
+    if (parts.length > 2) {
+        parts[0] = parts[0]?.replace(/\./g, '');
+        parts[1] = parts[1]?.replace(/\./g, ',');
+        parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
+        else {
+          parts[0] = parts[0]?.replace(/\./g, ',');
+        } 
     
-      };;//certo
+    // return parts?.join('.');
+    return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
+};//certo
   //UFER PONTA TE
   //TARIFASeIMPOSTOS
   const getUFERPONTATETARIFASeIMPOSTOS = (pdf) => {
@@ -44886,6 +49734,7 @@ function dadosNota(pdfData) {
     return valor?.replace('.', ',');
 
   };//certo
+
   const getConsumoAtivoFpontaTUSDvalueVALOR = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -44906,10 +49755,20 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[10];
-    return valor?.replace('.', ',');
-    // return valor?.replace(/,/g, '.');
+    const parts = valor.split(',');
+    if (parts.length > 2) {
+        parts[0] = parts[0]?.replace(/\./g, '');
+        parts[1] = parts[1]?.replace(/\./g, ',');
+        parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
+        else {
+          parts[0] = parts[0]?.replace(/\./g, ',');
+        } 
+    
+    // return parts?.join('.');
+    return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
+}//certo
 
-  };//certo
+
   const getConsumoAtivoFpontaTUSDvalueICMS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -44930,11 +49789,18 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[9];
-    return valor?.replace('.', ',');
-
-    // return valor?.replace(/,/g, '.');
-
-  };//certo
+    const parts = valor.split(',');
+    if (parts.length > 2) {
+        parts[0] = parts[0]?.replace(/\./g, '');
+        parts[1] = parts[1]?.replace(/\./g, ',');
+        parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
+        else {
+          parts[0] = parts[0]?.replace(/\./g, ',');
+        } 
+    
+    // return parts?.join('.');
+    return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
+}//certo
   const getConsumoAtivoFpontaTUSDaliqICMS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -44959,7 +49825,8 @@ function dadosNota(pdfData) {
     return valor?.replace('%', '');
 
   };//certo
-  const getConsumoAtivoFpontaTUSDBaseICMS = (pdf) => {
+
+  const getConsumoAtivoFpontaTUSDBaseICMS= (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
       return row.some((cell) => {
@@ -44979,11 +49846,50 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[7];
-    return valor
-    //return valor?.replace(/,/g, '.');
-    // return valor?.replace(/,/g, '.');
+    const parts = valor.split(',');
+    if (parts.length > 2) {
+        parts[0] = parts[0]?.replace(/\./g, '');
+        parts[1] = parts[1]?.replace(/\./g, ',');
+        parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
+        else {
+          parts[0] = parts[0]?.replace(/\./g, ',');
+        } 
+    
+    // return parts?.join('.');
+    return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
+}//certo
 
-  };//certo
+  // const getConsumoAtivoFpontaTUSDBaseICMS = (pdf) => {
+  //   const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
+  //     //console.log(row)
+  //     return row.some((cell) => {
+  //       //console.log(`'${cell}'`) 
+  //       const formatcell = cell?.replace(/\s/g, "");
+  //       if (formatcell.includes('CONSUMOATIVOFPONTATUSD')) return true
+  //       return false
+  //     })
+  //   }));
+  //   if (!table) return false;
+  //   const row = table.valuesContent.find((row) => {
+  //     return row.some((cell) => {
+  //       const formatCell = cell?.replace(/\s/g, "");
+  //       return formatCell.includes("CONSUMOATIVOFPONTATUSD");
+  //     });
+  //   });
+  //   if (!row) return false;
+
+  //   const valor = row[7];
+  //   const parts = valor.split(',');
+  //   if (parts.length > 2) {
+  //       parts[0] = parts[0]?.replace(/\./g, '');
+  //       parts[1] = parts[1]?.replace(/\./g, ',');
+  //       parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
+  //       else {
+  //         parts[0] = parts[0]?.replace(/\./g, ',');
+  //       } 
+  //   return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
+  // };//certo
+
   const getConsumoAtivoFpontaTUSDtarifaCICMS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -45010,44 +49916,81 @@ function dadosNota(pdfData) {
     // return valor?.replace(/,/g, '.');
 
   };//certo
-  const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
-      const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
-          const formatRow = row.map(cell => cell?.replace(/\s/g, ""));
-          return formatRow.includes('CONSUMOATIVOFPONTATUSD');
-      }));
-  
-      if (!table) return false;
-  
-      const row = table.valuesContent.find((row) => {
-          const formatRow = row.map(cell => cell?.replace(/\s/g, ""));
-          return formatRow.includes("CONSUMOATIVOFPONTATUSD");
-      });
-  
-      if (!row) return false;
-  
-      const valor = row[5];
-  
-      // Substituir vírgulas por pontos na parte decimal e pontos por vírgulas na parte inteira
-      const parts = valor.split(',');
-  //     if (parts.length > 1) {
-  //         parts[0] = parts[0]?.replace(/\./g, '');
-  //         parts[1] = parts[1]?.replace(/\./g, ',');
-  //     }
-  
-  //     return parts?.join('.');
-  // };
-  if (parts.length > 2) {
-      parts[0] = parts[0]?.replace(/\./g, '');
-      parts[1] = parts[1]?.replace(/\./g, ',');
-      parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
-      else {
-        parts[0] = parts[0]?.replace(/\./g, ',');
-      } 
-  
-  // return parts?.join('.');
-  return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
 
-  }
+
+  const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
+    const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
+      //console.log(row)
+      return row.some((cell) => {
+        //console.log(`'${cell}'`) 
+        const formatcell = cell?.replace(/\s/g, "");
+        if (formatcell.includes('CONSUMOATIVOFPONTATUSD')) return true
+        return false
+      })
+    }));
+    if (!table) return false;
+    const row = table.valuesContent.find((row) => {
+      return row.some((cell) => {
+        const formatCell = cell?.replace(/\s/g, "");
+        return formatCell.includes("CONSUMOATIVOFPONTATUSD");
+      });
+    });
+    if (!row) return false;
+
+    const valor = row[5];
+    const parts = valor.split(',');
+    if (parts.length > 2) {
+        parts[0] = parts[0]?.replace(/\./g, '');
+        parts[1] = parts[1]?.replace(/\./g, ',');
+        parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
+        else {
+          parts[0] = parts[0]?.replace(/\./g, ',');
+        } 
+    
+    // return parts?.join('.');
+    return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
+}
+
+//   const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
+//   const getConsumoAtivoFpontaTUSDBaseICMS= (pdf) => {
+//     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
+//       //console.log(row)
+//       return row.some((cell) => {
+//         //console.log(`'${cell}'`) 
+//         const formatcell = cell?.replace(/\s/g, "");
+//         if (formatcell.includes('CONSUMOATIVOFPONTATUSD')) return true
+//         return false
+//       })
+//     }));
+//     if (!table) return false;
+//     const row = table.valuesContent.find((row) => {
+//       return row.some((cell) => {
+//         const formatCell = cell?.replace(/\s/g, "");
+//         return formatCell.includes("CONSUMOATIVOFPONTATUSD");
+//       });
+//     });
+//     if (!row) return false;
+
+//     const valor = row[7];
+//     const parts = valor.split(',');
+//     if (parts.length > 2) {
+//         parts[0] = parts[0]?.replace(/\./g, '');
+//         parts[1] = parts[1]?.replace(/\./g, ',');
+//         parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
+//         else {
+//           parts[0] = parts[0]?.replace(/\./g, ',');
+//         } 
+    
+//     // return parts?.join('.');
+//     return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
+// }
+
+
+
+
+
+
+
   const getConsumoAtivoPontaTUSDvalueTARIFASeIMPOSTOS = (pdf) => {
       const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
       const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -45084,7 +50027,8 @@ function dadosNota(pdfData) {
         parts[0] = parts[0]?.replace(/\./g, ',');
       } 
   
-  return parts?.join('.');
+  // return parts?.join('.');
+  return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
   }
   const getConsumoAtivoPontaTUSDvalueICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
@@ -45126,9 +50070,7 @@ function dadosNota(pdfData) {
 
     const valor = row[7];
     const parts = valor.split(',');
-
-  //   if (parts.length > 1) {
-       if (parts.length > 2) {
+    if (parts.length > 2) {
         parts[0] = parts[0]?.replace(/\./g, '');
         parts[1] = parts[1]?.replace(/\./g, ',');
         parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
@@ -45136,10 +50078,9 @@ function dadosNota(pdfData) {
           parts[0] = parts[0]?.replace(/\./g, ',');
         } 
     
-    return parts?.join('.');
-
-
-  };//certo
+    // return parts?.join('.');
+    return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
+}//certo
   const getConsumoAtivoPontaTUSDtarifaCICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -45166,13 +50107,17 @@ function dadosNota(pdfData) {
     const valor = row[5];
  
     const parts = valor.split(',');
-    if (parts.length > 1) {
-        parts[0] = parts[0]?.replace(/\./g, '');
-        parts[1] = parts[1]?.replace(/\./g, ',');
-    }
-
-    return parts?.join('.');
-  };//certo
+    if (parts.length > 2) {
+      parts[0] = parts[0]?.replace(/\./g, '');
+      parts[1] = parts[1]?.replace(/\./g, ',');
+      parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
+      else {
+        parts[0] = parts[0]?.replace(/\./g, ',');
+      } 
+  
+  // return parts?.join('.');
+  return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
+  }//certo
   const getAUferPontaLeituraREGISTRADO = (pdf) => {
     const table = pdf.tables.find((table) => {
       const valuesContent = table.valuesContent;
@@ -45464,7 +50409,7 @@ function dadosNota(pdfData) {
     }
 
     const valor = row[8] || row[7];
-    return valor
+    return valor?.replace(/%/g, '');
     // const valorSubstituido = valor?.replace(/,/g, '.');
 
     // //console.log('Final value:', valorSubstituido);
@@ -45492,12 +50437,18 @@ function dadosNota(pdfData) {
     //(row[8] || row[7]);
     if (vlrSerieDoTipoDeConta === "A") {
       const valor = row[10];
-      //console.log(row)
-      // const valorFinal = valor?.replace(/,/g, '.');
-
-      return valor;
-    }
-
+      const parts = valor.split(',');
+    if (parts.length > 2) {
+        parts[0] = parts[0]?.replace(/\./g, '');
+        parts[1] = parts[1]?.replace(/\./g, ',');
+        parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
+        else {
+          parts[0] = parts[0]?.replace(/\./g, ',');
+        } 
+    
+    // return parts?.join('.');
+    return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
+}
     const valor = row[8] || row[7];
     return valor
     //const valorSubstituido = valor?.replace(/,/g, '.');
@@ -45999,6 +50950,15 @@ function dadosNota(pdfData) {
     const vlrConsumoDoMes = getConsumoDoMes(pdf);
     const vlrLeituraAtual = getLeituraAtual(pdf);
     const vlrValorLeituraAtual = geValorLeituraAtual(pdf);
+    // const vlrConsumoAtivoFpontaTUSDFATURADO = getConsumoAtivoFpontaTUSDFATURADO(pdf);
+
+  // const vlrRetornoConsumoAtivoFpontaTUSDFATURADO = getConsumoAtivoFpontaTUSDFATURADO(pdf);
+  // let vlrRetornoSem = vlrRetornoConsumoAtivoFpontaTUSDFATURADO.split('.')
+  //   if (vlrRetornoSem.length === 2){
+  //     console.log (`${parts[0]}.${parts[1]?.replace(/\./g, ',')}`)
+  //     return `${parts[0]}.${parts[1]?.replace(/\./g, ',')}`;
+  //   }
+  //   const vlrConsumoAtivoFpontaTUSDFATURADO = `${parts[0]}.${parts[1]?.replace(/\./g, ',')}`
 
   //   const vlrRetornoProximaleitura = getProximaleitura(pdf, vlrContaReferente); // Suponhamos que o valor seja "11/12/2023" ou "10/00/2023" ou "10/000"
   //   let partesProximaLeitura = vlrRetornoProximaleitura.split('/');
@@ -46042,7 +51002,6 @@ function dadosNota(pdfData) {
     const vlrConsumoAtivoFpontaTUSDBaseICMS = getConsumoAtivoFpontaTUSDBaseICMS(pdf) //
     const vlrConsumoAtivoFpontaTUSDvalueICMS = getConsumoAtivoFpontaTUSDvalueICMS(pdf)
     const vlrConsumoAtivoFpontaTUSDtarifaCICMS = getConsumoAtivoFpontaTUSDtarifaCICMS(pdf) //
-    const vlrConsumoAtivoFpontaTUSDFATURADO = getConsumoAtivoFpontaTUSDFATURADO(pdf) // 
     const vlrUFERPONTATEFATURADO = getUFERPONTATEFATURADO(pdf) // se nao tiver fica = 0 no SGU - conta A
     const vlrUFERPONTATEtarifaCICMS = getUFERPONTATEtarifaCICMS(pdf) // se nao tiver fica = 0 no SGU - conta A
     const vlrUFERPONTATEBaseICMS = getUFERPONTATEBaseICMS(pdf) // se nao tiver fica = 0 no SGU - conta A
@@ -46124,12 +51083,12 @@ function dadosNota(pdfData) {
       vlrNumeroSubGrupo,
     };
   };
-  //ate aqui
+//ate aqui
 
-  const dados = getDados(pdfData);
-  console.log(dados);
+const dados = getDados(pdfData);
+console.log(dados);
 
-  return false;
+return false;
 }
 
 //return dadosNota(actions.leiturENEL)
@@ -46139,13 +51098,13 @@ function dadosNota(pdfData) {
 
 // uma nota use abaixo
 for (let nota in notas) {
-  // uma nota use abaixo
+// uma nota use abaixo
 //     if(nota !== "ocrContaA") {
 //      continue
-   
+
 //uma nota so use acima ou comente
 
-  console.log(`---------- ${nota} ----------`)
-  dadosNota(notas[nota])
+console.log(`---------- ${nota} ----------`)
+dadosNota(notas[nota])
 
 }
