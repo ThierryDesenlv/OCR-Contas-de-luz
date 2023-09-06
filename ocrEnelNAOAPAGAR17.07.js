@@ -4838,7 +4838,7 @@ const notas = {
         "valuesSize": 1,
         "page": 2
     }]
- },
+  },
   "ocrEnel": {
     "words": [{
         "content": "Eletropaulo",
@@ -49278,7 +49278,6 @@ const notas = {
     }]
   }
 }
-
 function dadosNota(pdfData) {
   const checkOnlyNumber = (str) => `${str}`.trim().split('').filter(a => a != ' ').reduce((n, c) => !isNaN(Number(c)) ? n + 1 : n, 0) === `${str}`.trim().length;
   const checkContainsNumber = (str) => `${str}`.trim().split('').filter(a => a != ' ').reduce((n, c) => !isNaN(Number(c)) ? n + 1 : n, 0);
@@ -49494,8 +49493,6 @@ function dadosNota(pdfData) {
 
   };//certo
   //FATURADO
-
-
   const getUFERFORAPONTATEFATURADO = (pdf) => {
       const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
           //console.log(row)
@@ -49527,7 +49524,7 @@ function dadosNota(pdfData) {
     
     // return parts?.join('.');
     return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
-};//certo
+  };//certo
   //UFER PONTA TE
   //TARIFASeIMPOSTOS
   const getUFERPONTATETARIFASeIMPOSTOS = (pdf) => {
@@ -49554,10 +49551,6 @@ function dadosNota(pdfData) {
     // return valor?.replace(/,/g, '.');
 
   };
-  
-  
-  
-  
   //value VALOR
   const getUFERPONTATEvalueVALOR = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
@@ -49734,7 +49727,6 @@ function dadosNota(pdfData) {
     return valor?.replace('.', ',');
 
   };//certo
-
   const getConsumoAtivoFpontaTUSDvalueVALOR = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -49755,20 +49747,18 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[10];
-    const parts = valor.split(',');
-    if (parts.length > 2) {
+    const parts = valor?.split(',');
+    if (parts?.length > 2) {
         parts[0] = parts[0]?.replace(/\./g, '');
         parts[1] = parts[1]?.replace(/\./g, ',');
-        parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
+        parts[parts?.length - 1] = parts[parts?.length - 1]?.replace(/\./g, ',')}
         else {
           parts[0] = parts[0]?.replace(/\./g, ',');
         } 
     
     // return parts?.join('.');
-    return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
-}//certo
-
-
+    return parts?.join('.')?.replace(/\.(?=[^.]*$)/, ',');
+  }//certo
   const getConsumoAtivoFpontaTUSDvalueICMS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -49789,18 +49779,18 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[9];
-    const parts = valor.split(',');
-    if (parts.length > 2) {
+    const parts = valor?.split(',');
+    if (parts?.length > 2) {
         parts[0] = parts[0]?.replace(/\./g, '');
         parts[1] = parts[1]?.replace(/\./g, ',');
-        parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
+        parts[parts?.length - 1] = parts[parts?.length - 1]?.replace(/\./g, ',')}
         else {
           parts[0] = parts[0]?.replace(/\./g, ',');
         } 
     
     // return parts?.join('.');
     return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
-}//certo
+  }//certo
   const getConsumoAtivoFpontaTUSDaliqICMS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -49825,8 +49815,7 @@ function dadosNota(pdfData) {
     return valor?.replace('%', '');
 
   };//certo
-
-  const getConsumoAtivoFpontaTUSDBaseICMS= (pdf) => {
+  const getConsumoAtivoFpontaTUSDBaseICMS= (pdf, vlrConsumoAtivoFpontaTUSDvalueVALOR) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
       return row.some((cell) => {
@@ -49846,50 +49835,20 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[7];
-    const parts = valor.split(',');
-    if (parts.length > 2) {
-        parts[0] = parts[0]?.replace(/\./g, '');
-        parts[1] = parts[1]?.replace(/\./g, ',');
-        parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
-        else {
-          parts[0] = parts[0]?.replace(/\./g, ',');
-        } 
-    
-    // return parts?.join('.');
-    return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
-}//certo
-
-  // const getConsumoAtivoFpontaTUSDBaseICMS = (pdf) => {
-  //   const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
-  //     //console.log(row)
-  //     return row.some((cell) => {
-  //       //console.log(`'${cell}'`) 
-  //       const formatcell = cell?.replace(/\s/g, "");
-  //       if (formatcell.includes('CONSUMOATIVOFPONTATUSD')) return true
-  //       return false
-  //     })
-  //   }));
-  //   if (!table) return false;
-  //   const row = table.valuesContent.find((row) => {
-  //     return row.some((cell) => {
-  //       const formatCell = cell?.replace(/\s/g, "");
-  //       return formatCell.includes("CONSUMOATIVOFPONTATUSD");
-  //     });
-  //   });
-  //   if (!row) return false;
-
-  //   const valor = row[7];
-  //   const parts = valor.split(',');
-  //   if (parts.length > 2) {
-  //       parts[0] = parts[0]?.replace(/\./g, '');
-  //       parts[1] = parts[1]?.replace(/\./g, ',');
-  //       parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
-  //       else {
-  //         parts[0] = parts[0]?.replace(/\./g, ',');
-  //       } 
-  //   return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
-  // };//certo
-
+    const lastDotIndex = valor.lastIndexOf('.');
+  
+    if (lastDotIndex !== -1) {
+      const normalizedValue = valor.substring(0, lastDotIndex) + ',' + valor.substring(lastDotIndex + 1);
+      return normalizedValue;
+    }
+    if (valor.indexOf('.') === -1) {
+      // Substitui o valor por getConsumoAtivoFpontaTUSDvalueVALOR(pdf) se não houver ponto
+      return vlrConsumoAtivoFpontaTUSDvalueVALOR;
+    } else {
+      return valor
+    }
+      return valor;
+  };//certo
   const getConsumoAtivoFpontaTUSDtarifaCICMS = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
       //console.log(row)
@@ -49916,16 +49875,12 @@ function dadosNota(pdfData) {
     // return valor?.replace(/,/g, '.');
 
   };//certo
-
-
   const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
-      //console.log(row)
       return row.some((cell) => {
-        //console.log(`'${cell}'`) 
         const formatcell = cell?.replace(/\s/g, "");
-        if (formatcell.includes('CONSUMOATIVOFPONTATUSD')) return true
-        return false
+        if (formatcell.includes('CONSUMOATIVOFPONTATUSD')) return true;
+        return false;
       })
     }));
     if (!table) return false;
@@ -49936,61 +49891,18 @@ function dadosNota(pdfData) {
       });
     });
     if (!row) return false;
-
     const valor = row[5];
-    const parts = valor.split(',');
-    if (parts.length > 2) {
-        parts[0] = parts[0]?.replace(/\./g, '');
-        parts[1] = parts[1]?.replace(/\./g, ',');
-        parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
-        else {
-          parts[0] = parts[0]?.replace(/\./g, ',');
-        } 
-    
-    // return parts?.join('.');
-    return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
-}
-
-//   const getConsumoAtivoFpontaTUSDFATURADO = (pdf) => {
-//   const getConsumoAtivoFpontaTUSDBaseICMS= (pdf) => {
-//     const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
-//       //console.log(row)
-//       return row.some((cell) => {
-//         //console.log(`'${cell}'`) 
-//         const formatcell = cell?.replace(/\s/g, "");
-//         if (formatcell.includes('CONSUMOATIVOFPONTATUSD')) return true
-//         return false
-//       })
-//     }));
-//     if (!table) return false;
-//     const row = table.valuesContent.find((row) => {
-//       return row.some((cell) => {
-//         const formatCell = cell?.replace(/\s/g, "");
-//         return formatCell.includes("CONSUMOATIVOFPONTATUSD");
-//       });
-//     });
-//     if (!row) return false;
-
-//     const valor = row[7];
-//     const parts = valor.split(',');
-//     if (parts.length > 2) {
-//         parts[0] = parts[0]?.replace(/\./g, '');
-//         parts[1] = parts[1]?.replace(/\./g, ',');
-//         parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
-//         else {
-//           parts[0] = parts[0]?.replace(/\./g, ',');
-//         } 
-    
-//     // return parts?.join('.');
-//     return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
-// }
-
-
-
-
-
-
-
+    const parts = valor?.split(',');
+    //
+    if (parts?.length > 1) {
+      const lastPart = parts.pop();
+      parts.push(lastPart?.replace(/,|\./, ','));
+    } else {
+      parts[0] = parts[0]?.replace(/,|\./, ',');
+    }
+    const normalizedValue = parts?.join('.');
+    return normalizedValue;
+  };
   const getConsumoAtivoPontaTUSDvalueTARIFASeIMPOSTOS = (pdf) => {
       const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
       const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -50003,33 +49915,45 @@ function dadosNota(pdfData) {
       const valor = row[11];
       // return valor
       // return valor?.replace(/,/g, '.');
-      return valor.replace('.', ',');
+      return valor?.replace('.', ',');
       
 
       // return valor?.replace(/./g, ',');
   };//certo
-  const getConsumoAtivoPontaTUSDvalueVALOR = (pdf) => {
-    const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
-    const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
 
+  const getConsumoAtivoPontaTUSDvalueVALOR = (pdf) => {    
+    const table = pdf.tables.find((table) => table.valuesContent.some((row) => {
+        const formatcell = row.map((cell) => cell?.replace(/\s/g, ""));
+        return formatcell.includes("CONSUMOATIVOPONTATUSD");
+    }));
     if (!table) return false;
-
-    const row = table.valuesContent.find((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword))));
+    const row = table.valuesContent.find((row) => {
+        const formatCell = row.map((cell) => cell?.replace(/\s/g, ""));
+        return formatCell.includes("CONSUMOATIVOPONTATUSD");
+    });
     if (!row) return false;
-
     const valor = row[10];
-    const parts = valor.split(',');
-    if (parts.length > 2) {
-      parts[0] = parts[0]?.replace(/\./g, '');
-      parts[1] = parts[1]?.replace(/\./g, ',');
-      parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
-      else {
-        parts[0] = parts[0]?.replace(/\./g, ',');
-      } 
+
+    // Verifique se valor não é indefinido
+    if (valor !== undefined) {
+        const parts = valor?.split(',');
+
+        if (parts?.length > 2) {
+            parts[0] = parts[0]?.replace(/\./g, '');
+            parts[1] = parts[1]?.replace(/\./g, ',');
+            parts[parts?.length - 1] = parts[parts?.length - 1]?.replace(/\./g, ',');
+        } else {
+            parts[0] = parts[0]?.replace(/\./g, ',');
+        } 
+
+        return parts?.join('.')?.replace(/\.(?=[^.]*$)/, ',');
+    } else {
+        return false; // Retorne false se valor for indefinido
+    }
+};
   
-  // return parts?.join('.');
-  return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
-  }
+
+
   const getConsumoAtivoPontaTUSDvalueICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -50042,7 +49966,7 @@ function dadosNota(pdfData) {
     const valor = row[9];
     //return valor
   //   return valor?.replace(/,/g, '.');
-    return valor.replace('.', ',');
+    return valor?.replace('.', ',');
     
   };//certo
   const getConsumoAtivoPontaTUSDaliqICMS = (pdf) => {
@@ -50069,18 +49993,18 @@ function dadosNota(pdfData) {
     
 
     const valor = row[7];
-    const parts = valor.split(',');
-    if (parts.length > 2) {
+    const parts = valor?.split(',');
+    if (parts?.length > 2) {
         parts[0] = parts[0]?.replace(/\./g, '');
         parts[1] = parts[1]?.replace(/\./g, ',');
-        parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
+        parts[parts?.length - 1] = parts[parts?.length - 1]?.replace(/\./g, ',')}
         else {
           parts[0] = parts[0]?.replace(/\./g, ',');
         } 
     
     // return parts?.join('.');
-    return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
-}//certo
+    return parts?.join('.')?.replace(/\.(?=[^.]*$)/, ',');
+  };//certo
   const getConsumoAtivoPontaTUSDtarifaCICMS = (pdf) => {
     const keywords = ["CONSUMO ATIVO PONTA TUSD", "CONSUMO ATIVO PONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVOPONTATUSD", "CONSUMO ATIVOPONTATUSD", "CONSUMOATIVO PONTATUSD", "CONSUMOATIVOPONTA TUSD"];
     const table = pdf.tables.find((table) => table.valuesContent.some((row) => row.some((cell) => keywords.some((keyword) => cell.includes(keyword)))));
@@ -50091,7 +50015,7 @@ function dadosNota(pdfData) {
     if (!row) return false;
 
     const valor = row[6];
-    const valorSubstituido = valor.replace('.', ',');
+    const valorSubstituido = valor?.replace('.', ',');
 
     return valorSubstituido;
   }//certo
@@ -50106,17 +50030,17 @@ function dadosNota(pdfData) {
 
     const valor = row[5];
  
-    const parts = valor.split(',');
-    if (parts.length > 2) {
+    const parts = valor?.split(',');
+    if (parts?.length > 2) {
       parts[0] = parts[0]?.replace(/\./g, '');
       parts[1] = parts[1]?.replace(/\./g, ',');
-      parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
+      parts[parts?.length - 1] = parts[parts?.length - 1]?.replace(/\./g, ',')}
       else {
         parts[0] = parts[0]?.replace(/\./g, ',');
       } 
   
   // return parts?.join('.');
-  return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
+  return parts?.join('.')?.replace(/\.(?=[^.]*$)/, ',');
   }//certo
   const getAUferPontaLeituraREGISTRADO = (pdf) => {
     const table = pdf.tables.find((table) => {
@@ -50437,17 +50361,17 @@ function dadosNota(pdfData) {
     //(row[8] || row[7]);
     if (vlrSerieDoTipoDeConta === "A") {
       const valor = row[10];
-      const parts = valor.split(',');
+      const parts = valor?.split(',');
     if (parts.length > 2) {
         parts[0] = parts[0]?.replace(/\./g, '');
         parts[1] = parts[1]?.replace(/\./g, ',');
-        parts[parts.length - 1] = parts[parts.length - 1]?.replace(/\./g, ',')}
+        parts[parts?.length - 1] = parts[parts?.length - 1]?.replace(/\./g, ',')}
         else {
           parts[0] = parts[0]?.replace(/\./g, ',');
         } 
     
     // return parts?.join('.');
-    return parts?.join('.').replace(/\.(?=[^.]*$)/, ',');
+    return parts?.join('.')?.replace(/\.(?=[^.]*$)/, ',');
 }
     const valor = row[8] || row[7];
     return valor
@@ -50533,7 +50457,7 @@ function dadosNota(pdfData) {
       const partes = numeroSemPontos.split(' '); // Dividir a string em partes separadas por espaços
       const ultimoValorNumerico = partes[partes.length - 1]; // Último valor numérico
       //console.log('Valor numérico da leitura anterior:', ultimoValorNumerico);
-      if (!isNaN(ultimoValorNumerico.replace('.', ''))) {
+      if (!isNaN(ultimoValorNumerico?.replace('.', ''))) {
         //console.log('Retornando valor numérico da leitura anterior:', ultimoValorNumerico);
         return ultimoValorNumerico; // Retornar o último valor numérico encontrado
       }
@@ -50595,7 +50519,7 @@ function dadosNota(pdfData) {
       const partes = numeroSemPontos.split(' '); // Dividir a string em partes separadas por espaços
       const ultimoValorNumerico = partes[partes.length - 1]; // Último valor numérico
       //console.log('Valor numérico da leitura anterior:', ultimoValorNumerico);
-      if (!isNaN(ultimoValorNumerico.replace('.', ''))) {
+      if (!isNaN(ultimoValorNumerico?.replace('.', ''))) {
       //console.log('Retornando valor numérico da leitura anterior:', ultimoValorNumerico);
       return ultimoValorNumerico; // Retornar o último valor numérico encontrado
       }
@@ -50612,18 +50536,32 @@ function dadosNota(pdfData) {
       return false; // Se não for um número, retorna false
   };      
   const getCFOP = (pdf) => {
-    const indexAlias = pdf.queries.findIndex((i) => i.alias === 'Qual CFOP?');
-    if (indexAlias === -1) return false;
-
-    const content = pdf.queries[indexAlias].content;
-    const cfop = content?.replace(/\D/g, ''); // Remove all non-numeric characters
-
-    // Check if cfop is not empty
-    if (cfop.length > 0) {
-      return cfop;
-    }
-
-    return false;
+  const indexAlias = pdf.queries.findIndex((i) => i.alias === 'Qual CFOP?');
+  if (indexAlias !== -1) {
+      const content = pdf.queries[indexAlias].content;
+      const cfop = content?.replace(/\D/g, ''); // Remove all non-numeric characters
+      if (cfop.length > 0 && ["5250", "5251", "5253", "5254", "5255", "5256", "5257", "5258"].includes(cfop)) {
+          return cfop;
+      }
+  }
+  for (const form of pdf.forms) {
+      if (form.key === 'Qual CFOP?') {
+          const cfop = form.value?.replace(/\D/g, ''); // Remove all non-numeric characters
+          if (cfop.length > 0 && ["5250", "5251", "5253", "5254", "5255", "5256", "5257", "5258"].includes(cfop)) {
+              return cfop;
+          }
+      }
+  }
+  const specifiedNumbers = ["5250", "5251", "5253", "5254", "5255", "5256", "5257", "5258"];
+  for (const form of pdf.forms) {
+      const key = form.key;
+      for (const number of specifiedNumbers) {
+          if (key.includes(number)) {
+              return number;
+          }
+      }
+  }
+  return false; 
   };
   const getValorSubgrupo = (pdf) => {
       const subgrupoField = pdf.forms.find(field => field.key === 'Subgrupo');
@@ -50935,6 +50873,7 @@ function dadosNota(pdfData) {
 
     return cpf;
   };
+
   const getDados = (pdf) => {
     const vlrVencimento = getVencimento(pdf);
     const vlrLeituraAnterior = getLeituraAnterior(pdf);
@@ -50950,74 +50889,53 @@ function dadosNota(pdfData) {
     const vlrConsumoDoMes = getConsumoDoMes(pdf);
     const vlrLeituraAtual = getLeituraAtual(pdf);
     const vlrValorLeituraAtual = geValorLeituraAtual(pdf);
-    // const vlrConsumoAtivoFpontaTUSDFATURADO = getConsumoAtivoFpontaTUSDFATURADO(pdf);
-
-  // const vlrRetornoConsumoAtivoFpontaTUSDFATURADO = getConsumoAtivoFpontaTUSDFATURADO(pdf);
-  // let vlrRetornoSem = vlrRetornoConsumoAtivoFpontaTUSDFATURADO.split('.')
-  //   if (vlrRetornoSem.length === 2){
-  //     console.log (`${parts[0]}.${parts[1]?.replace(/\./g, ',')}`)
-  //     return `${parts[0]}.${parts[1]?.replace(/\./g, ',')}`;
-  //   }
-  //   const vlrConsumoAtivoFpontaTUSDFATURADO = `${parts[0]}.${parts[1]?.replace(/\./g, ',')}`
-
-  //   const vlrRetornoProximaleitura = getProximaleitura(pdf, vlrContaReferente); // Suponhamos que o valor seja "11/12/2023" ou "10/00/2023" ou "10/000"
-  //   let partesProximaLeitura = vlrRetornoProximaleitura.split('/');
-  //   if (partesProximaLeitura[1] === "00" || partesProximaLeitura[1].startsWith("0")) {
-  //       const partesVlrContaReferente = vlrContaReferente.split('/');
-  //       partesProximaLeitura[1] = partesVlrContaReferente[1];
-    
-  //       if (partesProximaLeitura.length < 3) {
-  //           partesProximaLeitura[2] = partesVlrContaReferente[2];
-  //       }
-  //   }
-  //   const vlrProximaleitura = `${partesProximaLeitura[0].padStart(2, '0')}/${partesProximaLeitura[1].padStart(2, '0')}/${partesProximaLeitura[2]}`;
-  //   console.log(vlrProximaleitura)
+    const vlrConsumoAtivoFpontaTUSDFATURADO = getConsumoAtivoFpontaTUSDFATURADO(pdf);
     const vlrProximaleitura = getProximaleitura(pdf, vlrLeituraAtual);
     const vlrDataDeEmissao = getDataDeEmissao(pdf);
-    const vlrMensagens = getMensagens(pdf) //
-    const vlrCodigo0807 = getCodigo0807(pdf, vlrSerieDoTipoDeConta) // Conta A
-    const vlrTUSD0605 = getTUSD0605(pdf)
-    const vlrENERGIA0601 = getENERGIA0601(pdf)
-    const vlrPISPASEP0699 = getPISPASEP0699(pdf, vlrSerieDoTipoDeConta)
-    const vlrCOFINS = getCOFINS(pdf, vlrSerieDoTipoDeConta) // Perguntar duvida ao cliente 
-    const vlrAUferPontaLeituraANTERIOR = getAUferPontaLeituraANTERIOR(pdf)
-    const vlrAUferPontaLeituraATUAL = getAUferPontaLeituraATUAL(pdf)
-    const vlrAUferPontaLeituraREGISTRADO = getAUferPontaLeituraREGISTRADO(pdf)
-    const vlrADemandaPontaANTERIOR = getADemandaPontaANTERIOR(pdf)
-    const vlrADemandaPontaATUAL = getADemandaPontaATUAL(pdf)
-    const vlrADemandaPontaREGISTRADO = getADemandaPontaREGISTRADO(pdf)
-    const vlrADemandaForaPontaIndutivaANTERIOR = getADemandaForaPontaIndutivaANTERIOR(pdf) 
-    const vlrADemandaForaPontaIndutivaATUAL = getADemandaForaPontaIndutivaATUAL(pdf)
-    const vlrADemandaForaPontaIndutivaREGISTRADO = getADemandaForaPontaIndutivaREGISTRADO(pdf)
-    const vlrConsumoAtivoPontaTUSDFATURADO = getConsumoAtivoPontaTUSDFATURADO(pdf) //getConsumoAtivoPontaTUSDFATURADO
-    const vlrConsumoAtivoPontaTUSDtarifaCICMS = getConsumoAtivoPontaTUSDtarifaCICMS(pdf)
-    const vlrConsumoAtivoPontaTUSDvalueVALOR = getConsumoAtivoPontaTUSDvalueVALOR(pdf)
-    const vlrConsumoAtivoPontaTUSDvalueICMS = getConsumoAtivoPontaTUSDvalueICMS(pdf)
-    const vlrConsumoAtivoPontaTUSDBaseICMS = getConsumoAtivoPontaTUSDBaseICMS(pdf)
-    const vlrConsumoAtivoPontaTUSDaliqICMS = getConsumoAtivoPontaTUSDaliqICMS(pdf)
-    const vlrConsumoAtivoPontaTUSDvalueTARIFASeIMPOSTOS = getConsumoAtivoPontaTUSDvalueTARIFASeIMPOSTOS(pdf)
-    const vlrConsumoAtivoFpontaTUSDTARIFASeIMPOSTOS = getConsumoAtivoFpontaTUSDTARIFASeIMPOSTOS(pdf) //
-    const vlrConsumoAtivoFpontaTUSDvalueVALOR = getConsumoAtivoFpontaTUSDvalueVALOR(pdf) //getConsumoAtivoFpontaTUSDvalueICMS
-    const vlrConsumoAtivoFpontaTUSDaliqICMS = getConsumoAtivoFpontaTUSDaliqICMS(pdf) //
-    const vlrConsumoAtivoFpontaTUSDBaseICMS = getConsumoAtivoFpontaTUSDBaseICMS(pdf) //
-    const vlrConsumoAtivoFpontaTUSDvalueICMS = getConsumoAtivoFpontaTUSDvalueICMS(pdf)
-    const vlrConsumoAtivoFpontaTUSDtarifaCICMS = getConsumoAtivoFpontaTUSDtarifaCICMS(pdf) //
-    const vlrUFERPONTATEFATURADO = getUFERPONTATEFATURADO(pdf) // se nao tiver fica = 0 no SGU - conta A
-    const vlrUFERPONTATEtarifaCICMS = getUFERPONTATEtarifaCICMS(pdf) // se nao tiver fica = 0 no SGU - conta A
-    const vlrUFERPONTATEBaseICMS = getUFERPONTATEBaseICMS(pdf) // se nao tiver fica = 0 no SGU - conta A
-    const vlrUFERPONTATEaliqICMS = getUFERPONTATEaliqICMS(pdf) // se nao tiver fica = 0 no SGU - conta A
-    const vlrUFERPONTATEvalueICMS = getUFERPONTATEvalueICMS(pdf) // se nao tiver fica = 0 no SGU - conta A
+    const vlrMensagens = getMensagens(pdf);
+    const vlrCodigo0807 = getCodigo0807(pdf, vlrSerieDoTipoDeConta);//Conta A
+    const vlrTUSD0605 = getTUSD0605(pdf);
+    const vlrENERGIA0601 = getENERGIA0601(pdf);
+    const vlrPISPASEP0699 = getPISPASEP0699(pdf, vlrSerieDoTipoDeConta);
+    const vlrCOFINS = getCOFINS(pdf, vlrSerieDoTipoDeConta);//Perguntar duvida ao cliente 
+    const vlrAUferPontaLeituraANTERIOR = getAUferPontaLeituraANTERIOR(pdf);
+    const vlrAUferPontaLeituraATUAL = getAUferPontaLeituraATUAL(pdf);
+    const vlrAUferPontaLeituraREGISTRADO = getAUferPontaLeituraREGISTRADO(pdf);
+    const vlrADemandaPontaANTERIOR = getADemandaPontaANTERIOR(pdf);
+    const vlrADemandaPontaATUAL = getADemandaPontaATUAL(pdf);
+    const vlrADemandaPontaREGISTRADO = getADemandaPontaREGISTRADO(pdf);
+    const vlrADemandaForaPontaIndutivaANTERIOR = getADemandaForaPontaIndutivaANTERIOR(pdf);
+    const vlrADemandaForaPontaIndutivaATUAL = getADemandaForaPontaIndutivaATUAL(pdf);
+    const vlrADemandaForaPontaIndutivaREGISTRADO = getADemandaForaPontaIndutivaREGISTRADO(pdf);
+    const vlrConsumoAtivoPontaTUSDFATURADO = getConsumoAtivoPontaTUSDFATURADO(pdf); //getConsumoAtivoPontaTUSDFATURADO
+    const vlrConsumoAtivoPontaTUSDtarifaCICMS = getConsumoAtivoPontaTUSDtarifaCICMS(pdf);
+    const vlrConsumoAtivoPontaTUSDvalueVALOR = getConsumoAtivoPontaTUSDvalueVALOR(pdf);
+    const vlrConsumoAtivoPontaTUSDvalueICMS = getConsumoAtivoPontaTUSDvalueICMS(pdf);
+    const vlrConsumoAtivoPontaTUSDBaseICMS = getConsumoAtivoPontaTUSDBaseICMS(pdf);
+    const vlrConsumoAtivoPontaTUSDaliqICMS = getConsumoAtivoPontaTUSDaliqICMS(pdf);
+    const vlrConsumoAtivoPontaTUSDvalueTARIFASeIMPOSTOS = getConsumoAtivoPontaTUSDvalueTARIFASeIMPOSTOS(pdf);
+    const vlrConsumoAtivoFpontaTUSDTARIFASeIMPOSTOS = getConsumoAtivoFpontaTUSDTARIFASeIMPOSTOS(pdf);
+    const vlrConsumoAtivoFpontaTUSDvalueVALOR = getConsumoAtivoFpontaTUSDvalueVALOR(pdf);//getConsumoAtivoFpontaTUSDvalueICMS
+    const vlrConsumoAtivoFpontaTUSDaliqICMS = getConsumoAtivoFpontaTUSDaliqICMS(pdf);
+    const vlrConsumoAtivoFpontaTUSDBaseICMS = getConsumoAtivoFpontaTUSDBaseICMS(pdf, vlrConsumoAtivoFpontaTUSDvalueVALOR);
+    const vlrConsumoAtivoFpontaTUSDvalueICMS = getConsumoAtivoFpontaTUSDvalueICMS(pdf);
+    const vlrConsumoAtivoFpontaTUSDtarifaCICMS = getConsumoAtivoFpontaTUSDtarifaCICMS(pdf);
+    const vlrUFERPONTATEFATURADO = getUFERPONTATEFATURADO(pdf);// se nao tiver fica = 0 no SGU - conta A
+    const vlrUFERPONTATEtarifaCICMS = getUFERPONTATEtarifaCICMS(pdf); // se nao tiver fica = 0 no SGU - conta A
+    const vlrUFERPONTATEBaseICMS = getUFERPONTATEBaseICMS(pdf); // se nao tiver fica = 0 no SGU - conta A
+    const vlrUFERPONTATEaliqICMS = getUFERPONTATEaliqICMS(pdf); // se nao tiver fica = 0 no SGU - conta A
+    const vlrUFERPONTATEvalueICMS = getUFERPONTATEvalueICMS(pdf); // se nao tiver fica = 0 no SGU - conta A
     const vlrUFERPONTATEvalueVALOR = getUFERPONTATEvalueVALOR(pdf) // se nao tiver fica = 0 no SGU - conta A
-    const vlrUFERPONTATETARIFASeIMPOSTOS = getUFERPONTATETARIFASeIMPOSTOS(pdf) // se nao tiver fica = 0 no SGU - conta A
-    const vlrUFERFORAPONTATEFATURADO = getUFERFORAPONTATEFATURADO(pdf)
-    const vlrUFERFORAPONTATEtarifaICMS = getUFERFORAPONTATEtarifaICMS(pdf)
-    const vlrUFERFORAPONTATEBaseICMS = getUFERFORAPONTATEBaseICMS(pdf)
-    const vlrUFERFORAPONTATEaliqICMS = getUFERFORAPONTATEaliqICMS(pdf)
-    const vlrUFERFORAPONTATEvalueICMS = getUFERFORAPONTATEvalueICMS(pdf)
-    const vlrUFERFORAPONTATEvalueVALOR = getUFERFORAPONTATEvalueVALOR(pdf)
-    const vlrUFERFORAPONTATETARIFASeIMPOSTOS = getUFERFORAPONTATETARIFASeIMPOSTOS(pdf) //
-    const vlrValorLeituraAnterior = getValorLeituraAnterior(pdf)
-    const vlrNumeroSubGrupo = getValorSubgrupo(pdf)
+    const vlrUFERPONTATETARIFASeIMPOSTOS = getUFERPONTATETARIFASeIMPOSTOS(pdf); // se nao tiver fica = 0 no SGU - conta A
+    const vlrUFERFORAPONTATEFATURADO = getUFERFORAPONTATEFATURADO(pdf);
+    const vlrUFERFORAPONTATEtarifaICMS = getUFERFORAPONTATEtarifaICMS(pdf);
+    const vlrUFERFORAPONTATEBaseICMS = getUFERFORAPONTATEBaseICMS(pdf);
+    const vlrUFERFORAPONTATEaliqICMS = getUFERFORAPONTATEaliqICMS(pdf);
+    const vlrUFERFORAPONTATEvalueICMS = getUFERFORAPONTATEvalueICMS(pdf);
+    const vlrUFERFORAPONTATEvalueVALOR = getUFERFORAPONTATEvalueVALOR(pdf);
+    const vlrUFERFORAPONTATETARIFASeIMPOSTOS = getUFERFORAPONTATETARIFASeIMPOSTOS(pdf); //
+    const vlrValorLeituraAnterior = getValorLeituraAnterior(pdf);
+    const vlrNumeroSubGrupo = getValorSubgrupo(pdf);
 
     return {
       vlrCNPJ,
@@ -51090,7 +51008,6 @@ console.log(dados);
 
 return false;
 }
-
 //return dadosNota(actions.leiturENEL)
 // return dadosNota(actions.ocrBarueri.value)
 // console.log(dadosNota(ocrSaoBernardo1))
@@ -51098,12 +51015,11 @@ return false;
 
 // uma nota use abaixo
 for (let nota in notas) {
-// uma nota use abaixo
-//     if(nota !== "ocrContaA") {
+// // uma nota use abaixo
+//     if(nota !== "contaTesteAnelita") {
 //      continue
-
-//uma nota so use acima ou comente
-
+// //uma nota so use acima ou comente
+// }
 console.log(`---------- ${nota} ----------`)
 dadosNota(notas[nota])
 
